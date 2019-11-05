@@ -1,0 +1,410 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*
+tentative body
+*/
+body {
+    /* position: absolute; */
+    margin: auto;
+    /* height: 100vh;
+    display: flex;
+    justify-content: center; */
+}
+
+/*
+tentative login/signup forms
+*/
+
+
+.login-image {
+    /* position: relative;
+    z-index: -1;
+    object-fit: cover;
+    min-width: 1600px; */
+    
+}
+
+.everything{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.root-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url('/login_background2.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.privacy-policy {
+    margin: 10px;
+    line-height: 1.5em;
+
+}
+
+.policy {
+    margin-left: 132px;
+    text-decoration-line: none;
+    color: blue;
+}
+
+.policy:hover {
+    text-decoration-line: underline;
+}
+
+.root-signup{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url('/rest_background.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+
+.login-signup-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background: white;
+    border: solid 1px black;
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background: white;
+    border: solid 1px black;
+    margin-top: 150px;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 10px;
+    height: 700px;
+    margin: auto;
+}
+
+#errors-form {
+    height: 800px;
+}
+
+.login-value {
+    width: 370px;
+    height: 30px;
+    border-radius: 3px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: 1px gray solid
+}
+
+.login-value-name {
+    width: 180px;
+    height: 30px;
+    border-radius: 3px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: 1px gray solid;
+}
+
+.login-names {
+    width: 382px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-submit {
+    width: 375px;
+    height: 45px;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.signup-submit {
+    width: 375px;
+    height: 55px;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    padding: 0;
+    margin-right: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.login-links {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 175px;
+}
+
+.login-links4 {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 233px;
+    
+}
+
+.signup-link-btn {
+    text-decoration-line: none;
+    color: blue;
+}
+
+.signup-link-btn:hover {
+    text-decoration-line: underline;
+}
+
+.login-links1 {
+    margin-top: 5px;
+}
+
+.login-links3 {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 200px;
+}
+
+.signup-links {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.login-title {
+    margin-bottom: 0px;
+    font-size: 34px;
+}
+
+.back-to-login {
+    text-decoration-line: none;
+    color: blue;
+}
+
+.back-to-login:hover {
+    text-decoration: underline;
+
+}
+
+.line-height {
+    line-height: 1.5em;
+}
+
+
+/*
+tentative splash form
+*/
+
+.splash-body{
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    background-image: url('/steak_home.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.top-nav{
+    margin: auto;
+    width: 1600px;
+    height: 100px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px
+
+}
+
+.homeButtons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 240px;
+}
+
+.splash-nav-ele {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-evenly;
+}
+
+.home-links1{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    height: 40px;
+    width: 80px;
+    background-color: transparent;
+    font-size: 19px;
+    border: transparent;
+}
+
+.nav-ele {
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+
+.home-links2 {
+    text-decoration-line: none;
+    width: 120px;
+    height: 40px;
+    font-size: 19px;
+    padding: 10px;
+    padding-top: 6px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+.home-links2:hover{
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+
+.home-links1:hover{
+    border-radius: 0;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+
+}
+
+.links1 {
+    text-decoration-line: none;
+    color: white
+}
+
+.links2 {
+    text-decoration-line: none;
+    color: white
+}
+
+.links2:hover{
+    background-color: white;
+    cursor: pointer;
+    color: black
+}
+
+
+.home-ele-size {
+    font-size: 18px;
+}
+
+.hero-image {
+    position: relative;
+    z-index: -1;
+    object-fit: cover;
+    min-width: 1600px;
+    background-position: 50%;
+
+}
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.home-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 80px; */
+    margin-bottom: 80px;
+}
+
+.main-title {
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bolder;
+    color: white;
+}
+
+.search {
+    width: 800px;
+    height: 50px;
+    display: flex;
+}
+
+.search-label {
+    background: white;
+    height: 34px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    color: darkslategray;
+    font-weight: bold;
+    
+}
+.search-form {
+    width: 675px;
+    height: 44px;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.search-submit {
+    width: 50px;
+    height: 50px; 
+}
+
+#error {
+    border: 1px solid red;
+}
+
+.errors {
+    margin-right: 160px;
+}
+
+.signup-errors {
+    margin-right: 80px;
+    line-height: 1.5em;
+}
