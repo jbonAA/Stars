@@ -5,8 +5,13 @@ const sessionErrorsReducer = (state=[], action) => {
     let nextState = Object.assign([], state)
     switch(action.type){
         case RECEIVE_SESSION_ERRORS:
-            nextState = action.errors
-            return nextState
+            if(typeof action.errors === 'undefined'){
+                nextState = []
+                return nextState
+            }else{
+                nextState = action.errors
+                return nextState
+            }
         case CLEAR_ERRORS:
             nextState = []
             return nextState

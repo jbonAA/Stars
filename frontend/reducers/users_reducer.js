@@ -5,7 +5,7 @@ export default (state={}, action) => {
     let nextState = Object.assign({}, state);
     switch(action.type){
         case RECEIVE_CURRENT_USER:
-            nextState = action.currentUser
+            nextState = {[action.currentUser.id]: action.currentUser }
             return nextState
         default:
             return state

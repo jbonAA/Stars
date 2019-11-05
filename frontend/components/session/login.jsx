@@ -12,6 +12,7 @@ class Login extends React.Component{
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleGuest = this.handleGuest.bind(this);
     }
 
     handleInput(type) {
@@ -20,7 +21,8 @@ class Login extends React.Component{
 
     handleSubmit(event){
         event.preventDefault();
-        this.props.logIn(this.state)
+        
+        this.props.login(this.state)
             .then(() => this.props.history.push('/'));
     }
 
@@ -29,6 +31,17 @@ class Login extends React.Component{
             <li>{error}</li>
         ))
         return errors
+    }
+
+    handleGuest() {
+     
+        const user = {
+            email: "guest@aa.io",
+            password: "password"
+        }
+        debugger
+        this.props.login(user)
+            .then(() => this.props.history.push('/'));
     }
 
     render() {
@@ -70,12 +83,12 @@ class Login extends React.Component{
                             <br/>
                             <button className="login-submit" onClick={this.handleSubmit}>Log In</button>
                         </form>
-                        <p className="login-links4">New to Stars? <Link className="signup-link-btn" onClick={this.props.clearErrors} to="/signup">Sign Up</Link></p>
+                        <div className="guest-redirect">
+                            <button className="guest" onClick={this.handleGuest}>Login as Guest</button>
+                            <p className="login-links4">New to Stars? <Link className="signup-link-btn" onClick={this.props.clearErrors} to="/signup">Sign Up</Link></p>
+                        </div>
                     </div>
                 </div>
-                {/* <div className="login-image">
-                    <img src="/login_background2.jpg" />
-                </div> */}
             </div>
         </div>
         )

@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    logIn: (formUser) => dispatch(login(formUser)),
+    login: (formUser) => dispatch(login(formUser)),
     clearErrors: () => dispatch(clearErrors)
 })
 

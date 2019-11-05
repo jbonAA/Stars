@@ -32,7 +32,6 @@ class Signup extends React.Component {
         const errors = this.props.errors.map(error => (
             <li>{error}</li>
         ))
-        console.log(this.props.errors)
         return errors
     }
 
@@ -50,7 +49,6 @@ class Signup extends React.Component {
                         <p className="privacy-policy">By logging in, you agree to Stars' <a className="signup-link-btn" href="">Terms of Service</a> and <br />
                             <a className="policy" href="">Privacy Policy</a></p>
                             <ul className="signup-errors">
-                                {/* {errors} */}
                                 {this.handleErrors()}
                             </ul>
                             <br />

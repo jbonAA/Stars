@@ -9,11 +9,10 @@ const _nullSession = {
 
 const sessionReducer = (state=_nullSession, action) => {
     Object.freeze(state);
-    let nextState = Object.assign({}, state)
     switch(action.type){
-        case RECEIVE_CURRENT_USER:
-            nextState = { id: action.currentUser[Object.keys(action.currentUser)[0]].id }
-            return nextState
+        case RECEIVE_CURRENT_USER:  
+        debugger   
+           return {id: action.currentUser.id}
         case LOGOUT_CURRENT_USER:
             return _nullSession
         default:
