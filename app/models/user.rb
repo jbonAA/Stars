@@ -6,6 +6,8 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6}, allow_nil: true
     validates :email, uniqueness: true
 
+    has_many :reviews
+    
     before_validation :ensure_session_token
     
     def ensure_session_token

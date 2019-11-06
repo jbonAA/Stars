@@ -9,6 +9,9 @@ import HomeContainer from './home/home_container';
 
 const App = () => (
     <div>
+        <header>
+            
+        </header>
         <Switch>
             {/* <AuthRoute exact path="/" component={GreetingContainer} /> */}
             <Route exact path="/" component={HomeContainer} />
