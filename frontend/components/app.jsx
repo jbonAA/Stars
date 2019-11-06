@@ -17,7 +17,6 @@ const App = () => (
             {/* <Route path="/" component={Footer} /> */}
             <Redirect to="/" />
         </Switch>
-        
     </div>
 )
 

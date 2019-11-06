@@ -449,7 +449,7 @@ tentative splash form
 .greeting-search-box {
     border: 3px solid white;
     height: 40px;
-    width: 800px;
+    width: 900px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -457,7 +457,7 @@ tentative splash form
 }
 
 .greeting-search-form {
-    width: 680px;
+    width: 880px;
     font-size: 20px;
 }
 
@@ -471,10 +471,9 @@ tentative splash form
     text-align: center;
     padding-top: 10px;
     font-weight: bold;
-    
-    
-    
-
+}
+.logo-title{
+    margin-right: 70px;
 }
 
 .welcome {
@@ -485,7 +484,7 @@ tentative splash form
 
 .greeting-title {
     color: white;
-    font-size: 34px;
+    font-size: 36px;
     margin-left: 150px;
 }
 
@@ -500,4 +499,82 @@ tentative splash form
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+
+//search and filters
+
+.filter-nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.filter-features {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 900px;
+    justify-content: space-evenly;
+
+}
+
+.each-filter-feature {
+    min-width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    margin-right: 60px;
+}
+
+.filter-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 900px;
+    margin-right: 60px;
+    padding-top: 40px;
+    
+}
+
+.filter-selector {
+    display: flex;
+    flex-direction: row;
+    min-width: 900px;
+    margin-right: 60px;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+.split-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 200px;
+    
+}
+
+.filter-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    min-width: 880px;
+    align-items: center;
+}
+
+.filt {
+    width: 90px;
+    height: 30px;
+    border: none;
+    color: gray;
+}
+
+.filt:hover {
+    cursor: pointer;
 }

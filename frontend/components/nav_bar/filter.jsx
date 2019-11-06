@@ -40,29 +40,51 @@ class Filter extends React.Component {
         //iterate through the most recent element in state array
         //render restaurant items that have that element.true/make frontend calls
         //no need to map and make ajax calls to backend
+
+        const deliveryicon = (<img className="icon2" src="https://img.icons8.com/material/24/000000/delivery--v1.png"></img>)
+        const takeouticon = (<img className="icon1" src="https://img.icons8.com/ios-filled/50/000000/take-away-food.png"></img>)
         return(
-            <div>
+            <div className="filter-nav-container">
                 <div className="filter-nav">
-                    <h2>Filter Restaurants In San Francisco</h2>
-                    <div className="filter-features">
-                        <div className="price-filters">
-                            <button></button>
-                            <button></button>
-                            <button></button>
+                    <div className="filter-top">
+                        <div className="filter-header">
+                            <h2>
+                                <span className="restaurants">
+                                    Restaurants 
+                                    <span> in San Francisco, CA</span>
+                                </span>
+                            </h2>
+                            <p>Showing number/total</p>
                         </div>
-                        <div className="cuisine-filters">
-                            <button></button>
-                            <button></button>
-                            <button></button>
-                        </div>
-                        <div className="takeout">
-                            <button></button>
-                            <button></button>
-                            <button></button>
+                        <div className="filter-selector">
+                            <div className="split-selector">   
+                                <a href="">San Francisco </a>
+                                <p className="no-margin">></p>
+                                <a href="">Restaurants</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+                <div className="filter-features">
+                        <div className="each-filter-feature">
+                            <button className="filt">All Filters</button>
+                            <div className="price-filters">
+                                <button className="filt">$</button>
+                                <button className="filt">$$</button>
+                                <button className="filt">$$$</button>
+                                <button className="filt">$$$$</button>
+                            </div>
+                            <div className="cuisine-filters">
+                                <button className="filt">American</button>
+                                <button className="filt">Breakfast</button>
+                                <button className="filt">French</button>
+                            </div>
+                            <div className="takeout">
+                                <button className="filt"> {takeouticon} Takeout</button>
+                                <button className="filt"> {deliveryicon} Delivery</button>
+                            </div>
+                        </div>
+                </div>
 
             </div>
         )

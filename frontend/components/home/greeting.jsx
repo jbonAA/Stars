@@ -29,8 +29,9 @@ class Greeting extends React.Component {
         if (this.props.currentUser){
             display = 
             (<div className="greeting-search">
-                <p className="greeting-title">Stars</p>
-
+                <div className="logo-title">
+                    <p className="greeting-title">Stars</p>
+                </div>
                 <div className="greeting-search-box">
                     <label className="greeting-search-label">Find</label>
                     <input
