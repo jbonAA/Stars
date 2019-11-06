@@ -6,17 +6,17 @@ import SignupContainer from './session/signup_container';
 import NavBarContainer from './nav_bar/nav_bar_container'
 import Footer from './nav_bar/footer';
 import HomeContainer from './home/home_container';
+import SearchContainer from './search/search_container';
 
 const App = () => (
     <div>
-        <header>
-            
-        </header>
+  
         <Switch>
             {/* <AuthRoute exact path="/" component={GreetingContainer} /> */}
             <Route exact path="/" component={HomeContainer} />
             <ProtectedRoute path="/login" component={LoginContainer} />
             <ProtectedRoute path="/signup" component={SignupContainer} />
+            <Route exact path="/search" component={SearchContainer} />
             {/* <Route path="/" component={Footer} /> */}
             <Redirect to="/" />
         </Switch>

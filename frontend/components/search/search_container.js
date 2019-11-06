@@ -1,9 +1,14 @@
 import { connect } from 'react-redux';
 import { asArray } from '../../reducers/selectors';
-import Search from './search'
+import Search from './search';
+import {fetchRestaurants} from '../../actions/restaurant_actions';
 
 const mapStateToProps = (state) => ({
-    restaurants: asArray(state.entities.restaurants)
+    restaurants: asArray(state.entities)
 })
 
-export default connect(mapStateToProps, null)(Search)
+const mapDispatchToProps = (dispatch) =>  ({
+    fetchRestaurants: () => dispatch(fetchRestaurants())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search)

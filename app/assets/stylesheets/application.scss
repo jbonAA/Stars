@@ -578,3 +578,23 @@ tentative splash form
 .filt:hover {
     cursor: pointer;
 }
+
+//restaurant index
+
+.restaurant-ii-photo{
+    height: 214px;
+    width: 214px;
+}
+
+.restaurant-ii-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.restaurant-ii-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
