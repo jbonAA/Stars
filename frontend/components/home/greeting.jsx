@@ -43,7 +43,7 @@ class Greeting extends React.Component {
                     <button className="greeting-search-submit" onClick={this.handleSubmit}>{icon}</button>
                 </div>
                 <div className="greeting-welcome">
-                    <h2 className="welcome">Welcome Back, {this.props.user.first_name}!</h2>
+                    <h2 className="welcome">Welcome, {this.props.user.first_name}!</h2>
                     <button className="logout-link" onClick={this.props.logout}>Log Out</button>
                 </div>
             </div>)
