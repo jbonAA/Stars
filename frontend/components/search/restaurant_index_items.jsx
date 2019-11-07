@@ -11,7 +11,6 @@ class RestaurantIndexItem extends React.Component {
     //handleClick()
 
     render() {
-        // debugger
         return (
             <div className="restaurant-ii-container">
                 <div className="restaurant-ii-photo">

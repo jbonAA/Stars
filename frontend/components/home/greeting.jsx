@@ -1,5 +1,5 @@
 import React from 'react';
-import Welcome from './welcome';
+import WelcomeContainer from './welcome_container';
 import HomeFilters from './home_filters'
 
 class Greeting extends React.Component {
@@ -9,7 +9,7 @@ class Greeting extends React.Component {
             name: '',
         }
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleLogout = this.handleLogout.bind(this)
+        // this.handleLogout = this.handleLogout.bind(this)
     }
 
     handleInput(type) {
@@ -24,17 +24,17 @@ class Greeting extends React.Component {
             .then(() => this.props.history.push('/'));
     }
 
-    handleLogout(event) {
-        event.preventDefault();
-        this.props.logout(this.state)
-            .then(() => this.props.history.push('/'))
-    }
+    // handleLogout(event) {
+    //     event.preventDefault();
+    //     this.props.logout(this.state)
+    //         .then(() => this.props.history.push('/'))
+    // }
 
     render() {
 
         const icon = (<img src="https://img.icons8.com/ios-glyphs/30/000000/search.png"/>)
         let display = ""
-        if (this.props.currentUser){
+        if (window.location.hash === '#/search'){
             display = 
             (<div className="greeting-search">
                 <div className="logo-title">
@@ -52,9 +52,15 @@ class Greeting extends React.Component {
                     <button className="greeting-search-submit" onClick={this.handleSubmit}>{icon}</button>
                 </div>
                 <div className="greeting-welcome">
+                    <WelcomeContainer />
+                </div>
+
+                {/* <div className="greeting-welcome">
                     <h2 className="welcome">Welcome, {this.props.user.first_name}!</h2>
                     <button className="logout-link" onClick={this.handleLogout}>Log Out</button>
-                </div>
+                </div> */}
+
+
             </div>)
         }else{
             display = (
@@ -67,7 +73,7 @@ class Greeting extends React.Component {
                             <p className="nav-ele">Talk</p>
                         </div>
                         <div>
-                            {<Welcome />}
+                            {<WelcomeContainer />}
                         </div>
                     </div>
                     <div className="home-search">

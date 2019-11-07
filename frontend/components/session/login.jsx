@@ -10,7 +10,7 @@ class Login extends React.Component{
             email: '',
             password: ''
         }
-
+        
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleGuest = this.handleGuest.bind(this);
     }
@@ -23,7 +23,7 @@ class Login extends React.Component{
         event.preventDefault();
         
         this.props.login(this.state)
-            .then(() => this.props.history.push('/search'));
+            .then(() => this.props.history.goBack());
     }
 
     handleErrors() {
@@ -39,14 +39,11 @@ class Login extends React.Component{
             email: "guest@aa.io",
             password: "password"
         }
-        // debugger
         this.props.login(user)
-            .then(() => this.props.history.push('/search'));
+            .then(() => this.props.history.goBack());
     }
 
     render() {
-        
-        
 
         return (
         <div>

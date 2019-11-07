@@ -1,9 +1,11 @@
 import React from 'react';
 import RestaurantIndexItem from './restaurant_index_items';
+import Filter from '../nav_bar/filter';
 
 const RestaurantIndex = ({restaurants}) => {
     return (
     <div className="inner-restaurant-index">
+        <Filter />
         <p className="all-results">All Results</p>
         {restaurants.map(restaurant => (
             <div> <RestaurantIndexItem

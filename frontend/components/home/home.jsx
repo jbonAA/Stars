@@ -1,7 +1,7 @@
 import React from 'react';
 import  { Link } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
-import FilterContainer from '../nav_bar/filter_container';
+// import FilterContainer from '../nav_bar/filter_container';
 
 class Home extends React.Component{
     constructor(props) {

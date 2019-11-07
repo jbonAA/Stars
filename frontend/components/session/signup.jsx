@@ -25,7 +25,7 @@ class Signup extends React.Component {
     handleSubmit(event){
         event.preventDefault();
         this.props.signUp(this.state)
-            .then(() => this.props.history.push('/'))
+            .then(() => this.props.history.push(window.location.hash.slice(1)))
     }
 
     handleErrors() {

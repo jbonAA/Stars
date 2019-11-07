@@ -1,6 +1,6 @@
 import React from 'react';
 import RestaurantIndex from './restaurant_index';
-import Filter from '../nav_bar/filter';
+// import Filter from '../nav_bar/filter';
 import HomeContainer from '../home/home_container'
 
 class Search extends React.Component {
@@ -24,11 +24,10 @@ class Search extends React.Component {
         }else{
             display = null
         }
-        // debugger
         return (
             <div>
                 <HomeContainer />
-                <Filter />
+                {/* <Filter /> */}
                 <br/>
                 <br/>
                 {display}

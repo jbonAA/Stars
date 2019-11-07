@@ -593,10 +593,10 @@ tentative splash form
 //restaurant index
 
 .restaurant-ii-photo{
-    height: 214px;
-    width: 214px;
+    height: 284px;
+    width: 284px;
     border: 1px solid black;
-    margin-right: 20px;
+    margin-right: 35px;
 }
 
 .restaurant-ii-info {
@@ -613,12 +613,12 @@ tentative splash form
 }
 
 .restaurant-info-container {
-    width: 576px;
+    width: 600px;
     height: 214px;
 }
 
 .all-results {
-    margin-left: 342px;
+    margin-left: 490px;
     font-weight: bold;
     color: rgb(25, 28, 26);
     font-size: 19px;
@@ -640,12 +640,14 @@ tentative splash form
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+    align-items: center;    
+    background-image: linear-gradient(#141414, #282530)
 }
 
 .filter-title {
     text-align: center;
+    font-size: 22px;
+    color: white
 }
 
 .state-list-elements {
@@ -653,19 +655,46 @@ tentative splash form
     flex-direction: row;
     justify-content: space-evenly;
     list-style: none;
-    width: 900px;
+    width: 1050px;
     padding: 0px;
 }
 
 .state-li {
-    background-color: green;
-    width: 150px;
-    height: 150px;
+    width: 256px;
+    height: 256px;
 
+}
+
+#ca-li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sf-li {
+    background-image: url('/sf_icon.jpg')
+}
+
+#wy-li {
+    background-image: url('/wyoming_icon.jpg')
+}
+
+#nv-li {
+    background-image: url('/las_vegas_icon.jpg')
 }
 
 .state-li:hover {
     background-color: floralwhite;
     cursor: pointer;
 
+}
+
+#state {
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+        1px 1px 0 #000;
+    color: white;
+    font-weight: bold;
 }

@@ -19,9 +19,24 @@ class HomeFilters extends React.Component {
             <div className="home-filter-backgrounds">
                     <p className="filter-title">Find Restaurants By State</p>
                     <ul className="state-list-elements">
-                        <li className="state-li"><a href=""></a>California</li>
-                        <li className="state-li"><a href=""></a>Wyoming</li>
-                        <li className="state-li"><a href=""></a>Nevada</li>
+                        <li className="state-li" id="sf-li">
+                            <div id="ca-li">
+                                <a href=""></a>
+                                <h2 id="state">California</h2>
+                            </div>
+                        </li>
+                        <li className="state-li" id="nv-li">
+                            <div id="ca-li">
+                                <a href=""></a>
+                                <h2 id="state">Nevada</h2>
+                            </div>
+                        </li>
+                        <li className="state-li" id="wy-li">
+                            <div id="ca-li">
+                                <a href=""></a>
+                            <h2 id="state">Wyoming</h2>
+                            </div>
+                        </li>
                     </ul>
             </div>
         )
