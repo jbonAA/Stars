@@ -1,5 +1,6 @@
 import React from 'react';
 import Welcome from './welcome';
+import HomeFilters from './home_filters'
 
 class Greeting extends React.Component {
     constructor(props) {
@@ -8,6 +9,7 @@ class Greeting extends React.Component {
             name: '',
         }
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleLogout = this.handleLogout.bind(this)
     }
 
     handleInput(type) {
@@ -20,6 +22,12 @@ class Greeting extends React.Component {
         event.preventDefault();
         this.props.fetchRestaurants(this.state)
             .then(() => this.props.history.push('/'));
+    }
+
+    handleLogout(event) {
+        event.preventDefault();
+        this.props.logout(this.state)
+            .then(() => this.props.history.push('/'))
     }
 
     render() {
@@ -45,37 +53,42 @@ class Greeting extends React.Component {
                 </div>
                 <div className="greeting-welcome">
                     <h2 className="welcome">Welcome, {this.props.user.first_name}!</h2>
-                    <button className="logout-link" onClick={this.props.logout}>Log Out</button>
+                    <button className="logout-link" onClick={this.handleLogout}>Log Out</button>
                 </div>
             </div>)
         }else{
-            display = (<div className="splash-body" >
-                <div className="top-nav">
-                    <div className="splash-nav-ele">
-                        <p className="nav-ele">Write a review</p>
-                        <p className="nav-ele">Events</p>
-                        <p className="nav-ele">Talk</p>
+            display = (
+            <div>
+                <div className="splash-body" >
+                    <div className="top-nav">
+                        <div className="splash-nav-ele">
+                            <p className="nav-ele">Write a review</p>
+                            <p className="nav-ele">Events</p>
+                            <p className="nav-ele">Talk</p>
+                        </div>
+                        <div>
+                            {<Welcome />}
+                        </div>
                     </div>
-                    <div>
-                        {<Welcome />}
-                    </div>
-                </div>
-                <div className="home-search">
-                    <p className="main-title">Stars</p>
+                    <div className="home-search">
+                        <p className="main-title">Stars</p>
 
-                    <div className="greeting-search-box">
-                        <label className="greeting-search-label">Find</label>
-                        <input
-                            className="greeting-search-form"
-                            type="text"
-                            value={this.state.name}
-                            placeholder="restaurant name"
-                            onChange={this.handleInput('name')}
-                        />
-                        <button className="greeting-search-submit">{icon}</button>
+                        <div className="greeting-search-box">
+                            <label className="greeting-search-label">Find</label>
+                            <input
+                                className="greeting-search-form"
+                                type="text"
+                                value={this.state.name}
+                                placeholder="restaurant name"
+                                onChange={this.handleInput('name')}
+                            />
+                            <button className="greeting-search-submit">{icon}</button>
+                        </div>
                     </div>
                 </div>
-            </div>)   
+                <HomeFilters />
+            </div> 
+                )   
         }
 
         return (

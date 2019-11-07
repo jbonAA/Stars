@@ -573,10 +573,21 @@ tentative splash form
     height: 30px;
     border: none;
     color: gray;
+    font-size: 14px;
 }
 
 .filt:hover {
     cursor: pointer;
+}
+
+.icon1 {
+    height: 15px;
+    width: 15px;
+}
+
+.icon2 {
+    height: 15px;
+    width: 15px;
 }
 
 //restaurant index
@@ -584,6 +595,8 @@ tentative splash form
 .restaurant-ii-photo{
     height: 214px;
     width: 214px;
+    border: 1px solid black;
+    margin-right: 20px;
 }
 
 .restaurant-ii-info {
@@ -596,5 +609,63 @@ tentative splash form
 .restaurant-ii-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.restaurant-info-container {
+    width: 576px;
+    height: 214px;
+}
+
+.all-results {
+    margin-left: 342px;
+    font-weight: bold;
+    color: rgb(25, 28, 26);
+    font-size: 19px;
+}
+
+.restaurant-title {
+    font-size: 19px;
+    text-decoration-line: none;
+    font-weight: bold;
+    color: rgb(64, 61, 173)
+}
+
+
+//home state filters
+
+.home-filter-backgrounds {
+    width: 100vw;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.filter-title {
+    text-align: center;
+}
+
+.state-list-elements {
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
+    list-style: none;
+    width: 900px;
+    padding: 0px;
+}
+
+.state-li {
+    background-color: green;
+    width: 150px;
+    height: 150px;
+
+}
+
+.state-li:hover {
+    background-color: floralwhite;
+    cursor: pointer;
+
 }

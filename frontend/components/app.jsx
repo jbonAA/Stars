@@ -13,10 +13,10 @@ const App = () => (
   
         <Switch>
             {/* <AuthRoute exact path="/" component={GreetingContainer} /> */}
+            <Route exact path="/search" component={SearchContainer} />
             <Route exact path="/" component={HomeContainer} />
             <ProtectedRoute path="/login" component={LoginContainer} />
             <ProtectedRoute path="/signup" component={SignupContainer} />
-            <Route exact path="/search" component={SearchContainer} />
             {/* <Route path="/" component={Footer} /> */}
             <Redirect to="/" />
         </Switch>

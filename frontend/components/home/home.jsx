@@ -32,7 +32,6 @@ class Home extends React.Component{
         return (
             <div className="home">
                 <GreetingContainer />
-                <FilterContainer />
             </div>
         )
     }

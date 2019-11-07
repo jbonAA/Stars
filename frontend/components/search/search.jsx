@@ -1,6 +1,7 @@
 import React from 'react';
 import RestaurantIndex from './restaurant_index';
-
+import Filter from '../nav_bar/filter';
+import HomeContainer from '../home/home_container'
 
 class Search extends React.Component {
     constructor(props){
@@ -23,9 +24,13 @@ class Search extends React.Component {
         }else{
             display = null
         }
-        debugger
+        // debugger
         return (
             <div>
+                <HomeContainer />
+                <Filter />
+                <br/>
+                <br/>
                 {display}
             </div>
         )

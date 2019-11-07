@@ -23,7 +23,7 @@ class Login extends React.Component{
         event.preventDefault();
         
         this.props.login(this.state)
-            .then(() => this.props.history.push('/'));
+            .then(() => this.props.history.push('/search'));
     }
 
     handleErrors() {
@@ -39,9 +39,9 @@ class Login extends React.Component{
             email: "guest@aa.io",
             password: "password"
         }
-        debugger
+        // debugger
         this.props.login(user)
-            .then(() => this.props.history.push('/'));
+            .then(() => this.props.history.push('/search'));
     }
 
     render() {
