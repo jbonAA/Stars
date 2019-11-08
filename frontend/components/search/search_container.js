@@ -3,9 +3,12 @@ import { asArray } from '../../reducers/selectors';
 import Search from './search';
 import {fetchRestaurants} from '../../actions/restaurant_actions';
 
-const mapStateToProps = (state) => ({
-    restaurants: asArray(state.entities)
-})
+const mapStateToProps = (state) => {
+    return ({
+        restaurants: asArray(state.entities),
+
+    })
+}
 
 const mapDispatchToProps = (dispatch) =>  ({
     fetchRestaurants: () => dispatch(fetchRestaurants())

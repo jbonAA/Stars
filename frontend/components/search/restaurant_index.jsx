@@ -1,16 +1,26 @@
 import React from 'react';
 import RestaurantIndexItem from './restaurant_index_items';
 import Filter from '../nav_bar/filter';
-
+//react component
+//listen using 
+//maybe ui reducer for default location & handles
 const RestaurantIndex = ({restaurants}) => {
+    let filtered_restaurants = []
+    restaurants.forEach((rest) => {
+        if (rest.state === window.localStorage.getItem(location)) {
+            filtered_restaurants.push(rest)
+        }
+    })
+    
+
     return (
     <div className="inner-restaurant-index">
-        <Filter />
+        <Filter total={filtered_restaurants.length}/>
         <p className="all-results">All Results</p>
-        {restaurants.map(restaurant => (
+        {filtered_restaurants.map(restaurant => (
+            
             <div> <RestaurantIndexItem
                 restaurant={restaurant}
-                total={restaurants.length}
                 key={restaurant.id} />
                 <br/>
             </div>

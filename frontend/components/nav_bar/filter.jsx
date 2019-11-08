@@ -5,7 +5,6 @@ class Filter extends React.Component {
     constructor(props) {
         super(props)
         //pass index of restaurants into props
-
         this.state = {
             filters: []
             //onclick update filter
@@ -40,7 +39,16 @@ class Filter extends React.Component {
         //iterate through the most recent element in state array
         //render restaurant items that have that element.true/make frontend calls
         //no need to map and make ajax calls to backend
-
+        let state = window.localStorage.getItem(location)
+        let display;
+        if(state === 'CA'){
+            display = "California"
+        }else if (state === 'NV') {
+            display = "Nevada"
+        }else if (state === 'WY'){
+            display="Wyoming"
+        }
+            
         const deliveryicon = (<img className="icon2" src="https://img.icons8.com/material/24/000000/delivery--v1.png"></img>)
         const takeouticon = (<img className="icon1" src="https://img.icons8.com/ios-filled/50/000000/take-away-food.png"></img>)
         return(
@@ -50,15 +58,15 @@ class Filter extends React.Component {
                         <div className="filter-header">
                             <h2>
                                 <span className="restaurants">
-                                    Restaurants 
-                                    <span> in San Francisco, CA</span>
+                                    Restaurants in 
+                                    <span> {display}</span>
                                 </span>
                             </h2>
-                            <p>Showing number/total</p>
+                            <p>Showing number/{this.props.total}</p>
                         </div>
                         <div className="filter-selector">
                             <div className="split-selector">   
-                                <a href="">San Francisco </a>
+                                <a href="">{display} </a>
                                 <p className="no-margin">></p>
                                 <a href="">Restaurants</a>
                             </div>

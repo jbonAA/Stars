@@ -6,19 +6,32 @@ import HomeContainer from '../home/home_container'
 class Search extends React.Component {
     constructor(props){
         super(props)
-        this.props.fetchRestaurants()
+        
     }
 
     componentDidMount() {
         this.props.fetchRestaurants()
+        
+        if (window.localStorage.getItem(location) === "undefined" ||
+        ["CA", "NV", "WY"].includes(this.props.location.query)) {
+            window.localStorage.setItem(location, this.props.location.query)
+        }
     }
+// window.localStorage.getItem(location) !== this.props.location.query)
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.location.query !== this.props.location.query){
+
+    //     } 
+    // }
 
     render() {
         let display;
         if (this.props.restaurants){
             display = (
                 <div className="search-restaurant-index">
-                    <RestaurantIndex restaurants={this.props.restaurants} />
+                    <RestaurantIndex 
+                        restaurants={this.props.restaurants}
+                        loc={this.props.location.query} />
                 </div>
             )
         }else{

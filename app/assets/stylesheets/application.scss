@@ -437,7 +437,6 @@ tentative splash form
     background: rgb(20, 18, 18);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
     height: 90px;
     width: 100vw;
@@ -449,7 +448,7 @@ tentative splash form
 .greeting-search-box {
     border: 3px solid white;
     height: 40px;
-    width: 900px;
+    width: 770px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -485,7 +484,7 @@ tentative splash form
 .greeting-title {
     color: white;
     font-size: 36px;
-    margin-left: 150px;
+    margin-left: 80px;
 }
 
 .logout-link {
@@ -497,7 +496,7 @@ tentative splash form
     width: 350px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -508,6 +507,8 @@ tentative splash form
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(248, 241, 241);
+    border: 1px solid rgb(201, 192, 192);
     
 }
 
@@ -520,11 +521,19 @@ tentative splash form
 
 }
 
+.price-filters {
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+
+}
+
 .each-filter-feature {
     min-width: 900px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    align-items: flex-start;
+    justify-content: space-around;
     padding-top: 20px;
     margin-right: 60px;
 }
@@ -536,7 +545,7 @@ tentative splash form
     align-items: center;
     min-width: 900px;
     margin-right: 60px;
-    padding-top: 40px;
+    padding-top: 10px;
     
 }
 
@@ -569,11 +578,10 @@ tentative splash form
 }
 
 .filt {
-    width: 90px;
     height: 30px;
     border: none;
     color: gray;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .filt:hover {
@@ -618,7 +626,7 @@ tentative splash form
 }
 
 .all-results {
-    margin-left: 490px;
+    margin-left: 17vw;
     font-weight: bold;
     color: rgb(25, 28, 26);
     font-size: 19px;
@@ -636,7 +644,7 @@ tentative splash form
 
 .home-filter-backgrounds {
     width: 100vw;
-    height: 330px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -662,7 +670,13 @@ tentative splash form
 .state-li {
     width: 256px;
     height: 256px;
+    border-radius: 3px;
+    border: 3px solid;
 
+}
+
+.state-li:hover {
+    border-color: white;
 }
 
 #ca-li {
