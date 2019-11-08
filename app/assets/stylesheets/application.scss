@@ -49,7 +49,7 @@ tentative login/signup forms
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-image: url('/login_background2.jpg');
+    background-image: image_url('login_background2.jpg');
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@ tentative login/signup forms
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-image: url('/rest_background.jpg');
+    background-image: image_url('rest_background.jpg');
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
@@ -263,7 +263,7 @@ tentative splash form
     display: flex;
     flex-direction: column;
     height: 650px;
-    background-image: url('/steak_home.jpg');
+    background-image: image_url('steak_home.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -686,15 +686,15 @@ tentative splash form
 }
 
 #sf-li {
-    background-image: url('/sf_icon.jpg')
+    background-image: image_url('sf_icon.jpg')
 }
 
 #wy-li {
-    background-image: url('/wyoming_icon.jpg')
+    background-image: image_url('wyoming_icon.jpg')
 }
 
 #nv-li {
-    background-image: url('/las_vegas_icon.jpg')
+    background-image: image_url('las_vegas_icon.jpg')
 }
 
 .state-li:hover {
