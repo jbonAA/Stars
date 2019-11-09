@@ -12,6 +12,11 @@ class Greeting extends React.Component {
         // this.handleLogout = this.handleLogout.bind(this)
     }
 
+    componentDidMount() {
+        // debugger
+        window.localStorage.setItem(["[object Object]"], JSON.stringify({}))
+    }
+
     handleInput(type) {
         return (event) => {
             this.setState({ [type]: event.target.value });

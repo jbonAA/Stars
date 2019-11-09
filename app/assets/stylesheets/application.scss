@@ -437,7 +437,8 @@ tentative splash form
     background: rgb(20, 18, 18);
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
+    align-content: center;
     height: 90px;
     width: 100vw;
     
@@ -453,6 +454,7 @@ tentative splash form
     flex-direction: row;
     justify-content: center;
     border-radius: 3px;
+    margin-top: 22px;
 }
 
 .greeting-search-form {
@@ -485,6 +487,7 @@ tentative splash form
     color: white;
     font-size: 36px;
     margin-left: 80px;
+    margin-top: 26px;
 }
 
 .logout-link {
@@ -518,14 +521,35 @@ tentative splash form
     align-items: center;
     width: 900px;
     justify-content: space-evenly;
+    padding-bottom: 10px;
 
 }
 
 .price-filters {
-    width: 30px;
+    width: 150px;
     display: flex;
     flex-direction: row;
 
+}
+
+#green {
+    background-color: green;
+    outline-color: darkgreen;
+}
+
+.takeout {
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.cuisine-filters {
+    width: 315px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .each-filter-feature {
@@ -533,7 +557,7 @@ tentative splash form
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-top: 20px;
     margin-right: 60px;
 }
@@ -544,7 +568,7 @@ tentative splash form
     justify-content: space-between;
     align-items: center;
     min-width: 900px;
-    margin-right: 60px;
+    margin-right: 18px;
     padding-top: 10px;
     
 }
@@ -564,7 +588,8 @@ tentative splash form
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 200px;
+    width: 190px;
+    margin-left: 10px;
     
 }
 
@@ -579,9 +604,12 @@ tentative splash form
 
 .filt {
     height: 30px;
+    width: 100px;
     border: none;
     color: gray;
     font-size: 13px;
+    outline: 1px solid black;
+    
 }
 
 .filt:hover {
@@ -626,7 +654,7 @@ tentative splash form
 }
 
 .all-results {
-    margin-left: 17vw;
+    margin-left: 26%;
     font-weight: bold;
     color: rgb(25, 28, 26);
     font-size: 19px;
@@ -711,4 +739,115 @@ tentative splash form
         1px 1px 0 #000;
     color: white;
     font-weight: bold;
+}
+
+//dropdown filters index page
+
+.dropdown-house{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 90px;
+    
+}
+
+#more {
+    width: 90px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    width: 710px;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    width: 170px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    width: 150px;
+    text-align: center;
+
+
+}
+
+i {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 4px;
+  margin-bottom: 2.5px;
+}
+
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.dd-links{
+    width: 325px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dd-review {
+    width: 120px;
+
 }
