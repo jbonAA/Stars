@@ -14,9 +14,10 @@ class Filter extends React.Component {
 
         this.filters = {}
 
-        this.handleDelivery = this.handleDelivery.bind(this)
+
         this.handleTakeout = this.handleTakeout.bind(this)
         this.handlePrice = this.handlePrice.bind(this)
+        this.handleCuisine = this.handleCuisine.bind(this)
     }
 
     componentDidMount() {
@@ -28,25 +29,50 @@ class Filter extends React.Component {
         }
     }
 
-    handleDelivery() {
-        //filter index by delivery
-    }
-
-    handlePrice() {
-        //filter index by price
+    handlePrice(e) {
+        e.preventDefault();
+        if (e.currentTarget.id === "green") {
+            this.filters[e.target.value] = ""
+            e.currentTarget.id = ""
+            window.localStorage.setItem(this.filters, JSON.stringify(this.filters))
+            this.forceUpdate()
+        } else {
+            e.currentTarget.id = "green"
+            // debugger
+            this.filters[e.target.value] = e.target.textContent
+            window.localStorage.setItem(this.filters, JSON.stringify(this.filters))
+            this.forceUpdate()
+        }
     }
 
     handleTakeout(e) {
         e.preventDefault();
-        // debugger
-        e.currentTarget.id="green"
-        this.filters[e.target.value] = true
-        window.localStorage.setItem(this.filters, JSON.stringify(this.filters))
-        this.forceUpdate()
+        if (e.currentTarget.id === "green"){
+            this.filters[e.target.value] = ""
+            e.currentTarget.id = ""
+            window.localStorage.setItem(this.filters, JSON.stringify(this.filters))
+            this.forceUpdate()
+        }else{
+            e.currentTarget.id="green"
+            this.filters[e.target.value] = true
+            window.localStorage.setItem(this.filters, JSON.stringify(this.filters))
+            this.forceUpdate()
+        }
     }
 
-    handleCuisine() {
-        //add filters to state
+    handleCuisine(e) {
+        e.preventDefault();
+        if (e.currentTarget.id === "green") {
+            this.filters[e.target.value] = ""
+            e.currentTarget.id = ""
+            window.localStorage.setItem(this.filters, JSON.stringify(this.filters))
+            this.forceUpdate()
+        } else {
+            e.currentTarget.id = "green"
+            this.filters[e.target.value] = e.target.textContent
+            window.localStorage.setItem(this.filters, JSON.stringify(this.filters))
+            this.forceUpdate()
+        }
     }
 
     clearFilters() {
@@ -69,7 +95,8 @@ class Filter extends React.Component {
         }
 
         
-            
+        let number = window.localStorage.getItem(number)
+        let total = window.localStorage.getItem(total)
         const deliveryicon = (<img className="icon2" src="https://img.icons8.com/material/24/000000/delivery--v1.png"></img>)
         const takeouticon = (<img className="icon1" src="https://img.icons8.com/ios-filled/50/000000/take-away-food.png"></img>)
         return(
@@ -84,7 +111,7 @@ class Filter extends React.Component {
                                     <span> {display}</span>
                                 </span>
                             </h2>
-                            <p>Showing number/{this.props.total}</p>
+                            <p>{number}/{total}</p>
                         </div>
                         <div className="filter-selector">
                             <div className="split-selector">   
@@ -99,19 +126,19 @@ class Filter extends React.Component {
                     <div className="each-filter-feature">
                         <button className="filt">All Filters</button>
                         <div className="price-filters">
-                            <button className="filt" onClick={this.handlePrice}>$</button>
-                            <button className="filt" onClick={this.handlePrice}>$$</button>
-                            <button className="filt" onClick={this.handlePrice}>$$$</button>
-                            <button className="filt" onClick={this.handlePrice}>$$$$</button>
+                            <button className="filt" onClick={this.handlePrice} value="price">$</button>
+                            <button className="filt" onClick={this.handlePrice} value="price">$$</button>
+                            <button className="filt" onClick={this.handlePrice} value="price">$$$</button>
+                            <button className="filt" onClick={this.handlePrice} value="price">$$$$</button>
                         </div>
                         <div className="cuisine-filters">
-                            <button className="filt" onClick={this.handleCuisine}>American</button>
-                            <button className="filt">Breakfast</button>
-                            <button className="filt">French</button>
+                            <button className="filt" onClick={this.handleCuisine} value="description">American</button>
+                            <button className="filt" onClick={this.handleCuisine} value="description">Breakfast</button>
+                            <button className="filt" onClick={this.handleCuisine} value="description">French</button>
                         </div>
                         <div className="takeout">
-                            <button className="filt" onClick={this.handleTakeout} value="takeout"> {takeouticon} Takeout</button>
-                            <button className="filt" value="delivery"> {deliveryicon} Delivery</button>
+                            <button className="filt" onClick={this.handleTakeout} value="takeout">{takeouticon}Takeout</button>
+                            <button className="filt" onClick={this.handleTakeout} value="delivery">{deliveryicon}Delivery</button>
                         </div>
                     </div>
                 </div>

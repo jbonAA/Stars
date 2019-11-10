@@ -533,8 +533,8 @@ tentative splash form
 }
 
 #green {
-    background-color: green;
-    outline-color: darkgreen;
+    background-color: rgb(173, 224, 173);
+    outline-color: green;
 }
 
 .takeout {
@@ -850,4 +850,46 @@ i {
 .dd-review {
     width: 120px;
 
+}
+
+//restaurant show
+
+.rest-show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rest-photo-show {
+    width: 100vw;
+    height: 256px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#pic {
+    height: 254px;
+    width: 256px;
+    border: 1px solid black;
+}
+
+.rest-show-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    outline: black;
+}
+
+.show-info-left {
+    border: 1px solid black;
+    width: 45vw;
+}
+
+.show-info-right {
+    border: 1px solid black;
+    width: 28vw;
 }

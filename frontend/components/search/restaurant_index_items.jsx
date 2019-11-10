@@ -1,14 +1,19 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import RestaurantShowContainer from '../restaurants/restaurant_show_container'
 
 class RestaurantIndexItem extends React.Component {
     constructor(props){
         super(props)
-
-        //this.handleclick for access to show
+        debugger
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    //handleClick()
+    handleClick() {
+        debugger
+        const restaurantId = this.props.restaurant.id
+        this.props.history.push(`/restaurants/${restaurantId}`)
+    }
 
     render() {
         return (
@@ -18,8 +23,8 @@ class RestaurantIndexItem extends React.Component {
                 </div>
                 <div className="restaurant-info-container">
                     <div className="restaurant-ii-info">
-                        <div className="restaurant-info-top-left">
-                            <a href="" className="restaurant-title" >{this.props.restaurant.name}</a>
+                        <div className="restaurant-info-top-left" onClick={this.handleClick}>
+                            <p className="restaurant-title">{this.props.restaurant.name}</p>
                             <p>{this.props.restaurant.stars}</p>
                             <p>{this.props.restaurant.price}</p>
                             <p>{this.props.restaurant.description}</p>
@@ -40,4 +45,4 @@ class RestaurantIndexItem extends React.Component {
     }
 }
 
-export default RestaurantIndexItem
+export default withRouter(RestaurantIndexItem)

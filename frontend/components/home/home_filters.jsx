@@ -24,13 +24,13 @@ class HomeFilters extends React.Component {
                         <li className="state-li" id="sf-li">
                             <div id="ca-li">
 
-                            <Link to={{pathname: "/search", query: "CA"}}><h2 id="state">California</h2></Link>
+                            <Link to={{pathname: "/restaurants", query: "CA"}}><h2 id="state">California</h2></Link>
                                 
                             </div>
                         </li>
                         <li className="state-li" id="nv-li">
                             <div id="ca-li">
-                            <Link to={{ pathname: "/search", query: "NV" }}><h2 id="state">Nevada</h2></Link>
+                            <Link to={{ pathname: "/restaurants", query: "NV" }}><h2 id="state">Nevada</h2></Link>
                                 
                             </div>
                         </li>

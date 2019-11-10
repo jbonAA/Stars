@@ -39,7 +39,7 @@ class Greeting extends React.Component {
 
         const icon = (<img src="https://img.icons8.com/ios-glyphs/30/000000/search.png"/>)
         let display = ""
-        if (window.location.hash === '#/search'){
+        if (window.location.hash !== '#/'){
             display = 
             (<div className="greeting-search">
                 <div className="logo-title">

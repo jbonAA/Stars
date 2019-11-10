@@ -7,13 +7,15 @@ import NavBarContainer from './nav_bar/nav_bar_container'
 import Footer from './nav_bar/footer';
 import HomeContainer from './home/home_container';
 import SearchContainer from './search/search_container';
+import RestaurantShowContainer from './restaurants/restaurant_show_container'
 
 const App = () => (
     <div>
   
         <Switch>
             {/* <AuthRoute exact path="/" component={GreetingContainer} /> */}
-            <Route exact path="/search" component={SearchContainer} />
+            <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+            <Route exact path="/restaurants" component={SearchContainer} />
             <Route exact path="/" component={HomeContainer} />
             <ProtectedRoute path="/login" component={LoginContainer} />
             <ProtectedRoute path="/signup" component={SignupContainer} />

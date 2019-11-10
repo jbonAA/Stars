@@ -19,8 +19,8 @@ export const fetchRestaurants = () => dispatch => (
     ))
 );
 
-export const fetchBench = id => dispatch => (
-    APIUtil.fetchBench(id).then(payload => (
+export const fetchRestaurant = id => dispatch => (
+    APIUtil.fetchRestaurant(id).then(payload => (
         dispatch(receiveRestaurant(payload))
     ))
 );
