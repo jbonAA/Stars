@@ -11,6 +11,7 @@ class IndexDropdown extends React.Component{
         return(
             <div className="dropdown-house">
                 <div className="navbar">
+
                     <div className="dropdown">
                         <button className="dropbtn">Restaurants
                             <i className="down"></i>
@@ -22,6 +23,7 @@ class IndexDropdown extends React.Component{
                         </div>
 
                     </div>
+                    
                     <div className="dropdown">
                         <button className="dropbtn">Home Services   
                             <i className="down"></i>

@@ -38,7 +38,7 @@ class Filter extends React.Component {
             this.forceUpdate()
         } else {
             e.currentTarget.id = "green"
-            // debugger
+
             this.filters[e.target.value] = e.target.textContent
             window.localStorage.setItem(this.filters, JSON.stringify(this.filters))
             this.forceUpdate()
@@ -83,7 +83,7 @@ class Filter extends React.Component {
         //iterate through the most recent element in state array
         //render restaurant items that have that element.true/make frontend calls
         //no need to map and make ajax calls to backend
-        // debugger
+
         let state = window.localStorage.getItem(location)
         let display;
         if(state === 'CA'){
@@ -148,6 +148,7 @@ class Filter extends React.Component {
                     restaurants={this.props.restaurants}
                     loc={this.props.loc}
                     filters={this.filters}
+                    fetchRestaurant={this.props.fetchRestaurant}
                     />
 
                 </div>

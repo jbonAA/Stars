@@ -2,6 +2,7 @@ import * as APIUtil from '../util/restaurant_util';
 
 export const RECEIVE_RESTAURANTS = "RECEIVE_RESTAURANTS"
 export const RECEIVE_RESTAURANT = "RECEIVE_RESTAURANT"
+export const RECEIVE_REVIEW = "RECEIVE_REVIEW"
 
 export const receiveRestaurants = restaurants => ({
     type: RECEIVE_RESTAURANTS,
@@ -11,6 +12,11 @@ export const receiveRestaurants = restaurants => ({
 export const receiveRestaurant = restaurant => ({
     type: RECEIVE_RESTAURANT,
     restaurant
+})
+
+export const receiveReview = ({ review }) => ({
+    type: RECEIVE_REVIEW,
+    review
 })
 
 export const fetchRestaurants = () => dispatch => (
@@ -24,3 +30,11 @@ export const fetchRestaurant = id => dispatch => (
         dispatch(receiveRestaurant(payload))
     ))
 );
+
+export const createReview = review => dispatch => {
+    
+    return(
+    APIUtil.createReview(review).then(review => (
+        dispatch(receiveReview(review))
+    )))
+    }

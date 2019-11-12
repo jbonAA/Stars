@@ -5,14 +5,14 @@ import RestaurantShowContainer from '../restaurants/restaurant_show_container'
 class RestaurantIndexItem extends React.Component {
     constructor(props){
         super(props)
-        debugger
+
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-        debugger
+
         const restaurantId = this.props.restaurant.id
-        this.props.history.push(`/restaurants/${restaurantId}`)
+        this.props.fetchRestaurant(restaurantId).then(() => this.props.history.push(`/restaurants/${restaurantId}`))
     }
 
     render() {

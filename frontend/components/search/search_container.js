@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { asArray } from '../../reducers/selectors';
 import Search from './search';
-import {fetchRestaurants} from '../../actions/restaurant_actions';
+import {fetchRestaurants, fetchRestaurant} from '../../actions/restaurant_actions';
 
 const mapStateToProps = (state) => {
     return ({
@@ -11,7 +11,9 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) =>  ({
-    fetchRestaurants: () => dispatch(fetchRestaurants())
+    fetchRestaurants: () => dispatch(fetchRestaurants()),
+    fetchRestaurant: (id) => dispatch(fetchRestaurant(id))
+
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search)

@@ -3,11 +3,11 @@ import RestaurantIndexItem from './restaurant_index_items';
 // import Filter from '../nav_bar/filter';
 
 
-const RestaurantIndex = ({restaurants, filters}) => {
-    // debugger
+const RestaurantIndex = ({restaurants, filters, fetchRestaurant}) => {
+
     let filtered_restaurants = []
     console.log(restaurants)
-    // debugger
+
     restaurants.forEach((rest) => {
         if (rest.state === window.localStorage.getItem(location)){
             filtered_restaurants.push(rest)
@@ -46,25 +46,6 @@ const RestaurantIndex = ({restaurants, filters}) => {
         }
     })
 
-    // localStorage.setItem(total, restaurants.length)
-    // window.localStorage.setItem(number, further_filt_restaurants.length)
-
-
-
-    //         if ((Object.keys(JSON.parse(localStorage.getItem(filters)))).length > 0){
-    //             Object.keys(JSON.parse(localStorage.getItem(filters))).forEach((key) => {
-    //                 let check = JSON.parse(localStorage.getItem(filters))[key]
-    //                 if (rest.key === check){
-    //                     filtered_restaurants.push(rest)
-    //                 }
-    //             })
-    //         }else{
-    //             filtered_restaurants.push(rest)
-    //         }
-    //     }
-    // })    
-    // debugger
-
     return (
     <div className="inner-restaurant-index">
         {/* <Filter total={filtered_restaurants.length}/> */}
@@ -72,7 +53,9 @@ const RestaurantIndex = ({restaurants, filters}) => {
         {further_filt_restaurants.map(restaurant => (
             <div> <RestaurantIndexItem
                 restaurant={restaurant}
-                key={restaurant.id} />
+                key={restaurant.id}
+                fetchRestaurant={fetchRestaurant}
+            />
                 <br/>
             </div>
         ))}

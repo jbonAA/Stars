@@ -1,19 +1,25 @@
 import { connect } from 'react-redux';
 import { fetchRestaurant } from '../../actions/restaurant_actions';
-import { selectRestaurant } from '../../reducers/selectors';
+import { selectRestaurant, selectReviewsForRestaurant } from '../../reducers/selectors';
 import RestaurantShow from './restaurant_show';
+import restaurantReducer from '../../reducers/restaurant_reducer';
 
 const mapStateToProps = (state, { match }) => {
     const restaurantId = parseInt(match.params.restaurantId);
-    const restaurant = selectRestaurant(state.entities, restaurantId);
+    const show = state.entities.restaurants.restaurant;
+    const reviews = state.entities.restaurants.reviews
+
+    // const restaurant = selectRestaurant(state.entities, restaurantId)
+    // const reviews = selectReviewsForRestaurant(state.entities, restaurant)
     return {
         restaurantId,
-        restaurant
+        show,
+        reviews
     };
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchRestaurant: id => dispatch(fetchRestaurant(id))
+    fetchRestaurant: id => dispatch(fetchRestaurant(id)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(RestaurantShow)

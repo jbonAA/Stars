@@ -13,7 +13,7 @@ class Greeting extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
+
         window.localStorage.setItem(["[object Object]"], JSON.stringify({}))
     }
 
