@@ -19,6 +19,7 @@ class ReviewForm extends React.Component {
     }
 
     handleInput(type) {
+
         return(event) => {
             this.setState({ [type]: event.target.value })
         };
@@ -45,38 +46,37 @@ class ReviewForm extends React.Component {
         return(
             <div>
                 <GreetingContainer />
-                <IndexDropdown />
-                <div className="review">
-                    <div className="review-stars">
-                        <input
-                            id={this.props.errors.length === 0 ? "" : ("error")}
-                            type="text"
-                            value={this.state.stars}
-                            placeholder="integer test"
-                            onChange={this.handleInput('stars')} />
-                    </div>
-                    <div className="review-title">
-                        <input 
-                            id={this.props.errors.length === 0 ? "" : ("error")}
-                            type="text"
-                            value={this.state.title}
-                            placeholder="temp"
-                            onChange={this.handleInput('title')}/>
+                <div id="new-review">
+                    <div id="title-rev">
+                        <h2>{localStorage.getItem("name")}</h2>
+                        <a id="rev-a" href="">Read our Review Guidelines</a>
                     </div>
                     <div>
-                        <textarea
-                            id={this.props.errors.length === 0 ? "" : ("error")} 
-                            value={this.state.description}
-                            cols="30"
-                            rows="10"
-                            onChange={this.handleInput('description')}    
-                            >
-                         </textarea>
+
+                        <div className="review-title">
+                            <input 
+                                id={this.props.errors.length === 0 ? "" : ("error")}
+                                type="text"
+                                value={this.state.title}
+                                placeholder="temp"
+                                onChange={this.handleInput('title')}/>
+                        </div>
+                        <div>
+                            <textarea
+                            className="description-review"
+                                id={this.props.errors.length === 0 ? "" : ("error")} 
+                                value={this.state.description}
+                                cols="30"
+                                rows="10"
+                                onChange={this.handleInput('description')}    
+                                >
+                            </textarea>
+                        </div>
+                        <button onClick={this.handleSubmit}>Submit</button>
                     </div>
 
                 </div>
                 
-                <button onClick={this.handleSubmit}>Submit</button>
             </div>
         )
 

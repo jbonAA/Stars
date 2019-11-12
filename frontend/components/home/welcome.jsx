@@ -12,8 +12,8 @@ class Welcome extends React.Component {
 
     handleLogout(event) {
         event.preventDefault();
-        this.props.logout(this.state)
-            .then(() => this.props.history.push('/'))
+        this.props.logout()
+            .then(() => this.props.history.goBack())
     }
 
     render(){

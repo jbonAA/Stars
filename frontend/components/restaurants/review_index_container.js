@@ -3,7 +3,6 @@ import ReviewIndex from './review_index';
 
 
 const mapStateToProps = (state) => {
-    debugger
     let reviews;
     if (Object.values(state.entities.restaurants).length === 0){
         reviews = []

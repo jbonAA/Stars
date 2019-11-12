@@ -10,9 +10,10 @@ class RestaurantIndexItem extends React.Component {
     }
 
     handleClick() {
-
-        const restaurantId = this.props.restaurant.id
-        this.props.fetchRestaurant(restaurantId).then(() => this.props.history.push(`/restaurants/${restaurantId}`))
+        
+        const {id} = this.props.restaurant
+        localStorage.setItem("restaurantId", id)
+        this.props.fetchRestaurant(id).then(() => this.props.history.push(`/restaurants/${id}`))
     }
 
     render() {

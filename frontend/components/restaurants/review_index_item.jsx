@@ -17,18 +17,20 @@ class ReviewIndexItems extends React.Component {
             }else{
                 display = null
             }
+
         return (
+            <div id="rev">
+                <li id="review-ele">
+                    <div>
+                        <h2>{review.title}</h2>
+                    </div>
+                    <div>
+                        <p>{review.description}</p>
+                    </div>
 
-            <li>
-                <div>
-                    <h2>{review.title}</h2>
-                </div>
-                <div>
-                    <p>{review.description}</p>
-                </div>
-
-                {display}
-            </li>
+                    {display}
+                </li>
+            </div>
         )
     }
 

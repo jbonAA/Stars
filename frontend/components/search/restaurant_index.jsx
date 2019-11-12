@@ -47,18 +47,19 @@ const RestaurantIndex = ({restaurants, filters, fetchRestaurant}) => {
     })
 
     return (
-    <div className="inner-restaurant-index">
-        {/* <Filter total={filtered_restaurants.length}/> */}
-        <p className="all-results">All Results</p>
-        {further_filt_restaurants.map(restaurant => (
-            <div> <RestaurantIndexItem
-                restaurant={restaurant}
-                key={restaurant.id}
-                fetchRestaurant={fetchRestaurant}
-            />
-                <br/>
-            </div>
-        ))}
+    <div id="center">
+        <div className="inner-restaurant-index">
+            {/* <Filter total={filtered_restaurants.length}/> */}
+            {further_filt_restaurants.map(restaurant => (
+                <div> <RestaurantIndexItem
+                    restaurant={restaurant}
+                    key={restaurant.id}
+                    fetchRestaurant={fetchRestaurant}
+                />
+                    <br/>
+                </div>
+            ))}
+        </div>
     </div>
     )
 }

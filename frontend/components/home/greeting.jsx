@@ -39,67 +39,78 @@ class Greeting extends React.Component {
 
         const icon = (<img src="https://img.icons8.com/ios-glyphs/30/000000/search.png"/>)
         let display = ""
-        if (window.location.hash !== '#/'){
-            display = 
-            (<div className="greeting-search">
-                <div className="logo-title">
-                    <p className="greeting-title">Stars</p>
-                </div>
-                <div className="greeting-search-box">
-                    <label className="greeting-search-label">Find</label>
-                    <input
-                        className="greeting-search-form"
-                        type="text"
-                        value={this.state.name}
-                        placeholder="restaurant name"
-                        onChange={this.handleInput('name')}
-                    />
-                    <button className="greeting-search-submit" onClick={this.handleSubmit}>{icon}</button>
-                </div>
-                <div className="greeting-welcome">
-                    <WelcomeContainer />
-                </div>
 
-                {/* <div className="greeting-welcome">
-                    <h2 className="welcome">Welcome, {this.props.user.first_name}!</h2>
-                    <button className="logout-link" onClick={this.handleLogout}>Log Out</button>
-                </div> */}
-
-
-            </div>)
-        }else{
+        if (window.location.hash.includes("/review/new")){
+                display = (
+                    <div className="greeting-new">
+                        <div className="logo-title">
+                            <p className="greeting-title">Stars</p>
+                        </div>
+                        <div className="greeting-welcome">
+                            <WelcomeContainer />
+                        </div>
+                    </div>
+                )
+        
+        
+        } else if (window.location.hash === '#/'){
             display = (
-            <div>
-                <div className="splash-body" >
-                    <div className="top-nav">
-                        <div className="splash-nav-ele">
-                            <p className="nav-ele">Write a review</p>
-                            <p className="nav-ele">Events</p>
-                            <p className="nav-ele">Talk</p>
+                <div>
+                    <div className="splash-body" >
+                        <div className="top-nav">
+                            <div className="splash-nav-ele">
+                                <p className="nav-ele">Write a review</p>
+                                <p className="nav-ele">Events</p>
+                                <p className="nav-ele">Talk</p>
+                            </div>
+                            <div>
+                                {<WelcomeContainer />}
+                            </div>
                         </div>
-                        <div>
-                            {<WelcomeContainer />}
-                        </div>
-                    </div>
-                    <div className="home-search">
-                        <p className="main-title">Stars</p>
+                        <div className="home-search">
+                            <p className="main-title">Stars</p>
 
-                        <div className="greeting-search-box">
-                            <label className="greeting-search-label">Find</label>
-                            <input
-                                className="greeting-search-form"
-                                type="text"
-                                value={this.state.name}
-                                placeholder="restaurant name"
-                                onChange={this.handleInput('name')}
-                            />
-                            <button className="greeting-search-submit">{icon}</button>
+                            <div className="greeting-search-box">
+                                <label className="greeting-search-label">Find</label>
+                                <input
+                                    className="greeting-search-form"
+                                    type="text"
+                                    value={this.state.name}
+                                    placeholder="restaurant name"
+                                    onChange={this.handleInput('name')}
+                                />
+                                <button className="greeting-search-submit">{icon}</button>
+                            </div>
                         </div>
                     </div>
+                    <HomeFilters />
                 </div>
-                <HomeFilters />
-            </div> 
-                )   
+            )   
+
+        }else{
+
+            display =
+                (<div className="greeting-search">
+                    <div className="logo-title">
+                        <p className="greeting-title">Stars</p>
+                    </div>
+                    <div className="greeting-search-box">
+                        <label className="greeting-search-label">Find</label>
+                        <input
+                            className="greeting-search-form"
+                            type="text"
+                            value={this.state.name}
+                            placeholder="restaurant name"
+                            onChange={this.handleInput('name')}
+                        />
+                        <button className="greeting-search-submit" onClick={this.handleSubmit}>{icon}</button>
+                    </div>
+                    <div className="greeting-welcome">
+                        <WelcomeContainer />
+                    </div>
+
+                </div>
+            )  
         }
 
         return (

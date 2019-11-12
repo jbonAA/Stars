@@ -111,7 +111,7 @@ class Filter extends React.Component {
                                     <span> {display}</span>
                                 </span>
                             </h2>
-                            <p>{number}/{total}</p>
+                            <p className="all-results">All Results</p>
                         </div>
                         <div className="filter-selector">
                             <div className="split-selector">   
