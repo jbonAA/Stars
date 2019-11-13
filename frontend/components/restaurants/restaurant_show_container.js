@@ -4,15 +4,17 @@ import RestaurantShow from './restaurant_show';
 import restaurantReducer from '../../reducers/restaurant_reducer';
 
 const mapStateToProps = (state, { match }) => {
+    
     const restaurantId = parseInt(match.params.restaurantId);
     const show = state.entities.restaurants.restaurant;
     const reviews = state.entities.restaurants.reviews
+   
     
 
     return {
         restaurantId,
         show,
-        reviews
+        reviews 
     };
 };
 

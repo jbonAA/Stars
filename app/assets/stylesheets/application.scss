@@ -642,8 +642,14 @@ tentative splash form
 .restaurant-ii-photo{
     height: 284px;
     width: 284px;
-    border: 1px solid black;
     margin-right: 35px;
+}
+
+#pic {
+    height: 19vh;
+    width: 15vw;
+    border: 1px solid black;
+    border-radius: 2px;
 }
 
 .restaurant-ii-info {
@@ -874,6 +880,7 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .show-pics {
@@ -896,13 +903,13 @@ i {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100vw;
-    height: 900px;
+    height: 80vh;
     outline: black;
 }
 
 .show-info-left {
-    border: 1px solid black;
     width: 43vw;
+    height: 55vh;
     margin-right: 22%;
     margin-top: 10%;
     display: flex;
@@ -944,13 +951,20 @@ i {
 
 .show-info-right {
     border: 1px solid black;
-    width: 28vw;
-    height: 350px;
+    width: 19vw;
+    height: 23.5vh;
     position: fixed;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-top: 10%;
+    border-radius: 5px;
 }
 
+#right-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 //review form
 
@@ -979,5 +993,65 @@ i {
     width: 57vw;
     height: 46vh;
 }
+
+
 //review index item
 
+
+
+//review form
+.head h1 {
+    text-align: center;
+}
+.head-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center
+}
+
+.head-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 9%
+}
+
+.head {
+    border: 1px solid black;
+    padding-bottom: 3%;
+    border-radius: 5px;
+}
+
+.show-hours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#list-hour {
+    list-style: none;
+   
+}
+
+.hours {
+    line-height: 1.8em;
+    padding-left: 0px;
+    
+}
+
+#show-button{
+    height: 32px;
+    width: 120px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.writeReview {
+    color: red;
+}

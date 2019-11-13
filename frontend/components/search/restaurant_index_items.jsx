@@ -5,7 +5,6 @@ import RestaurantShowContainer from '../restaurants/restaurant_show_container'
 class RestaurantIndexItem extends React.Component {
     constructor(props){
         super(props)
-
         this.handleClick = this.handleClick.bind(this);
     }
 

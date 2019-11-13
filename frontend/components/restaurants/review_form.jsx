@@ -1,5 +1,4 @@
 import React from 'react';
-import IndexDropdown from '../nav_bar/index-dropdown';
 import GreetingContainer from '../home/greeting_container';
 import {withRouter} from 'react-router-dom';
 
@@ -10,11 +9,12 @@ class ReviewForm extends React.Component {
         this.state = {
             title: '',
             description: '',
-            stars: '',
             restaurant_id: parseInt(this.props.match.params.restaurantId),
             user_id: this.props.userId
         }
         
+        this.stars = 0
+
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
@@ -52,6 +52,14 @@ class ReviewForm extends React.Component {
                         <a id="rev-a" href="">Read our Review Guidelines</a>
                     </div>
                     <div>
+
+                        <div className="review-stars">
+                            <input type="text"
+                            value={this.state.stars}
+                            placeholder="Enter a number 1-5"
+                            onChange={this.handleInput('stars')}/>
+
+                        </div>
 
                         <div className="review-title">
                             <input 

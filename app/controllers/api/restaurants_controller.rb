@@ -14,4 +14,8 @@ class Api::RestaurantsController < ApplicationController
         render :show
     end
 
+    # def restaurant_params
+    #     params.require(:restaurant).permit(photos: [])
+    # end
+
 end

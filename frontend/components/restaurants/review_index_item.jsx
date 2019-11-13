@@ -4,6 +4,20 @@ class ReviewIndexItems extends React.Component {
     constructor(props){
         super(props)
         
+
+        this.handleSubmit = this.handleSubmit.bind(this)
+        
+    }
+
+    // componentDidMount() {
+    //     this.props.fetchRestaurant(localStorage.getItem("restaurantId"))
+    // }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        
+        let id = this.props.review.id;
+        this.props.delete(id).then(this.props.fetchRestaurant(localStorage.getItem("restaurantId")))
     }
 
     render(){
@@ -11,8 +25,7 @@ class ReviewIndexItems extends React.Component {
         let display;
             if (this.props.currentUser === this.props.review.user_id){
                 display = (<div>
-                    <button>Delete</button>
-                    <button>Edit</button>
+                    <button onClick={this.handleSubmit} >Delete</button>
                 </div>)
             }else{
                 display = null
@@ -24,6 +37,7 @@ class ReviewIndexItems extends React.Component {
                     <div>
                         <h2>{review.title}</h2>
                     </div>
+                    
                     <div>
                         <p>{review.description}</p>
                     </div>

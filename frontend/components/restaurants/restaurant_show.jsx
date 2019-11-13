@@ -3,12 +3,14 @@ import IndexDropdown from '../nav_bar/index-dropdown';
 import GreetingContainer from '../home/greeting_container';
 import {withRouter} from 'react-router-dom';
 import ReviewIndexContainer from './review_index_container';
+import ShowHeader from '../show/show_header'
+import ShowHours from '../show/show_hours';
 
 class RestaurantShow extends React.Component {
 
     constructor(props){
         super(props)
-        debugger
+        
         
         this.handleClick = this.handleClick.bind(this)
     }
@@ -47,27 +49,27 @@ class RestaurantShow extends React.Component {
                         <div className="show-info-left">
                             <div id="main-info">
                                 <div>
-                                    <h2></h2>
+                                    <ShowHeader 
+                                    show={this.props.show}
+                                    reviews={this.props.reviews}/>
                                 </div>
                                 <div>
-
-                                </div>
-                                <div>
-
+                                    <ShowHours
+                                    show={this.props.show} />
                                 </div>
                             </div>
                         </div>
                         <div className="show-info-right">
                             <div id="right-info">
+                                <h3>Restaurant Info</h3>
+
                                 <div>
                                     {this.props.show.phone}
-                                </div>
-                                <div>
                                     <p>{this.props.show.address}</p>
                                     <p>{this.props.show.city}, {this.props.show.state} {this.props.show.zip}</p>
                                 </div>
                                 <div>
-                                    <a href="">View Menu</a>
+                                    <a id="" href="">View Menu</a>
                                 </div>
                             </div>
                         </div>

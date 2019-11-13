@@ -4,6 +4,7 @@ import Search from './search';
 import {fetchRestaurants, fetchRestaurant} from '../../actions/restaurant_actions';
 
 const mapStateToProps = (state) => {
+    
     return ({
         restaurants: asArray(state.entities),
 

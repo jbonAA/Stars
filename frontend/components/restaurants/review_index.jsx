@@ -19,7 +19,9 @@ class ReviewIndex extends React.Component{
                         reviews.reverse().map(review => (
                             <ReviewIndexItem
                             key = {`review${review.id}`}
+                            fetchRestaurant={this.props.fetchRestaurant}
                             review={review}
+                            delete={this.props.delete}
                             currentUser={this.props.currentUser} />
                             )
                         )
