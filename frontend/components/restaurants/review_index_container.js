@@ -4,17 +4,19 @@ import { deleteReview, fetchRestaurant} from '../../actions/restaurant_actions'
 
 
 const mapStateToProps = (state) => {
-    let reviews;
-    if (Object.values(state.entities.restaurants).length === 0){
-        reviews = []
-    }else{
-        reviews = Object.values(state.entities.restaurants.reviews)
-    }
+    // let reviews;
+    // debugger
+    // if (Object.values(state.entities.restaurants.restaurant).length === 0){
+    //     reviews = []
+    // }else{
+    //     reviews = Object.values(state.entities.restaurants.restaurant.reviewIds)
+    // }
 
     return ({
-        reviews: reviews,
+        reviews: state.entities.reviews,
         currentUser: state.session.id
     })
+
 }
 
 const mapDispatchToProps = (dispatch) => ({

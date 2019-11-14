@@ -6,6 +6,7 @@ class RestaurantIndexItem extends React.Component {
     constructor(props){
         super(props)
         this.handleClick = this.handleClick.bind(this);
+        debugger
     }
 
     handleClick() {
@@ -19,7 +20,7 @@ class RestaurantIndexItem extends React.Component {
         return (
             <div className="restaurant-ii-container">
                 <div className="restaurant-ii-photo">
-                    <h2>{this.props.total}</h2>
+                    <img src={this.props.restaurant.photoUrls[0]} alt=""/>
                 </div>
                 <div className="restaurant-info-container">
                     <div className="restaurant-ii-info">
@@ -33,9 +34,6 @@ class RestaurantIndexItem extends React.Component {
                             <p>{this.props.restaurant.phone}</p>
                             <p>{this.props.restaurant.address}</p>
                             <p>{this.props.restaurant.city}, {this.props.restaurant.state}</p>
-                        </div>
-                        <div className="restaurant-info-review">
-
                         </div>
                     </div>
                 </div>

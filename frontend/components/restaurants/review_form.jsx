@@ -25,6 +25,10 @@ class ReviewForm extends React.Component {
         };
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     handleSubmit(event) {
         event.preventDefault();
         const review = Object.assign({}, this.state)

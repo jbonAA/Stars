@@ -21,7 +21,7 @@ class ShowHeader extends React.Component {
             <div className="head">
                 <h1>{this.props.show.name}</h1>
                 <div className="head-price">
-                    <p>{stars} stars,  {Object.values(this.props.reviews).length} reviews</p>
+                    <p>{Math.floor(stars)} stars,  {Object.values(this.props.reviews).length} reviews</p>
                     <p>{this.props.show.price} {this.props.show.description}</p>
                 </div>
                 <div className="head-buttons">

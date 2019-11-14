@@ -10,9 +10,10 @@ export const receiveRestaurants = restaurants => ({
     restaurants
 })
 
-export const receiveRestaurant = restaurant => ({
+export const receiveRestaurant = ({restaurant, reviews}) => ({
     type: RECEIVE_RESTAURANT,
-    restaurant
+    restaurant,
+    reviews
 })
 
 export const receiveReview = ({ review }) => ({

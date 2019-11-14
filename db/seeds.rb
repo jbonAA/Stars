@@ -42,6 +42,8 @@ zazie = Restaurant.create(
     ] 
 )
 
+file = open("https://s3.console.aws.amazon.com/s3/object/stars-fullstack-dev/zazie_idx.jpg")
+zazie.photos.attach(io: file, filename: 'zazie_idx.jpg')
 
 
 Review.create(
@@ -66,7 +68,7 @@ Review.create(
     # zazie.photos.attach(io: file5, filename: "zazie4.jpg")
 
 fog = Restaurant.create({
-    name: "Fog Harbor Fish House"
+    name: "Fog Harbor Fish House",
     description:"Seafood, Bars",
     website:"fogharbor.com",
     city:"San Francisco",
@@ -91,7 +93,7 @@ fog = Restaurant.create({
 
 
 house = Restaurant.create({
-    name: "The House"
+    name: "The House",
     description:"Asian Fusion",
     website:"thehse.com",
     city:"San Francisco",
@@ -115,7 +117,7 @@ house = Restaurant.create({
 
 
 farmhouse = Restaurant.create({
-    name: "Farmhouse Kitchen Thai Cuising"
+    name: "Farmhouse Kitchen Thai Cuisine",
     description:"Thai, Comfort Food",
     website:"farmhousethai.com",
     city:"San Francisco",
@@ -139,7 +141,7 @@ farmhouse = Restaurant.create({
 
 
 umma = Restaurant.create({
-    name: "um.ma"
+    name: "um.ma",
     description:"Korean, Barbeque",
     website:"ummasf.com",
     city:"San Francisco",
@@ -163,7 +165,7 @@ umma = Restaurant.create({
 
 
 tuba = Restaurant.create({
-    name: "Tuba Authentic Turkish Restaurant"
+    name: "Tuba Authentic Turkish Restaurant",
     description:"Mediterranean, Turkish",
     website:"tubarestaurantsf.com",
     city:"San Francisco",
@@ -187,7 +189,7 @@ tuba = Restaurant.create({
 
 
 noosh = Restaurant.create({
-    name: "Noosh"
+    name: "Noosh",
     description:"Mediterranean",
     website:"nooshsf.com",
     city:"San Francisco",
@@ -211,7 +213,7 @@ noosh = Restaurant.create({
 
 
 hog = Restaurant.create({
-    name: "Hog Island Oyster Co"
+    name: "Hog Island Oyster Co",
     description:"Seafood, Seafood Markets, Live/Raw Food",
     website:"hogislandoysters.com",
     city:"San Francisco",
@@ -235,7 +237,7 @@ hog = Restaurant.create({
 
 
 tung = Restaurant.create({
-    name: "San Tung"
+    name: "San Tung",
     description:"Chinese, Chicken Wings, Noodles",
     website:"santung.new",
     city:"San Francisco",
@@ -257,339 +259,6 @@ tung = Restaurant.create({
    ]
 })
 
-
-delhi = Restaurant.create({
-    name: "Little Delhi"
-    description:"Indian",
-    website:"littledehli.com",
-    city:"San Francisco",
-    state:"CA",
-    address:"83 Eddy St",
-    phone:"(415) 398-3173",
-    stars:0,
-    delivery: false,
-    takeout: false,
-    price: "$$",
-    hours: [
-    "Mon: 11:30 am - 10:00 pm   ",
-    "Tue: 11:30 am - 10:00 pm   ",
-    "Wed: 11:30 am - 10:00 pm   ",
-    "Thu: 11:30 am - 10:00 pm   ",
-    "Fri: 11:30 am - 10:00 pm   ",
-    "Sat: 11:30 am - 10:00 pm   ",
-    "Sun: 11:30 am - 10:00 pm   "
-   ]
-})
-
-
-nopa = Restaurant.create({
-    name: "Nopa"
-    description:"American, Desserts, Cocktail Bars",
-    website:"nopasf.com",
-    city:"San Francisco",
-    state:"CA",
-    address:"560 Divisadero St",
-    phone:"(415) 864-8643",
-    stars:0,
-    delivery: false,
-    takeout: true,
-    price: "$$$",
-    hours: [
-    "Mon: 5:00 pm - 12:00 am   ",
-    "Tue: 5:00 pm - 12:00 am   ",
-    "Wed: 5:00 pm - 12:00 am   ",
-    "Thu: 5:00 pm - 12:00 am   ",
-    "Fri: 5:00 pm - 12:00 am   ",
-    "Sat: 5:00 pm - 12:00 am   ",
-    "Sun: 5:00 pm - 12:00 am   "
-   ]
-})
-
-
-#vegas
-yardbird = Restaurant.create({
-    name: "Yardbird Southern Table & Bar"
-    description:"Southern, American, Cocktail Bars",
-    website:"runchickenrun.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"3355 Las Vegas Blvd S",
-    phone:"(702) 297-6541",
-    stars:0,
-    delivery: false,
-    takeout: true,
-    price: "$$",
-    hours: [
-    "Mon: 11:00 am - 11:00 pm   ",
-    "Tue: 11:00 am - 11:00 pm   ",
-    "Wed: 11:00 am - 11:00 pm   ",
-    "Thu: 11:00 am - 11:00 pm   ",
-    "Fri: 11:00 am - 12:00 am   ",
-    "Sat: 11:00 am - 12:00 am   ",
-    "Sun: 11:00 am - 11:00 pm   "
-   ]
-})
-
-
-mon = Restaurant.create({
-    name: "Mon Ami Gabi"
-    description:"French, Steakhouses, Breakfast & Brunch",
-    website:"monamigabi.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"3655 Las Vegas Blvd S",
-    phone:"(702) 944-4224",
-    stars:0,
-    delivery: true,
-    takeout: true,
-    price: "$$",
-    hours: [
-    "Mon: 7:00 am - 11:00 pm   ",
-    "Tue: 7:00 am - 11:00 pm   ",
-    "Wed: 7:00 am - 11:00 pm   ",
-    "Thu: 7:00 am - 11:00 pm   ",
-    "Fri: 7:00 am - 12:00 am   ",
-    "Sat: 7:00 am - 12:00 am   ",
-    "Sun: 7:00 am - 11:00 pm   "
-   ]
-})
-
-
-earl = Restaurant.create({
-    name: "Earl of Sandwich"
-    description:"Sandwiches, Salad, Wraps",
-    website:"earlofsandwichusa.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"3667 Las Vegas Blvd S",
-    phone:"(702) 463-0259",
-    stars:0,
-    delivery: true,
-    takeout: true,
-    price: "$",
-    hours: [
-    "Mon: Open 24 hours" ,
-    "Tue: Open 24 hours" ,
-    "Wed: Open 24 hours" ,
-    "Thu: Open 24 hours" ,
-    "Fri: Open 24 hours" ,
-    "Sat: Open 24 hours" ,
-    "Sun: Open 24 hours"
-   ]
-})
-
-
-nacho = Restaurant.create({
-    name: "Nacho Daddy"
-    description:"American, Mexican, Breakfast & Brunch",
-    website:"nachodaddy.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"3663 Las Vegas Blvd",
-    phone:"(702) 462-5000",
-    stars:0,
-    delivery: false,
-    takeout: false,
-    price: "$$",
-    hours: [
-    "Mon: 8:00 am - 2:00 am   ",
-    "Tue: 8:00 am - 2:00 am   ",
-    "Wed: 8:00 am - 2:00 am   ",
-    "Thu: 8:00 am - 2:00 am   ",
-    "Fri: 8:00 am - 3:00 am   ",
-    "Sat: 8:00 am - 3:00 am   ",
-    "Sun: 8:00 am - 2:00 am   "
-   ]
-})
-
-
-mamas = Restaurant.create({
-    name: "Mr Mamas"
-    description:"Breakfast & Brunch, American, Burgers",
-    website:"mrmamaslv.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"5693 S Jones Blvd",
-    phone:"(702) 220-9224",
-    stars:0,
-    delivery: false,
-    takeout: true,
-    price: "$",
-    hours: [
-    "Mon: 6:00 am - 3:00 pm",
-    "Tue: 6:00 am - 3:00 pm",
-    "Wed: 6:00 am - 3:00 pm",
-    "Thu: 6:00 am - 3:00 pm",
-    "Fri: 6:00 am - 3:00 pm",
-    "Sat: 6:00 am - 2:00 pm",
-    "Sun: 6:00 am - 2:00 pm"
-   ]
-})
-
-
-bacchanal = Restaurant.create({
-    name: "Bacchanal Buffet"
-    description:"Buffet",
-    website:"caesarspalace.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"3570 S Las Vegas Blvd",
-    phone:"(702) 731-7928",
-    stars:0,
-    delivery: true,
-    takeout: true,
-    price: "$$$",
-    hours: [
-    "Mon: 7:30 am - 10:00 pm",
-    "Tue: 7:30 am - 10:00 pm",
-    "Wed: 7:30 am - 10:00 pm",
-    "Thu: 7:30 am - 10:00 pm",
-    "Fri: 7:30 am - 10:00 pm",
-    "Sat: 7:30 am - 10:00 pm",
-    "Sun: 7:30 am - 10:00 pm"
-   ]
-})
-
-
-neighbors = Restaurant.create({
-    name: "Neighbors"
-    description:"Breakfast & Brunch, Coffee & Tea",
-    website:"neighborscafelv.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"5910 S Fort Apache Rd",
-    phone:"(702) 685-1166",
-    stars:0,
-    delivery: true,
-    takeout: true,
-    price: "$$",
-    hours: [
-    "Mon: 7:00 am - 3:00 pm",
-    "Tue: 7:00 am - 3:00 pm",
-    "Wed: 7:00 am - 3:00 pm",
-    "Thu: 7:00 am - 3:00 pm",
-    "Fri: 7:00 am - 3:00 pm",
-    "Sat: 7:00 am - 3:00 pm",
-    "Sun: 7:00 am - 3:00 pm"
-   ]
-})
-
-
-bouchon = Restaurant.create({
-    name: "Bouchon"
-    description:"French, Breakfast & Brunch",
-    website:"thomaskeller.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"3355 Las Vegas Blvd S",
-    phone:"(702) 414-6200",
-    stars:0,
-    delivery: false,
-    takeout: true,
-    price: "$$$",
-    hours: [
-    "Mon: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
-    "Tue: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
-    "Wed: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
-    "Thu: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
-    "Fri: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
-    "Sat: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
-    "Sun: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm"
-   ]
-})
-
-
-wicked = Restaurant.create({
-    name: "Wicked Spoon"
-    description:"Buffet, Breakfast & Brunch",
-    website:"cosmopolitanlasvegas.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"3708 S Las Vegas Blvd",
-    phone:"(877) 893-2001",
-    stars:0,
-    delivery: true,
-    takeout: true,
-    price: "$$$",
-    hours: [
-    "Mon: 8:00 am - 9:00 pm",
-    "Tue: 8:00 am - 9:00 pm",
-    "Wed: 8:00 am - 9:00 pm",
-    "Thu: 8:00 am - 9:00 pm",
-    "Fri: 8:00 am - 9:00 pm",
-    "Sat: 8:00 am - 9:00 pm",
-    "Sun: 8:00 am - 9:00 pm"
-   ]
-})
-
-
-firefly = Restaurant.create({
-    name: "Firefly Tapas Kitchen and Bar"
-    description:"Tapas/Small Plates, Spanish",
-    website:"fireflylv.com",
-    city:"Las Vegas",
-    state:"NV",
-    address:"3824 Paradise Rd",
-    phone:"(702) 369-3971",
-    stars:0,
-    delivery: true,
-    takeout: true,
-    price: "$$",
-    hours: [
-    "Mon:   ",
-    "Tue:   ",
-    "Wed:   ",
-    "Thu:   ",
-    "Fri:   ",
-    "Sat:   "
-   ]
-})
-
-
-Restaurant.create({
-    name: ""
-    description:"",
-    website:"",
-    city:"",
-    state:"",
-    address:"",
-    phone:"",
-    stars:0,
-    delivery: true,
-    takeout: false,
-    price: "",
-    hours: [
-    "Mon:   "
-    "Tue:   "
-    "Wed:   "
-    "Thu:   "
-    "Fri:   "
-    "Sat:   "
-   ]
-})
-
-
-Restaurant.create({
-    name: ""
-    description:"",
-    website:"",
-    city:"",
-    state:"",
-    address:"",
-    phone:"",
-    stars:0,
-    delivery: true,
-    takeout: false,
-    price: "",
-    hours: [
-    "Mon:   "
-    "Tue:   "
-    "Wed:   "
-    "Thu:   "
-    "Fri:   "
-    "Sat:   "
-   ]
-})
 bird = Restaurant.create({
    name:"The Bird",
    description:"Chicken Shop, Sandwiches",
@@ -634,4 +303,478 @@ spoon = Restaurant.create({
        "Sat: 8:00 am - 3:00 pm", 
        "Sun: 8:00 am - 3:00 pm" ,
    ],
+})
+
+
+#vegas
+yardbird = Restaurant.create({
+    name: "Yardbird Southern Table & Bar",
+    description:"Southern, American, Cocktail Bars",
+    website:"runchickenrun.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"3355 Las Vegas Blvd S",
+    phone:"(702) 297-6541",
+    stars:0,
+    delivery: false,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 11:00 am - 11:00 pm   ",
+    "Tue: 11:00 am - 11:00 pm   ",
+    "Wed: 11:00 am - 11:00 pm   ",
+    "Thu: 11:00 am - 11:00 pm   ",
+    "Fri: 11:00 am - 12:00 am   ",
+    "Sat: 11:00 am - 12:00 am   ",
+    "Sun: 11:00 am - 11:00 pm   "
+   ]
+})
+
+
+mon = Restaurant.create({
+    name: "Mon Ami Gabi",
+    description:"French, Steakhouses, Breakfast & Brunch",
+    website:"monamigabi.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"3655 Las Vegas Blvd S",
+    phone:"(702) 944-4224",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 7:00 am - 11:00 pm   ",
+    "Tue: 7:00 am - 11:00 pm   ",
+    "Wed: 7:00 am - 11:00 pm   ",
+    "Thu: 7:00 am - 11:00 pm   ",
+    "Fri: 7:00 am - 12:00 am   ",
+    "Sat: 7:00 am - 12:00 am   ",
+    "Sun: 7:00 am - 11:00 pm   "
+   ]
+})
+
+
+earl = Restaurant.create({
+    name: "Earl of Sandwich",
+    description:"Sandwiches, Salad, Wraps",
+    website:"earlofsandwichusa.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"3667 Las Vegas Blvd S",
+    phone:"(702) 463-0259",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$",
+    hours: [
+    "Mon: Open 24 hours" ,
+    "Tue: Open 24 hours" ,
+    "Wed: Open 24 hours" ,
+    "Thu: Open 24 hours" ,
+    "Fri: Open 24 hours" ,
+    "Sat: Open 24 hours" ,
+    "Sun: Open 24 hours"
+   ]
+})
+
+
+nacho = Restaurant.create({
+    name: "Nacho Daddy",
+    description:"American, Mexican, Breakfast & Brunch",
+    website:"nachodaddy.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"3663 Las Vegas Blvd",
+    phone:"(702) 462-5000",
+    stars:0,
+    delivery: false,
+    takeout: false,
+    price: "$$",
+    hours: [
+    "Mon: 8:00 am - 2:00 am   ",
+    "Tue: 8:00 am - 2:00 am   ",
+    "Wed: 8:00 am - 2:00 am   ",
+    "Thu: 8:00 am - 2:00 am   ",
+    "Fri: 8:00 am - 3:00 am   ",
+    "Sat: 8:00 am - 3:00 am   ",
+    "Sun: 8:00 am - 2:00 am   "
+   ]
+})
+
+
+mamas = Restaurant.create({
+    name: "Mr Mamas",
+    description:"Breakfast & Brunch, American, Burgers",
+    website:"mrmamaslv.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"5693 S Jones Blvd",
+    phone:"(702) 220-9224",
+    stars:0,
+    delivery: false,
+    takeout: true,
+    price: "$",
+    hours: [
+    "Mon: 6:00 am - 3:00 pm",
+    "Tue: 6:00 am - 3:00 pm",
+    "Wed: 6:00 am - 3:00 pm",
+    "Thu: 6:00 am - 3:00 pm",
+    "Fri: 6:00 am - 3:00 pm",
+    "Sat: 6:00 am - 2:00 pm",
+    "Sun: 6:00 am - 2:00 pm"
+   ]
+})
+
+
+bacchanal = Restaurant.create({
+    name: "Bacchanal Buffet",
+    description:"Buffet",
+    website:"caesarspalace.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"3570 S Las Vegas Blvd",
+    phone:"(702) 731-7928",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$$",
+    hours: [
+    "Mon: 7:30 am - 10:00 pm",
+    "Tue: 7:30 am - 10:00 pm",
+    "Wed: 7:30 am - 10:00 pm",
+    "Thu: 7:30 am - 10:00 pm",
+    "Fri: 7:30 am - 10:00 pm",
+    "Sat: 7:30 am - 10:00 pm",
+    "Sun: 7:30 am - 10:00 pm"
+   ]
+})
+
+
+neighbors = Restaurant.create({
+    name: "Neighbors",
+    description:"Breakfast & Brunch, Coffee & Tea",
+    website:"neighborscafelv.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"5910 S Fort Apache Rd",
+    phone:"(702) 685-1166",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 7:00 am - 3:00 pm",
+    "Tue: 7:00 am - 3:00 pm",
+    "Wed: 7:00 am - 3:00 pm",
+    "Thu: 7:00 am - 3:00 pm",
+    "Fri: 7:00 am - 3:00 pm",
+    "Sat: 7:00 am - 3:00 pm",
+    "Sun: 7:00 am - 3:00 pm"
+   ]
+})
+
+
+bouchon = Restaurant.create({
+    name: "Bouchon",
+    description:"French, Breakfast & Brunch",
+    website:"thomaskeller.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"3355 Las Vegas Blvd S",
+    phone:"(702) 414-6200",
+    stars:0,
+    delivery: false,
+    takeout: true,
+    price: "$$$",
+    hours: [
+    "Mon: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
+    "Tue: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
+    "Wed: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
+    "Thu: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
+    "Fri: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
+    "Sat: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
+    "Sun: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm"
+   ]
+})
+
+
+wicked = Restaurant.create({
+    name: "Wicked Spoon",
+    description:"Buffet, Breakfast & Brunch",
+    website:"cosmopolitanlasvegas.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"3708 S Las Vegas Blvd",
+    phone:"(877) 893-2001",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$$",
+    hours: [
+    "Mon: 8:00 am - 9:00 pm",
+    "Tue: 8:00 am - 9:00 pm",
+    "Wed: 8:00 am - 9:00 pm",
+    "Thu: 8:00 am - 9:00 pm",
+    "Fri: 8:00 am - 9:00 pm",
+    "Sat: 8:00 am - 9:00 pm",
+    "Sun: 8:00 am - 9:00 pm"
+   ]
+})
+
+
+firefly = Restaurant.create({
+    name: "Firefly Tapas Kitchen and Bar",
+    description:"Tapas/Small Plates, Spanish",
+    website:"fireflylv.com",
+    city:"Las Vegas",
+    state:"NV",
+    address:"3824 Paradise Rd",
+    phone:"(702) 369-3971",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 8:00 am - 9:00 pm",
+    "Tue: 8:00 am - 9:00 pm",
+    "Wed: 8:00 am - 9:00 pm",
+    "Thu: 8:00 am - 9:00 pm",
+    "Fri: 8:00 am - 9:00 pm",
+    "Sat: 8:00 am - 9:00 pm",
+    "Sun: 8:00 am - 9:00 pm"
+   ]
+})
+
+#wyoming
+
+snake = Restaurant.create({
+    name: "Snake River Brewing",
+    description:"Brewpub, American",
+    website:"snakeriverbrewing.com",
+    city:"Jackson",
+    state:"WY",
+    address:"265 S Millward St",
+    phone:"(307) 200-4890",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 11:00 am - 11:00 pm",
+    "Tue: 11:00 am - 11:00 pm",
+    "Wed: 11:00 am - 11:00 pm",
+    "Thu: 11:00 am - 11:00 pm",
+    "Fri: 11:00 am - 11:00 pm",
+    "Sat: 11:00 am - 11:00 pm",
+    "Sun: 11:00 am - 11:00 pm"
+   ]
+})
+
+
+gather = Restaurant.create({
+    name: "Gather",
+    description:"American, Wine Bar, Caterers",
+    website:"gatherjh.com",
+    city:"Jackson",
+    state:"WY",
+    address:"72 S Glenwood St",
+    phone:"(307) 264-1820",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 5:00 pm - 10:00 pm",
+    "Tue: 5:00 pm - 10:00 pm",
+    "Wed: 5:00 pm - 10:00 pm",
+    "Thu: 5:00 pm - 10:00 pm",
+    "Fri: 5:00 pm - 10:00 pm",
+    "Sat: 5:00 pm - 10:00 pm",
+    "Sun: 5:00 pm - 10:00 pm"
+   ]
+})
+
+gun = Restaurant.create({
+    name: "Gun Barrel Steak and Game House",
+    description:"Steakhouses, Bars",
+    website:"jackson.gunbarrel.com",
+    city:"Jackson",
+    state:"WY",
+    address:"862 W Broadway Ave",
+    phone:"(307) 733-3287",
+    stars:0,
+    delivery: false,
+    takeout: true,
+    price: "$$$",
+    hours: [
+    "Mon: 5:30 pm - 9:30 pm",
+    "Tue: 5:30 pm - 9:30 pm",
+    "Wed: 5:30 pm - 9:30 pm",
+    "Thu: 5:30 pm - 9:30 pm",
+    "Fri: 5:30 pm - 9:30 pm",
+    "Sat: 5:30 pm - 9:30 pm",
+    "Sun: 5:30 pm - 9:30 pm"
+   ]
+})
+
+still = Restaurant.create({
+    name: "StillWest Brewery & Grill",
+    description:"Brewpubs, American, Beer Bar",
+    website:"stillwestbreweryandgrill.com",
+    city:"Jackson",
+    state:"WY",
+    address:"45 East Snow King Ave",
+    phone:"(307) 201-5955",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 11:00 am - 10:00 pm",
+    "Tue: 11:00 am - 10:00 pm",
+    "Wed: 11:00 am - 10:00 pm",
+    "Thu: 11:00 am - 10:00 pm",
+    "Fri: 11:00 am - 10:00 pm",
+    "Sat: 11:00 am - 10:00 pm",
+    "Sun: 11:00 am - 10:00 pm"
+   ]
+})
+
+glori = Restaurant.create({
+    name: "Glorietta Trattoria",
+    description:"Italian, Bars",
+    website:"gloriettajackson.com",
+    city:"Jackson",
+    state:"WY",
+    address:"242 N Glenwood St",
+    phone:"(307) 733 3888",
+    stars:0,
+    delivery: false,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 5:00 pm - 10:00 pm",
+    "Tue: 5:00 pm - 10:00 pm",
+    "Wed: 5:00 pm - 10:00 pm",
+    "Thu: 5:00 pm - 10:00 pm",
+    "Fri: 5:00 pm - 10:00 pm",
+    "Sat: 5:00 pm - 10:00 pm",
+    "Sun: 5:00 pm - 10:00 pm"
+   ]
+})
+
+bin22 = Restaurant.create({
+    name: "Bin22",
+    description:"Tapas/Small Plates, Wine Bars",
+    website:"bin22jacksonhole.com",
+    city:"Jackson",
+    state:"WY",
+    address:"200 W Broadway",
+    phone:"(307) 739-9463",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 10:00 am - 10:00 pm",
+    "Tue: 10:00 am - 10:00 pm",
+    "Wed: 10:00 am - 10:00 pm",
+    "Thu: 10:00 am - 10:00 pm",
+    "Fri: 10:00 am - 10:00 pm",
+    "Sat: 10:00 am - 10:00 pm",
+    "Sun: 10:00 am - 10:00 pm"
+   ]
+})
+
+river = Restaurant.create({
+    name: "Snake River Grill",
+    description:"American, Tapas, Cocktail Bar",
+    website:"snakerivergrill.com",
+    city:"Jackson",
+    state:"WY",
+    address:"84 E Broadway",
+    phone:"(307) 733-0557",
+    stars:0,
+    delivery: false,
+    takeout: true,
+    price: "$$$",
+    hours: [
+    "Mon: 4:00 pm - 10:00 pm",
+    "Tue: 4:00 pm - 10:00 pm",
+    "Wed: 4:00 pm - 10:00 pm",
+    "Thu: 4:00 pm - 10:00 pm",
+    "Fri: 4:00 pm - 10:00 pm",
+    "Sat: 4:00 pm - 10:00 pm",
+    "Sun: 4:00 pm - 10:00 pm"
+   ]
+})
+
+thebird = Restaurant.create({
+    name: "The Bird",
+    description:"American",
+    website:"thebirdinjh.com",
+    city:"Jackson",
+    state:"WY",
+    address:"4125 S Pub Pl",
+    phone:"(307) 732-2473",
+    stars:0,
+    delivery: false,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 4:00 pm - 11:00 pm",
+    "Tue: 4:00 pm - 11:00 pm",
+    "Wed: 4:00 pm - 11:00 pm",
+    "Thu: 4:00 pm - 11:00 pm",
+    "Fri: 4:00 pm - 11:00 pm",
+    "Sat: 4:00 pm - 11:00 pm",
+    "Sun: 4:00 pm - 11:00 pm"
+   ]
+})
+
+kitchen = Restaurant.create({
+    name: "The Kitchen",
+    description:"American, Seafood, Asian Fusion",
+    website:"thekitchenjacksonhole.com",
+    city:"Jackson",
+    state:"WY",
+    address:"155 N Glenwood",
+    phone:"(307) 734-1633",
+    stars:0,
+    delivery: false,
+    takeout: false,
+    price: "$$$",
+    hours: [
+    "Mon: 5:30 pm - 9:30 pm",
+    "Tue: 5:30 pm - 9:30 pm",
+    "Wed: 5:30 pm - 9:30 pm",
+    "Thu: 5:30 pm - 9:30 pm",
+    "Fri: 5:30 pm - 9:30 pm",
+    "Sat: 5:30 pm - 9:30 pm",
+    "Sun: 5:30 pm - 9:30 pm"
+   ]
+})
+
+bighole = Restaurant.create({
+    name: "Big Hole BBQ",
+    description:"Barbeque",
+    website:"jacksonholebbq.com/home",
+    city:"Jackson",
+    state:"WY",
+    address:"325 W Pearl St",
+    phone:"(307) 264-1996",
+    stars:0,
+    delivery: true,
+    takeout: true,
+    price: "$$",
+    hours: [
+    "Mon: 11:30 am - 10:00 pm ",
+    "Tue: 11:30 am - 10:00 pm ",
+    "Wed: 11:30 am - 10:00 pm ",
+    "Thu: 11:30 am - 10:00 pm ",
+    "Fri: 11:30 am - 10:00 pm ",
+    "Sat: 11:30 am - 10:00 pm ",
+    "Sun: 11:30 am - 10:00 pm "
+   ]
 })

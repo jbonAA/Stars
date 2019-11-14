@@ -1,6 +1,7 @@
 json.restaurant do
     json.partial! '/api/restaurants/restaurant', restaurant: @restaurant
     json.reviewIds @restaurant.reviews.pluck(:id)
+    json.photoUrls @restaurant.photos.map { |file| url_for(file) }
 end
 
 @restaurant.reviews.each do |review|

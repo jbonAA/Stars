@@ -21,25 +21,30 @@ class HomeFilters extends React.Component {
             <div className="home-filter-backgrounds">
                     <p className="filter-title">Find Restaurants By State</p>
                     <ul className="state-list-elements">
+                        
                         <li className="state-li" id="sf-li">
-                            <div id="ca-li">
-
-                            <Link to={{pathname: "/restaurants", query: "CA"}}><h2 id="state">California</h2></Link>
-                                
-                            </div>
+                        <Link to={{ pathname: "/restaurants", query: "CA" }} style={{ textDecoration: 'none' }}>
+                                <div id="ca-li">
+                                    <h2 id="state">California</h2>
+                                </div>
+                            </Link>
                         </li>
                         <li className="state-li" id="nv-li">
-                            <div id="ca-li">
-                            <Link to={{ pathname: "/restaurants", query: "NV" }}><h2 id="state">Nevada</h2></Link>
-                                
-                            </div>
+                        <Link to={{ pathname: "/restaurants", query: "NV" }} style={{ textDecoration: 'none' }}>
+                                <div id="ca-li">
+                                    <h2 id="state">Nevada</h2>
+                                </div>
+                            </Link>
                         </li>
+
                         <li className="state-li" id="wy-li">
-                            <div id="ca-li">
-                                <a href=""></a>
-                            <h2 id="state">Wyoming</h2>
-                            </div>
+                            <Link to={{pathname: "/restaurants", query: "WY"}} style={{textDecoration: 'none'}}>
+                                <div id="ca-li">
+                                   <h2 id="state">Wyoming</h2>
+                                </div>
+                            </Link>
                         </li>
+                        
                     </ul>
             </div>
         )

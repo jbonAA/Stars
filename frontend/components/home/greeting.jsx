@@ -1,6 +1,7 @@
 import React from 'react';
 import WelcomeContainer from './welcome_container';
-import HomeFilters from './home_filters'
+import HomeFilters from './home_filters';
+
 
 class Greeting extends React.Component {
     constructor(props) {
@@ -76,7 +77,7 @@ class Greeting extends React.Component {
                                     className="greeting-search-form"
                                     type="text"
                                     value={this.state.name}
-                                    placeholder="restaurant name"
+                                    placeholder="Temporarily Unavailable"
                                     onChange={this.handleInput('name')}
                                 />
                                 <button className="greeting-search-submit">{icon}</button>

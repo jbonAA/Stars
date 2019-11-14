@@ -10,6 +10,13 @@ class RestaurantShow extends React.Component {
 
     constructor(props){
         super(props)
+
+        this.state = {
+            show: this.props.show,
+            test: ""
+        }
+
+        debugger
         
         
         this.handleClick = this.handleClick.bind(this)
@@ -22,19 +29,21 @@ class RestaurantShow extends React.Component {
 
 
     componentDidMount() {
-        
+        debugger
         this.props.fetchRestaurant(localStorage.getItem("restaurantId"))
-        if(this.props.show){
-            localStorage.setItem("name", this.props.show.name)
-        }
+            .then(this.setState({ ["test"]: "friend" }))
+        // if(this.props.show){
+        //     localStorage.setItem("name", this.props.show.name)
+        // }
     }
+
 
 
 
 
     render() {
         let display;
-        if (this.props.show) {
+        if (this.props.show.id) {
             display = (<div>
                 <GreetingContainer />
                 <IndexDropdown />

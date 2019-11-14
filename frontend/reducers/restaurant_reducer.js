@@ -11,8 +11,9 @@ const restaurantReducer = (state = {}, action) => {
         case RECEIVE_RESTAURANTS:
             return action.restaurants
         case RECEIVE_RESTAURANT:
-
-            return Object.assign({}, state, action.restaurant)
+            let newState = Object.assign({}, state)
+            newState[action.restaurant.id] = action.restaurant
+            return newState
         case RECEIVE_REVIEW:
             
             const { review } = action
