@@ -44,6 +44,24 @@ zazie = Restaurant.create(
 
 file = open("https://s3.console.aws.amazon.com/s3/object/stars-fullstack-dev/zazie_idx.jpg")
 zazie.photos.attach(io: file, filename: 'zazie_idx.jpg')
+file1 = open("https://s3.console.aws.amazon.com/s3/object/stars-fullstack-dev/zazie1.jpg")
+zazie.photos.attach(io: file1, filename: 'zazie1.jpg')
+file2 = open("https://s3.console.aws.amazon.com/s3/object/stars-fullstack-dev/zazie2.jpg")
+zazie.photos.attach(io: file2, filename: 'zazie2.jpg')
+file3 = open("https://s3.console.aws.amazon.com/s3/object/stars-fullstack-dev/zazie3.jpg")
+zazie.photos.attach(io: file3, filename: 'zazie3.jpg')
+file4 = open("https://s3.console.aws.amazon.com/s3/object/stars-fullstack-dev/zazie4.jpg")
+zazie.photos.attach(io: file4, filename: 'zazie4.jpg')
+
+
+#file1 = open()
+# zazie.photos.attach(io: file1, filename: 'zazie1.jpg')
+# file2 = open()
+# zazie.photos.attach(io: file2, filename: 'zazie2.jpg')
+# file3 = open()
+# zazie.photos.attach(io: file3, filename: 'zazie3.jpg')
+# file4 = open()
+#zazie.photos.attach(io: file4, filename: 'zazie4.jpg')
 
 
 Review.create(
