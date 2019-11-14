@@ -48,10 +48,10 @@ class RestaurantShow extends React.Component {
                 <IndexDropdown />
                 <div className="rest-show">
                     <div className="show-pics">
-                        <div className="pic"></div>
-                        <div className="pic"></div>
-                        <div className="pic"></div>
-                        <div className="pic"></div>
+                        <div className="pic"><img src={this.props.show.photoUrls[1]}/></div>
+                        <div className="pic"><img src={this.props.show.photoUrls[2]} /></div>
+                        <div className="pic"><img src={this.props.show.photoUrls[3]} /></div>
+                        <div className="pic"><img src={this.props.show.photoUrls[4]} /></div>
                     </div>
                     <div className="rest-show-info">
                         <div className="show-info-left">
