@@ -6,7 +6,7 @@ import RestaurantIndexItem from './restaurant_index_items';
 const RestaurantIndex = ({restaurants, filters, fetchRestaurant}) => {
     
     let filtered_restaurants = []
-    console.log(restaurants)
+    debugger
 
     restaurants.forEach((rest) => {
         if (rest.state === window.localStorage.getItem(location)){
@@ -18,7 +18,6 @@ const RestaurantIndex = ({restaurants, filters, fetchRestaurant}) => {
     filtered_restaurants.forEach((rest) => {
         let included = true;
         Object.keys(JSON.parse(localStorage.getItem(filters))).forEach((key) => {
-            console.log(key)
             if(key.toString() === "description"){
                 if ((JSON.parse(localStorage.getItem(filters)))[key] === ""){
                     included = true
@@ -40,12 +39,11 @@ const RestaurantIndex = ({restaurants, filters, fetchRestaurant}) => {
                 }
             }
         })
-        console.log(further_filt_restaurants)
         if (included === true){
             further_filt_restaurants.push(rest)
         }
     })
-
+    debugger
     return (
     <div id="center">
         <div className="inner-restaurant-index">
@@ -53,6 +51,7 @@ const RestaurantIndex = ({restaurants, filters, fetchRestaurant}) => {
             {further_filt_restaurants.map(restaurant => (
                 <div> <RestaurantIndexItem
                     restaurant={restaurant}
+                    photos={restaurant.photoUrls}
                     key={restaurant.id}
                     fetchRestaurant={fetchRestaurant}
                 />
