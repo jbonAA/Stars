@@ -4,7 +4,7 @@ import RestaurantShow from './restaurant_show';
 import { selectRestaurant, selectReviewsForRestaurant } from '../../reducers/selectors';
 
 const mapStateToProps = (state, { match }) => {
-    debugger
+    
     
     const restaurantId = parseInt(match.params.restaurantId);
     const show = selectRestaurant(state.entities, restaurantId);

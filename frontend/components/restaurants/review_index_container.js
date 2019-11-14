@@ -3,7 +3,7 @@ import ReviewIndex from './review_index';
 import { deleteReview, fetchRestaurant} from '../../actions/restaurant_actions'
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     // let reviews;
     // debugger
     // if (Object.values(state.entities.restaurants.restaurant).length === 0){
@@ -11,9 +11,9 @@ const mapStateToProps = (state) => {
     // }else{
     //     reviews = Object.values(state.entities.restaurants.restaurant.reviewIds)
     // }
-
+    
     return ({
-        reviews: state.entities.reviews,
+        reviews: ownProps.reviews,
         currentUser: state.session.id
     })
 

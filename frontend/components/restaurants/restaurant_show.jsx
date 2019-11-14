@@ -16,7 +16,7 @@ class RestaurantShow extends React.Component {
             test: ""
         }
 
-        debugger
+        
         
         
         this.handleClick = this.handleClick.bind(this)
@@ -24,17 +24,16 @@ class RestaurantShow extends React.Component {
 
     handleClick(e) {
         e.preventDefault();
+        localStorage.setItem("name", this.props.show.name)
+        debugger
         this.props.history.push(`/restaurants/${this.props.restaurantId}/review/new`)
     }
 
 
     componentDidMount() {
-        debugger
+        
         this.props.fetchRestaurant(localStorage.getItem("restaurantId"))
             .then(this.setState({ ["test"]: "friend" }))
-        // if(this.props.show){
-        //     localStorage.setItem("name", this.props.show.name)
-        // }
     }
 
 
@@ -85,9 +84,13 @@ class RestaurantShow extends React.Component {
                     </div>
 
                     <div id="test">
-                        <a onClick={this.handleClick}>Create a Review</a>
+                        <div id="rev-button">
+                            <h2>Reviews</h2>
+                            <h2 id="but"><a onClick={this.handleClick}>Create a Review</a></h2>
+                        </div>
                         <div id="review-index">
-                            <ReviewIndexContainer />
+                            <ReviewIndexContainer
+                            reviews={this.props.reviews} />
                         </div>
                     </div>
                 </div>

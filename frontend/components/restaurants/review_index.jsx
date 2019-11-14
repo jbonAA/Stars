@@ -4,7 +4,7 @@ import ReviewIndexItem from './review_index_item';
 class ReviewIndex extends React.Component{
     constructor(props){
         super(props)
-        debugger
+        
 
 
     }
@@ -14,12 +14,11 @@ class ReviewIndex extends React.Component{
     render(){
         const { reviews } = this.props
         return (
-            <div>
+            <div id="reviews-ul">
                 <ul>
                     {
                         Object.values(reviews).reverse().map(review => (
                             <ReviewIndexItem
-                            key = {`review${review.id}`}
                             fetchRestaurant={this.props.fetchRestaurant}
                             review={review}
                             delete={this.props.delete}

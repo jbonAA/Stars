@@ -656,7 +656,7 @@ tentative splash form
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    line-height: 1.5em;
 }
 
 .restaurant-ii-container {
@@ -666,9 +666,12 @@ tentative splash form
 }
 
 .restaurant-info-container {
-    width: 600px;
+    width: 570px;
     height: 214px;
+    padding-left: 10px;
 }
+
+
 
 .inner-restaurant-index {
     width: 100vw;
@@ -911,7 +914,7 @@ i {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100vw;
-    height: 80vh;
+    height: 71vh;
     outline: black;
 }
 
@@ -937,24 +940,49 @@ i {
     justify-content: center;
     width: 100vw;
     margin-right: 22%;
-    margin-top: 10%;
 }
 
 #test {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40vw;
-    margin-left: 20%;
-    border: 1px solid black;
+    width: 50vw;
+    margin-left: 15%;
+    
 
 }
 
+#test h2 {
+    text-align: center;
+    border-radius: 5px;
+}
+
 #review-ele {
-    outline: black;
     width: 28vw;
     height: 17vw;
-    
+    list-style: none;
+    padding: 10px;
+}
+
+#info-rev p {
+    overflow-wrap: break-word;
+}
+
+#reviews-ul {
+    width: 82%;
+    height: 50%;
+}
+
+#user-info-rev h4, p{
+    margin: 0px;
+}
+
+#info-rev {
+    width: 70%;
+}
+
+#info-rev h2 {
+    margin-top: 0px;
 }
 
 .show-info-right {
@@ -965,6 +993,10 @@ i {
     margin-left: 20%;
     margin-top: 10%;
     border-radius: 5px;
+}
+
+.show-info-right div {
+    line-height: 1.5em;
 }
 
 #right-info{
@@ -994,12 +1026,21 @@ i {
     width: 100vw;
 }
 
+#rev-form-input {
+    margin-left: 1%;
+}
+
+
+
 #rev-a {
     text-align: center;
+    margin-top: 1%;
+
 }
 .description-review {
     width: 57vw;
     height: 46vh;
+    font-size: 20px;
 }
 
 
@@ -1008,14 +1049,22 @@ i {
 
 
 //review form
-.head h1 {
+.head h1, h4 {
     text-align: center;
 }
 .head-price {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.head-price > p{
+    width: 50%;
+    text-align: center;
+    margin-top: 0px;
 }
 
 .head-buttons {
@@ -1072,6 +1121,35 @@ i {
 }
 
 .restaurant-ii-photo img {
-    width: 20vw;
-    height: 20vh;
+    width: 16vw;
+    height: 22vh;
+}
+
+#rev-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#rev {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 53.2%;
+    margin-left: 1%;
+
+}
+
+#rev-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#rev-button a {
+    text-align: center;
+}
+
+#but:hover {
+    cursor: pointer;
 }

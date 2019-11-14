@@ -5,6 +5,7 @@ import {withRouter} from 'react-router-dom';
 class ReviewForm extends React.Component {
     constructor(props){
         super(props)
+        debugger
 
         this.state = {
             title: '',
@@ -58,21 +59,30 @@ class ReviewForm extends React.Component {
                     <div>
 
                         <div className="review-stars">
-                            <input type="text"
+                            <label> Stars: 
+                            <input 
+                            id="rev-form-input"
+                            type="text"
                             value={this.state.stars}
                             placeholder="Enter a number 1-5"
                             onChange={this.handleInput('stars')}/>
+                            </label>
 
                         </div>
+                        <br/>
 
                         <div className="review-title">
+                            <label> Overview: 
                             <input 
-                                id={this.props.errors.length === 0 ? "" : ("error")}
+                                id="rev-form-input"
                                 type="text"
                                 value={this.state.title}
-                                placeholder="temp"
+                                placeholder="Title"
                                 onChange={this.handleInput('title')}/>
+                            </label>
                         </div>
+
+                        <br/>
                         <div>
                             <textarea
                             className="description-review"
@@ -80,7 +90,8 @@ class ReviewForm extends React.Component {
                                 value={this.state.description}
                                 cols="30"
                                 rows="10"
-                                onChange={this.handleInput('description')}    
+                                onChange={this.handleInput('description')}
+                                placeholder="Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees"    
                                 >
                             </textarea>
                         </div>
