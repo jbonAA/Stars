@@ -8,9 +8,15 @@ class Filter extends React.Component {
     constructor(props) {
         super(props)
 
+
         // this.state = {
-        //     takeout: ""
+        //     location: localStorage.getItem(location),
+        //     takeout: "",
+        //     delivery: "",
+        //     price: "",
+        //     description: ""
         // }
+
 
         this.filters = {}
 
@@ -19,6 +25,7 @@ class Filter extends React.Component {
         this.handlePrice = this.handlePrice.bind(this)
         this.handleCuisine = this.handleCuisine.bind(this)
     }
+
 
     componentDidMount() {
         this.props.fetchRestaurants()
@@ -38,7 +45,7 @@ class Filter extends React.Component {
             this.forceUpdate()
         } else {
             e.currentTarget.id = "green"
-
+            
             this.filters[e.target.value] = e.target.textContent
             window.localStorage.setItem(this.filters, JSON.stringify(this.filters))
             this.forceUpdate()
@@ -83,7 +90,8 @@ class Filter extends React.Component {
         //iterate through the most recent element in state array
         //render restaurant items that have that element.true/make frontend calls
         //no need to map and make ajax calls to backend
-
+        debugger
+        
         let state = window.localStorage.getItem(location)
         let display;
         if(state === 'CA'){

@@ -5,7 +5,7 @@ class RestaurantIndexItem extends React.Component {
     constructor(props){
         super(props)
         this.handleClick = this.handleClick.bind(this);
-        debugger
+        
     }
 
     handleClick() {
@@ -21,7 +21,7 @@ class RestaurantIndexItem extends React.Component {
         if(revs.length === 0){
             display = <p>No Reviews</p>
         }else{
-            display = revs.reduce((a, b) => a + b, 0) / revs.length
+            display = <p>{revs.reduce((a, b) => a + b, 0) / revs.length}</p> 
         }
 
         return (
@@ -33,7 +33,7 @@ class RestaurantIndexItem extends React.Component {
                     <div className="restaurant-ii-info">
                         <div className="restaurant-info-top-left" onClick={this.handleClick}>
                             <p className="restaurant-title">{this.props.restaurant.name}</p>
-                            <p>{display}</p>
+                            {display}
                             <p>{this.props.restaurant.price}</p>
                             <p>{this.props.restaurant.description}</p>
                         </div>

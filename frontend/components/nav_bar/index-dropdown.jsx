@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class IndexDropdown extends React.Component{
     constructor(props){
@@ -8,6 +9,7 @@ class IndexDropdown extends React.Component{
 
 
     render(){
+
         return(
             <div className="dropdown-house">
                 <div className="navbar">
@@ -17,9 +19,12 @@ class IndexDropdown extends React.Component{
                             <i className="down"></i>
                         </button>
                         <div className="dropdown-content">
-                            <a href="#">Link1</a>
-                            <a href="#">Link2</a>
-                            <a href="#">Link3</a>
+                            <br/>
+                            <p id="dropdown-tt">By Featured State</p>
+                            <br/>
+                            <Link to={{ pathname: "/restaurants", query: "CA" }} style={{ textDecoration: 'none' }}>California</Link>
+                            <Link to={{ pathname: "/restaurants", query: "NV" }} style={{ textDecoration: 'none' }}>Nevada</Link>
+                            <Link to={{ pathname: "/restaurants", query: "WY" }} style={{ textDecoration: 'none' }}>Wyoming</Link>
                         </div>
 
                     </div>

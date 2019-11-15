@@ -909,6 +909,17 @@ i {
     border: 1px solid black;
 }
 
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#dropdown-tt {
+    padding-left: 10px;
+}
+
 .rest-show-info {
     display: flex;
     flex-direction: row;
@@ -916,6 +927,7 @@ i {
     width: 100vw;
     height: 71vh;
     outline: black;
+    margin-top: 20px;
 }
 
 .show-info-left {

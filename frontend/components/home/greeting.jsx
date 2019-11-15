@@ -74,6 +74,7 @@ class Greeting extends React.Component {
                             <div className="greeting-search-box">
                                 <label className="greeting-search-label">Find</label>
                                 <input
+                                
                                     className="greeting-search-form"
                                     type="text"
                                     value={this.state.name}

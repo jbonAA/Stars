@@ -54,14 +54,6 @@ file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/zazie4.jpg"
 zazie.photos.attach(io: file4, filename: 'zazie4.jpg')
 
 
-#file1 = open()
-# zazie.photos.attach(io: file1, filename: 'zazie1.jpg')
-# file2 = open()
-# zazie.photos.attach(io: file2, filename: 'zazie2.jpg')
-# file3 = open()
-# zazie.photos.attach(io: file3, filename: 'zazie3.jpg')
-# file4 = open()
-#zazie.photos.attach(io: file4, filename: 'zazie4.jpg')
 
 
 Review.create(
@@ -74,16 +66,7 @@ Review.create(
 
 # in map state to props need to return an empty array if no reviews yet
     
-    # file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/zazie_idx.jpg")
-    # zazie.photos.attach(io: file, filename: "zazie_idx.jpg")
-    # file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/zazie1.jpg")
-    # zazie.photos.attach(io: file2, filename: "zazie1.jpg")
-    # file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/zazie2.jpg")
-    # zazie.photos.attach(io: file3, filename: "zazie2.jpg")
-    # file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/zazie3.jpg")
-    # zazie.photos.attach(io: file4, filename: "zazie3.jpg")
-    # file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/zazie4.jpg")
-    # zazie.photos.attach(io: file5, filename: "zazie4.jpg")
+
 
 fog = Restaurant.create({
     name: "Fog Harbor Fish House",
@@ -107,6 +90,17 @@ fog = Restaurant.create({
     "Sun: 11:00 am - 10:00 pm"
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/fog_idx.jpg")
+fog.photos.attach(io: file, filename: 'fog_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/fog1.jpg")
+fog.photos.attach(io: file1, filename: 'fog1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/fog2.jpg")
+fog.photos.attach(io: file2, filename: 'fog2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/fog3.jpg")
+fog.photos.attach(io: file3, filename: 'fog3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/fog4.jpg")
+fog.photos.attach(io: file4, filename: 'fog4.jpg')
 
 
 
@@ -133,6 +127,16 @@ house = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/house_idx.jpg")
+house.photos.attach(io: file, filename: 'house_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/house1.jpg")
+house.photos.attach(io: file1, filename: 'house1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/house2.jpg")
+house.photos.attach(io: file2, filename: 'house2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/house3.jpg")
+house.photos.attach(io: file3, filename: 'house3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/house4.jpg")
+house.photos.attach(io: file4, filename: 'house4.jpg')
 
 farmhouse = Restaurant.create({
     name: "Farmhouse Kitchen Thai Cuisine",
@@ -156,6 +160,17 @@ farmhouse = Restaurant.create({
     "Sun: 12:00pm - 10:00 pm"
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/farmhouse_idx.jpg")
+farmhouse.photos.attach(io: file, filename: 'farmhouse_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/farmhouse1.jpg")
+farmhouse.photos.attach(io: file1, filename: 'farmhouse1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/farmhouse2.jpg")
+farmhouse.photos.attach(io: file2, filename: 'farmhouse2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/farmhouse3.jpg")
+farmhouse.photos.attach(io: file3, filename: 'farmhouse3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/farmhouse4.jpg")
+farmhouse.photos.attach(io: file4, filename: 'farmhouse4.jpg')
 
 
 umma = Restaurant.create({
@@ -181,6 +196,17 @@ umma = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/umma_idx.jpg")
+umma.photos.attach(io: file, filename: 'umma_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/umma1.jpg")
+umma.photos.attach(io: file1, filename: 'umma1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/umma2.jpg")
+umma.photos.attach(io: file2, filename: 'umma2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/umma3.jpg")
+umma.photos.attach(io: file3, filename: 'umma3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/umma4.jpg")
+umma.photos.attach(io: file4, filename: 'umma4.jpg')
+
 
 tuba = Restaurant.create({
     name: "Tuba Authentic Turkish Restaurant",
@@ -204,6 +230,17 @@ tuba = Restaurant.create({
     "Sun: 5:00 pm - 10:30 pm   "
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tuba_idx.jpg")
+tuba.photos.attach(io: file, filename: 'tuba_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tuba1.jpg")
+tuba.photos.attach(io: file1, filename: 'tuba1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tuba2.jpg")
+tuba.photos.attach(io: file2, filename: 'tuba2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tuba3.jpg")
+tuba.photos.attach(io: file3, filename: 'tuba3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tuba4.jpg")
+tuba.photos.attach(io: file4, filename: 'tuba4.jpg')
 
 
 noosh = Restaurant.create({
@@ -229,6 +266,17 @@ noosh = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/noosh_idx.jpg")
+noosh.photos.attach(io: file, filename: 'noosh_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/noosh1.jpg")
+noosh.photos.attach(io: file1, filename: 'noosh1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/noosh2.jpg")
+noosh.photos.attach(io: file2, filename: 'noosh2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/noosh3.jpg")
+noosh.photos.attach(io: file3, filename: 'noosh3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/noosh4.jpg")
+noosh.photos.attach(io: file4, filename: 'noosh4.jpg')
+
 
 hog = Restaurant.create({
     name: "Hog Island Oyster Co",
@@ -252,6 +300,17 @@ hog = Restaurant.create({
     "Sun: 11:00 am - 9:00 pm"
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/hog_idx.jpg")
+hog.photos.attach(io: file, filename: 'hog_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/hog1.jpg")
+hog.photos.attach(io: file1, filename: 'hog1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/hog2.jpg")
+hog.photos.attach(io: file2, filename: 'hog2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/hog3.jpg")
+hog.photos.attach(io: file3, filename: 'hog3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/hog4.jpg")
+hog.photos.attach(io: file4, filename: 'hog4.jpg')
 
 
 tung = Restaurant.create({
@@ -277,6 +336,17 @@ tung = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tung_idx.jpg")
+tung.photos.attach(io: file, filename: 'tung_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tung1.jpg")
+tung.photos.attach(io: file1, filename: 'tung1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tung2.jpg")
+tung.photos.attach(io: file2, filename: 'tung2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tung3.jpg")
+tung.photos.attach(io: file3, filename: 'tung3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/tung4.jpg")
+tung.photos.attach(io: file4, filename: 'tung4.jpg')
+
 bird = Restaurant.create({
    name:"The Bird",
    description:"Chicken Shop, Sandwiches",
@@ -299,6 +369,16 @@ bird = Restaurant.create({
        "Sun: Closed" ,
    ]
 })
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bird_idx.jpg")
+bird.photos.attach(io: file, filename: 'bird_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bird1.jpg")
+bird.photos.attach(io: file1, filename: 'bird1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bird2.jpg")
+bird.photos.attach(io: file2, filename: 'bird2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bird3.jpg")
+bird.photos.attach(io: file3, filename: 'bird3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bird4.jpg")
+bird.photos.attach(io: file4, filename: 'bird4.jpg')
 
 spoon = Restaurant.create({
    name:"Wooden Spoon",
@@ -323,6 +403,16 @@ spoon = Restaurant.create({
    ],
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/spoon_idx.jpg")
+spoon.photos.attach(io: file, filename: 'spoon_idx.jpg')
+file1 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/spoon1.jpg")
+spoon.photos.attach(io: file1, filename: 'spoon1.jpg')
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/spoon2.jpg")
+spoon.photos.attach(io: file2, filename: 'spoon2.jpg')
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/spoon3.jpg")
+spoon.photos.attach(io: file3, filename: 'spoon3.jpg')
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/spoon4.jpg")
+spoon.photos.attach(io: file4, filename: 'spoon4.jpg')
 
 #vegas
 yardbird = Restaurant.create({
@@ -348,6 +438,17 @@ yardbird = Restaurant.create({
    ]
 })
 
+    file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/yardbird_idx.jpg")
+    yardbird.photos.attach(io: file, filename: "yardbird_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/yardbird1.jpg")
+    yardbird.photos.attach(io: file2, filename: "yardbird1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/yardbird2.jpg")
+    yardbird.photos.attach(io: file3, filename: "yardbird2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/yardbird3.jpg")
+    yardbird.photos.attach(io: file4, filename: "yardbird3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/yardbird4.jpg")
+    yardbird.photos.attach(io: file5, filename: "yardbird4.jpg")
+
 
 mon = Restaurant.create({
     name: "Mon Ami Gabi",
@@ -371,6 +472,17 @@ mon = Restaurant.create({
     "Sun: 7:00 am - 11:00 pm   "
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mon_idx.jpg")
+    mon.photos.attach(io: file, filename: "mon_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mon1.jpg")
+    mon.photos.attach(io: file2, filename: "mon1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mon2.jpg")
+    mon.photos.attach(io: file3, filename: "mon2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mon3.jpg")
+    mon.photos.attach(io: file4, filename: "mon3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mon4.jpg")
+    mon.photos.attach(io: file5, filename: "mon4.jpg")
 
 
 earl = Restaurant.create({
@@ -396,6 +508,17 @@ earl = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/earl_idx.jpg")
+    earl.photos.attach(io: file, filename: "earl_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/earl1.jpg")
+    earl.photos.attach(io: file2, filename: "earl1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/earl2.jpg")
+    earl.photos.attach(io: file3, filename: "earl2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/earl3.jpg")
+    earl.photos.attach(io: file4, filename: "earl3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/earl4.jpg")
+    earl.photos.attach(io: file5, filename: "earl4.jpg")
+
 
 nacho = Restaurant.create({
     name: "Nacho Daddy",
@@ -419,6 +542,17 @@ nacho = Restaurant.create({
     "Sun: 8:00 am - 2:00 am   "
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/nacho_idx.jpg")
+    nacho.photos.attach(io: file, filename: "nacho_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/nacho1.jpg")
+    nacho.photos.attach(io: file2, filename: "nacho1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/nacho2.jpg")
+    nacho.photos.attach(io: file3, filename: "nacho2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/nacho3.jpg")
+    nacho.photos.attach(io: file4, filename: "nacho3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/nacho4.jpg")
+    nacho.photos.attach(io: file5, filename: "nacho4.jpg")
 
 
 mamas = Restaurant.create({
@@ -444,6 +578,17 @@ mamas = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mamas_idx.jpg")
+    mamas.photos.attach(io: file, filename: "mamas_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mamas1.jpg")
+    mamas.photos.attach(io: file2, filename: "mamas1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mamas2.jpg")
+    mamas.photos.attach(io: file3, filename: "mamas2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mamas3.jpg")
+    mamas.photos.attach(io: file4, filename: "mamas3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/mamas4.jpg")
+    mamas.photos.attach(io: file5, filename: "mamas4.jpg")
+
 
 bacchanal = Restaurant.create({
     name: "Bacchanal Buffet",
@@ -467,6 +612,17 @@ bacchanal = Restaurant.create({
     "Sun: 7:30 am - 10:00 pm"
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bacchanal_idx.jpg")
+    bacchanal.photos.attach(io: file, filename: "bacchanal_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bacchanal1.jpg")
+    bacchanal.photos.attach(io: file2, filename: "bacchanal1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bacchanal2.jpg")
+    bacchanal.photos.attach(io: file3, filename: "bacchanal2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bacchanal3.jpg")
+    bacchanal.photos.attach(io: file4, filename: "bacchanal3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bacchanal4.jpg")
+    bacchanal.photos.attach(io: file5, filename: "bacchanal4.jpg")
 
 
 neighbors = Restaurant.create({
@@ -492,6 +648,17 @@ neighbors = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/neighbors_idx.jpg")
+    neighbors.photos.attach(io: file, filename: "neighbors_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/neighbors1.jpg")
+    neighbors.photos.attach(io: file2, filename: "neighbors1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/neighbors2.jpg")
+    neighbors.photos.attach(io: file3, filename: "neighbors2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/neighbors3.jpg")
+    neighbors.photos.attach(io: file4, filename: "neighbors3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/neighbors4.jpg")
+    neighbors.photos.attach(io: file5, filename: "neighbors4.jpg")
+
 
 bouchon = Restaurant.create({
     name: "Bouchon",
@@ -515,6 +682,17 @@ bouchon = Restaurant.create({
     "Sun: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm"
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bouchon_idx.jpg")
+    bouchon.photos.attach(io: file, filename: "bouchon_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bouchon1.jpg")
+    bouchon.photos.attach(io: file2, filename: "bouchon1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bouchon2.jpg")
+    bouchon.photos.attach(io: file3, filename: "bouchon2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bouchon3.jpg")
+    bouchon.photos.attach(io: file4, filename: "bouchon3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bouchon4.jpg")
+    bouchon.photos.attach(io: file5, filename: "bouchon4.jpg")
 
 
 wicked = Restaurant.create({
@@ -540,6 +718,17 @@ wicked = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/wicked_idx.jpg")
+    wicked.photos.attach(io: file, filename: "wicked_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/wicked1.jpg")
+    wicked.photos.attach(io: file2, filename: "wicked1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/wicked2.jpg")
+    wicked.photos.attach(io: file3, filename: "wicked2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/wicked3.jpg")
+    wicked.photos.attach(io: file4, filename: "wicked3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/wicked4.jpg")
+    wicked.photos.attach(io: file5, filename: "wicked4.jpg")
+
 
 firefly = Restaurant.create({
     name: "Firefly Tapas Kitchen and Bar",
@@ -564,30 +753,19 @@ firefly = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/firefly_idx.jpg")
+    firefly.photos.attach(io: file, filename: "firefly_idx.jpg")
+    file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/firefly1.jpg")
+    firefly.photos.attach(io: file2, filename: "firefly1.jpg")
+    file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/firefly2.jpg")
+    firefly.photos.attach(io: file3, filename: "firefly2.jpg")
+    file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/firefly3.jpg")
+    firefly.photos.attach(io: file4, filename: "firefly3.jpg")
+    file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/firefly4.jpg")
+    firefly.photos.attach(io: file5, filename: "firefly4.jpg")
+
 #wyoming
 
-snake = Restaurant.create({
-    name: "Snake River Brewing",
-    description:"Brewpub, American",
-    website:"snakeriverbrewing.com",
-    city:"Jackson",
-    state:"WY",
-    address:"265 S Millward St",
-    phone:"(307) 200-4890",
-    stars:0,
-    delivery: true,
-    takeout: true,
-    price: "$$",
-    hours: [
-    "Mon: 11:00 am - 11:00 pm",
-    "Tue: 11:00 am - 11:00 pm",
-    "Wed: 11:00 am - 11:00 pm",
-    "Thu: 11:00 am - 11:00 pm",
-    "Fri: 11:00 am - 11:00 pm",
-    "Sat: 11:00 am - 11:00 pm",
-    "Sun: 11:00 am - 11:00 pm"
-   ]
-})
 
 
 gather = Restaurant.create({
@@ -613,6 +791,18 @@ gather = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gather/gather_idx.jpg")
+gather.photos.attach(io: file, filename: "gather_idx.jpg")
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gather/gather1.jpg")
+gather.photos.attach(io: file2, filename: "gather1.jpg")
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gather/gather2.jpg")
+gather.photos.attach(io: file3, filename: "gather2.jpg")
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gather/gather3.jpg")
+gather.photos.attach(io: file4, filename: "gather3.jpg")
+file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gather/gather4.jpg")
+gather.photos.attach(io: file5, filename: "gather4.jpg")
+
+
 gun = Restaurant.create({
     name: "Gun Barrel Steak and Game House",
     description:"Steakhouses, Bars",
@@ -636,6 +826,17 @@ gun = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gun/gun_idx.jpg")
+gun.photos.attach(io: file, filename: "gun_idx.jpg")
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gun/gun1.jpg")
+gun.photos.attach(io: file2, filename: "gun1.jpg")
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gun/gun2.jpg")
+gun.photos.attach(io: file3, filename: "gun2.jpg")
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gun/gun3.jpg")
+gun.photos.attach(io: file4, filename: "gun3.jpg")
+file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/gun/gun4.jpg")
+gun.photos.attach(io: file5, filename: "gun4.jpg")
+
 still = Restaurant.create({
     name: "StillWest Brewery & Grill",
     description:"Brewpubs, American, Beer Bar",
@@ -658,6 +859,17 @@ still = Restaurant.create({
     "Sun: 11:00 am - 10:00 pm"
    ]
 })
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/still/still_idx.jpg")
+still.photos.attach(io: file, filename: "still_idx.jpg")
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/still/still1.jpg")
+still.photos.attach(io: file2, filename: "still1.jpg")
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/still/still2.jpg")
+still.photos.attach(io: file3, filename: "still2.jpg")
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/still/still3.jpg")
+still.photos.attach(io: file4, filename: "still3.jpg")
+file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/still/still4.jpg")
+still.photos.attach(io: file5, filename: "still4.jpg")
+
 
 glori = Restaurant.create({
     name: "Glorietta Trattoria",
@@ -682,6 +894,17 @@ glori = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/glori/glori_idx.jpg")
+glori.photos.attach(io: file, filename: "glori_idx.jpg")
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/glori/glori1.jpg")
+glori.photos.attach(io: file2, filename: "glori1.jpg")
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/glori/glori2.jpg")
+glori.photos.attach(io: file3, filename: "glori2.jpg")
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/glori/glori3.jpg")
+glori.photos.attach(io: file4, filename: "glori3.jpg")
+file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/glori/glori4.jpg")
+glori.photos.attach(io: file5, filename: "glori4.jpg")
+
 bin22 = Restaurant.create({
     name: "Bin22",
     description:"Tapas/Small Plates, Wine Bars",
@@ -704,6 +927,17 @@ bin22 = Restaurant.create({
     "Sun: 10:00 am - 10:00 pm"
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bin22/bin22_idx.jpg")
+bin22.photos.attach(io: file, filename: "bin22_idx.jpg")
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bin22/bin221.jpg")
+bin22.photos.attach(io: file2, filename: "bin221.jpg")
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bin22/bin222.jpg")
+bin22.photos.attach(io: file3, filename: "bin222.jpg")
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bin22/bin223.jpg")
+bin22.photos.attach(io: file4, filename: "bin223.jpg")
+file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bin22/bin224.jpg")
+bin22.photos.attach(io: file5, filename: "bin224.jpg")
 
 river = Restaurant.create({
     name: "Snake River Grill",
@@ -728,6 +962,17 @@ river = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/river/river_idx.jpg")
+river.photos.attach(io: file, filename: "river_idx.jpg")
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/river/river1.jpg")
+river.photos.attach(io: file2, filename: "river1.jpg")
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/river/river2.jpg")
+river.photos.attach(io: file3, filename: "river2.jpg")
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/river/river3.jpg")
+river.photos.attach(io: file4, filename: "river3.jpg")
+file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/river/river4.jpg")
+river.photos.attach(io: file5, filename: "river4.jpg")
+
 thebird = Restaurant.create({
     name: "The Bird",
     description:"American",
@@ -750,6 +995,17 @@ thebird = Restaurant.create({
     "Sun: 4:00 pm - 11:00 pm"
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/thebird/thebird_idx.jpg")
+thebird.photos.attach(io: file, filename: "thebird_idx.jpg")
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/thebird/thebird1.jpg")
+thebird.photos.attach(io: file2, filename: "thebird1.jpg")
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/thebird/thebird2.jpg")
+thebird.photos.attach(io: file3, filename: "thebird2.jpg")
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/thebird/thebird3.jpg")
+thebird.photos.attach(io: file4, filename: "thebird3.jpg")
+file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/thebird/thebird4.jpg")
+thebird.photos.attach(io: file5, filename: "thebird4.jpg")
 
 kitchen = Restaurant.create({
     name: "The Kitchen",
@@ -774,6 +1030,17 @@ kitchen = Restaurant.create({
    ]
 })
 
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/kitchen/kitchen_idx.jpg")
+kitchen.photos.attach(io: file, filename: "kitchen_idx.jpg")
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/kitchen/kitchen1.jpg")
+kitchen.photos.attach(io: file2, filename: "kitchen1.jpg")
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/kitchen/kitchen2.jpg")
+kitchen.photos.attach(io: file3, filename: "kitchen2.jpg")
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/kitchen/kitchen3.jpg")
+kitchen.photos.attach(io: file4, filename: "kitchen3.jpg")
+file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/kitchen/kitchen4.jpg")
+kitchen.photos.attach(io: file5, filename: "kitchen4.jpg")
+
 bighole = Restaurant.create({
     name: "Big Hole BBQ",
     description:"Barbeque",
@@ -796,3 +1063,14 @@ bighole = Restaurant.create({
     "Sun: 11:30 am - 10:00 pm "
    ]
 })
+
+file = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bighole/bighole_idx.jpg")
+bighole.photos.attach(io: file, filename: "bighole_idx.jpg")
+file2 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bighole/bighole1.jpg")
+bighole.photos.attach(io: file2, filename: "bighole1.jpg")
+file3 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bighole/bighole2.jpg")
+bighole.photos.attach(io: file3, filename: "bighole2.jpg")
+file4 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bighole/bighole3.jpg")
+bighole.photos.attach(io: file4, filename: "bighole3.jpg")
+file5 = open("https://stars-fullstack-dev.s3-us-west-1.amazonaws.com/bighole/bighole4.jpg")
+bighole.photos.attach(io: file5, filename: "bighole4.jpg")

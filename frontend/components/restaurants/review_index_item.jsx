@@ -23,7 +23,7 @@ class ReviewIndexItems extends React.Component {
     render(){
         const {review} = this.props
         let display;
-        debugger
+        
             if(this.props.review !== undefined){
                 if (this.props.currentUser === this.props.review.user_id){
                     display = (<div id="rev">
