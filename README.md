@@ -25,10 +25,10 @@ From there, logged in users can post reviews that dynamically update ratings for
 ### Future Implementations Include..
 
 * Minor Tweaks to Site Navigation
-* Implementing Links on Home Page to Filter by Business Type
 * Dynamic Search Functionality
 * Google Map & Markers
 * Editing Reviews
 * Api to Grab Businesses
+* Implementing Links on Home Page to Filter by Business Type
 
 
