@@ -30,7 +30,7 @@ class IndexDropdown extends React.Component{
                     </div>
                     
                     <div className="dropdown">
-                        <button className="dropbtn">Home Services   
+                        <button className="dropbtn">By Price   
                             <i className="down"></i>
                         </button>
                         <div className="dropdown-content">

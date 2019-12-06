@@ -277,6 +277,7 @@ tentative splash form
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 40px;
 
 }
 
@@ -441,9 +442,16 @@ tentative splash form
     align-content: center;
     height: 90px;
     width: 100vw;
-    
-   
-   
+}
+
+.greeting-search2 {
+    background: rgb(20, 18, 18);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 90px;
+    width: 100vw;
 }
 
 .greeting-new{
@@ -459,7 +467,17 @@ tentative splash form
 .greeting-search-box {
     border: 3px solid white;
     height: 40px;
-    width: 50%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 3px;
+    margin-top: 22px;
+}
+.greeting-search-box2 {
+    border: 3px solid white;
+    height: 40px;
+    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -468,6 +486,10 @@ tentative splash form
 }
 
 .greeting-search-form {
+    width: 880px;
+    font-size: 20px;
+}
+.greeting-search-form2 {
     width: 880px;
     font-size: 20px;
 }
@@ -480,7 +502,19 @@ tentative splash form
     width: 70px;
     font-size: 20px;
     text-align: center;
-    padding-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.greeting-search-label2 {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    background-color: white;
+    width: 70px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
     font-weight: bold;
 }
 .logo-title{

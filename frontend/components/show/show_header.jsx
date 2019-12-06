@@ -18,8 +18,6 @@ class ShowHeader extends React.Component {
 
     render() {
         let stars;
-        
-        
         let display;
         let total=[]
         if(this.props.reviews.length === 0){
