@@ -1,6 +1,7 @@
 import React from 'react';
 import WelcomeContainer from './welcome_container';
 import HomeFilters from './home_filters';
+import Filter from '../nav_bar/filter';
 
 
 class Greeting extends React.Component {
@@ -11,6 +12,7 @@ class Greeting extends React.Component {
             city: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSearchSubmit = this.handleSearchSubmit.bind(this)
         // this.handleLogout = this.handleLogout.bind(this)
     }
 
@@ -29,6 +31,32 @@ class Greeting extends React.Component {
         event.preventDefault();
         this.props.fetchRestaurants(this.state)
             .then(() => this.props.history.push('/'));
+    }
+
+    filter(name) {
+        let result = []
+        Object.values(this.props.restaurants).forEach((el) => {
+            debugger
+            if (el.name.toLowerCase() === name) {
+                debugger
+                result.push(el)
+            }
+        })
+        return result
+    }
+
+    handleSearchSubmit(event) {
+        event.preventDefault();
+        debugger
+
+
+        let searched = this.filter(this.state.name)
+        console.log(searched)
+        let id = searched[0].id
+        console.log(id)
+        this.props.history.push(`/restaurants/${id}`)
+        
+        
     }
 
     // handleLogout(event) {
@@ -91,7 +119,7 @@ class Greeting extends React.Component {
                                     placeholder="Featured City"
                                     onChange={this.handleInput('city')}
                                 />
-                                <button className="greeting-search-submit">{icon}</button>
+                                <button className="greeting-search-submit" onClick={this.handleSearchSubmit}>{icon}</button>
                             </div>
                         </div>
                     </div>
