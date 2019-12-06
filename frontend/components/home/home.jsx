@@ -13,6 +13,10 @@ class Home extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    componentDidMount(){
+        this.props.fetchRestaurants()
+    }
+
     handleInput(type) {
         return (event) => {
             this.setState({ [type]: event.target.value });
@@ -31,7 +35,7 @@ class Home extends React.Component{
 
         return (
             <div className="home">
-                <GreetingContainer />
+                <GreetingContainer fetchRestaurant={this.props.fetchRestaurant}/>
             </div>
         )
     }
