@@ -3,6 +3,7 @@ import { logout } from '../../actions/session_actions';
 import { connect} from 'react-redux';
 import {withRouter} from 'react-router-dom'
 import Greeting from './greeting';
+import {fetchRestaurant} from '../../actions/restaurant_actions'
 
 const mapStateToProps = (state) => {
     return ({ 
@@ -13,7 +14,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    fetchRestaurant: (id) => dispatch(fetchRestaurant(id))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Greeting))
