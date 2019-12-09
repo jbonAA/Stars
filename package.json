@@ -2,11 +2,13 @@
   "name": "stars",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "file-loader": "^4.2.0",
+    "mapbox-gl": "^1.6.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-redux": "^5.1.1",

@@ -6,11 +6,12 @@ import React from 'react';
 import HomeContainer from '../home/home_container'
 import Filter from '../nav_bar/filter';
 import IndexDropdown from '../nav_bar/index-dropdown';
+import IndexMap from '../map/index_map'
 
 class Search extends React.Component {
     constructor(props){
         super(props)
-        
+        debugger
     }
 
     render() {

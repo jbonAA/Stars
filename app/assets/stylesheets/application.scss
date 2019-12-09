@@ -674,9 +674,9 @@ tentative splash form
 //restaurant index
 
 .restaurant-ii-photo{
-    height: 284px;
-    width: 284px;
-    margin-right: 35px;
+    height: 200px;
+    width: 200px;
+    
 }
 
 #pic {
@@ -689,18 +689,19 @@ tentative splash form
 .restaurant-ii-info {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     line-height: 1.5em;
 }
 
 .restaurant-ii-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-content: center;
 }
 
 .restaurant-info-container {
-    width: 570px;
+    width: 400px;
     height: 214px;
     padding-left: 10px;
 }
@@ -708,8 +709,14 @@ tentative splash form
 
 
 .inner-restaurant-index {
-    width: 100vw;
+    width: 65vw;
 
+}
+
+#index-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .all-results {
@@ -1173,6 +1180,20 @@ i {
 .restaurant-ii-photo img {
     width: 16vw;
     height: 22vh;
+    margin-left: 0;
+}
+
+#map-container {
+    margin-right: 150px;
+    display: inline-block;
+
+
+}
+
+#map {
+    position: fixed;
+    top: 320px;
+    right: 120px;
 }
 
 #rev-container {

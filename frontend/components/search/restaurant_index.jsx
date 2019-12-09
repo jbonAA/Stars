@@ -93,6 +93,7 @@ import React from 'react';
 import RestaurantIndexItem from './restaurant_index_items';
 
 
+
 const RestaurantIndex = ({ restaurants, filters, fetchRestaurant }) => {
 
     let filtered_restaurants = []
