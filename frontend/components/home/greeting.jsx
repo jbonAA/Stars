@@ -36,9 +36,7 @@ class Greeting extends React.Component {
     filter(name) {
         let result = []
         Object.values(this.props.restaurants).forEach((el) => {
-            debugger
             if (el.name.toLowerCase() === name) {
-                debugger
                 result.push(el)
             }
         })
@@ -51,10 +49,9 @@ class Greeting extends React.Component {
 
 
         let searched = this.filter(this.state.name)
-        console.log(searched)
         let id = searched[0].id
-        console.log(id)
-        this.props.history.push(`/restaurants/${id}`)
+        this.props.fetchRestaurant(id)
+            .then(() => this.props.history.push(`/restaurants/${id}`))
         
         
     }
