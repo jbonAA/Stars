@@ -135,6 +135,8 @@ const RestaurantIndex = ({ restaurants, filters, fetchRestaurant }) => {
         }
     })
 
+
+
     return (
         <div id="center">
             <div className="inner-restaurant-index">
