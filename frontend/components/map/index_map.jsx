@@ -12,10 +12,13 @@ class IndexMap extends React.Component {
             map: {},
             city: []
         }
+        debugger
+        this.generateMap = this.generateMap.bind(this)
     }
 
 
     componentDidMount() {
+        debugger
         let marks = [];
         this.props.restaurants.forEach((restaurant) => {
             if(restaurant.location === this.props.location){
@@ -37,6 +40,20 @@ class IndexMap extends React.Component {
         debugger
         //create map iterate through props make markers
         //look at local storage to determine the center depends on city
+        
+
+
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        debugger
+        if(prevProps.location !== this.props.location) {
+            this.generateMap()
+        }
+    }
+
+
+    generateMap() {
         let cty = []
         axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${this.props.location}.json?access_token=pk.eyJ1IjoiamJvbmFhIiwiYSI6ImNrMzZnaWdsdjAxaGozbm1wM254bnR5cGoifQ.zUuEvUSaf5GdH1zFqimOVw`)
             .then((res) => {
@@ -67,15 +84,23 @@ class IndexMap extends React.Component {
 
 
 
-
-
     shouldComponentUpdate(nextState, nextProps) {
-        if (Object.values(nextState.restaurants).length > this.props.restaurants.length){
-            return true
+        debugger
+        if(this.props.location !== window.localStorage.getItem){
+            return true;
         }else{
             return false
         }
     }
+
+
+    // shouldComponentUpdate(nextState, nextProps) {
+    //     if (Object.values(nextState.restaurants).length > this.props.restaurants.length){
+    //         return true
+    //     }else{
+    //         return false
+    //     }
+    // }
 
 
     render() {
