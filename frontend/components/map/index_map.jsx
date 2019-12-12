@@ -96,37 +96,14 @@ class IndexMap extends React.Component {
                 this.generateMarkers(this.state.markers)
             })
             
-        
-
-
-
-            // .then(() => {
-                // mapboxgl.accessToken = "pk.eyJ1IjoicHJvc2UwMDIxIiwiYSI6ImNrMzZoYWdidTAxcm8zaW82MW5jZmV6c2EifQ.PRbSpg500wqcoctnYFTIog"
-                // var map = new mapboxgl.Map({
-                //     container: this.mapContainer,
-                //     style: 'mapbox://styles/mapbox/streets-v11',
-                //     center: this.state.city[0],
-                //     zoom: 11
-                // })
-                // debugger
-            // })
-            
-            
-            // if(this.state.markers.length > 1){
-            //     this.generateMarkers()
-            // }
-        
-            
     }
 
     generateMarkers(markers) {
-        console.log(markers)
       
 
         this.state.map.on("load", () => {
             this.state.map.loadImage("https://i.imgur.com/MK4NUzI.png", (error, image) => {
                 if (error) throw error;
-                console.log(image)
 
                 for (let i = 0; i < markers.length; i++) {
                 
@@ -196,7 +173,6 @@ class IndexMap extends React.Component {
                     .setLngLat(coordinates)
                     .setHTML(description)
                     .addTo(map)
-                    console.log(popup)
             
                 map.on('mouseleave', function () {
                     map.getCanvas().style.cursor = "";
