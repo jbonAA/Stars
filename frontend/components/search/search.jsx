@@ -14,6 +14,8 @@ class Search extends React.Component {
         debugger
     }
 
+    //handle with function scope needs to set state with new query on click in index dropdown
+
     render() {
         let display;
         if (this.props.restaurants){
