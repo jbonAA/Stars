@@ -91,6 +91,7 @@
 
 import React from 'react';
 import RestaurantIndexItem from './restaurant_index_items';
+import IndexMap from '../map/index_map';
 
 
 
@@ -135,6 +136,26 @@ const RestaurantIndex = ({ restaurants, filters, fetchRestaurant }) => {
         }
     })
 
+    let map;
+    let locat;
+    if (restaurants.length > 0) {
+        if (localStorage.getItem(location) === "CA") {
+            locat = "San Francisco, CA"
+        } else if (localStorage.getItem(location) === "NV") {
+            locat = "Las Vegas, NV"
+        } else {
+            locat = "Jackson, WY"
+        }
+
+        map = (
+            <div>
+                <IndexMap restaurants={further_filt_restaurants}
+                    location={locat} />
+            </div>
+        )
+    } else {
+        map = null
+    }
 
 
     return (
@@ -151,6 +172,7 @@ const RestaurantIndex = ({ restaurants, filters, fetchRestaurant }) => {
                         <br />
                     </div>
                 ))}
+                {map}
             </div>
         </div>
     )

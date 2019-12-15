@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 //refactor
 import RestaurantIndex from '../search/restaurant_index';
-import IndexMap from '../map/index_map';
+// import IndexMap from '../map/index_map';
 
 
 class Filter extends React.Component {
@@ -92,27 +92,33 @@ class Filter extends React.Component {
         //render restaurant items that have that element.true/make frontend calls
         //no need to map and make ajax calls to backend
         debugger
-        let map;
-        let locat;
-        if(this.props.restaurants.length > 0){
-            if(localStorage.getItem(location) === "CA"){
-                locat = "San Francisco, CA"
-            }else if(localStorage.getItem(location) === "NV"){
-                locat = "Las Vegas, NV"
-            }else{
-                locat = "Jackson, WY"
-            }
 
-            map = (
-                <div>
-                    <IndexMap restaurants={this.props.restaurants}
-                    location={locat} />
-                </div>
-            )
-        }else{
-            map = null
-        }
+
+
+        // let map;
+        // let locat;
+        // if(this.props.restaurants.length > 0){
+        //     if(localStorage.getItem(location) === "CA"){
+        //         locat = "San Francisco, CA"
+        //     }else if(localStorage.getItem(location) === "NV"){
+        //         locat = "Las Vegas, NV"
+        //     }else{
+        //         locat = "Jackson, WY"
+        //     }
+
+        //     map = (
+        //         <div>
+        //             <IndexMap restaurants={this.props.restaurants}
+        //             location={locat} />
+        //         </div>
+        //     )
+        // }else{
+        //     map = null
+        // }
         
+
+
+
         let state = window.localStorage.getItem(location)
         let display;
         if(state === 'CA'){
@@ -180,7 +186,7 @@ class Filter extends React.Component {
                     fetchRestaurant={this.props.fetchRestaurant}
                     />
 
-                {map}
+                {/* {map} */}
                 </div>
         </div>
         )

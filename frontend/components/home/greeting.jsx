@@ -9,7 +9,8 @@ class Greeting extends React.Component {
         super(props)
         this.state = {
             name: '',
-            city: ''
+            city: '',
+            current: []
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleSearchSubmit = this.handleSearchSubmit.bind(this)
@@ -22,9 +23,23 @@ class Greeting extends React.Component {
     }
 
     handleInput(type) {
+        debugger
+        let res = [];
         return (event) => {
-            this.setState({ [type]: event.target.value });
+            let length = this.state.name.length
+            Object.values(this.props.restaurants).forEach((el) => {
+                console.log(el.name.slice(0, length + 1).toLowerCase());
+                console.log(this.state.name + `${event.target.value}`);
+                if(el.name.slice(0, length + 1).toLowerCase() === this.state.name + `${event.target.value}`){
+                    res.push(el);
+                }
+            })
+            this.setState({ 
+                [type]: event.target.value, 
+                current: res
+            });
         }
+
     }
 
     handleSubmit(event) {
