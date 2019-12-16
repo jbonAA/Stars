@@ -113,7 +113,7 @@ class Greeting extends React.Component {
                         </div>
                         <div className="home-search">
                             <p className="main-title">Stars</p>
-
+                            
                             <div className="greeting-search-box">
                                 <label className="greeting-search-label">Find</label>
                                 <input
@@ -134,8 +134,10 @@ class Greeting extends React.Component {
                                     onChange={this.handleInput('city')}
                                 />
                                 <button className="greeting-search-submit" onClick={this.handleSearchSubmit}>{icon}</button>
-                            <SearchDropdown restaurants={this.state.current}/>
                             </div>
+                                <div id="moveSearch">
+                                    <SearchDropdown restaurants={this.state.current}/>
+                                </div>
                         </div>
                     </div>
                     <HomeFilters />
