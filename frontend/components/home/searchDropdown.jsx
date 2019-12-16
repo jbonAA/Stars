@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SearchDropdown extends React.Component {
     constructor(props) {
@@ -27,10 +28,20 @@ class SearchDropdown extends React.Component {
     handleDropdown() {
         console.log(this.props.restaurants)
         let display = [];
-        this.props.restaurants.forEach((el) => {
-            display.push(<li>{el.name}</li>)
+        this.props.restaurants.forEach((el, i) => {
+            display.push(<Link to={{ pathname: `/restaurants/${el.id}` }} key={i}style={{ textDecoration: 'none' }}>
+            <p key={i}>{el.name}: {el.city}, {el.state}</p>
+            </Link>)
         })
         console.log(display)
+        let change = document.getElementById("search-items");
+        debugger
+        if(display !== []) {
+            change.setAttribute("class", "none")
+        }else{
+            change.setAttribute("class", "transp")
+
+        }
         return display
     }
 
@@ -45,7 +56,7 @@ class SearchDropdown extends React.Component {
         }
 
         return (
-            <div>
+            <div className="transp" id="search-items">
                 {list}
             </div>
         )

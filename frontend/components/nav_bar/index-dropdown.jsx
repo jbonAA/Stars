@@ -30,9 +30,7 @@ class IndexDropdown extends React.Component{
                             <br/>
                             <p id="dropdown-tt">By Featured State</p>
                             <br/>
-                            <li>
                             <Link to={{ pathname: "/restaurants", query: "CA" }} style={{ textDecoration: 'none' }}>California</Link>
-                            </li>
                             <Link to={{ pathname: "/restaurants", query: "NV" }} style={{ textDecoration: 'none' }}>Nevada</Link>
                             <Link to={{ pathname: "/restaurants", query: "WY" }} style={{ textDecoration: 'none' }}>Wyoming</Link>
                         </div>
