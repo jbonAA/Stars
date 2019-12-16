@@ -91,7 +91,7 @@
 
 import React from 'react';
 import RestaurantIndexItem from './restaurant_index_items';
-import IndexMap from '../map/index_map';
+import IndexMap from '../map/mapindex';
 
 
 
@@ -172,8 +172,8 @@ const RestaurantIndex = ({ restaurants, filters, fetchRestaurant }) => {
                         <br />
                     </div>
                 ))}
-                {map}
             </div>
+            {map}
         </div>
     )
 }

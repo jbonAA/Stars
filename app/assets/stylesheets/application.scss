@@ -695,34 +695,55 @@ tentative splash form
 .restaurant-ii-info {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     line-height: 1.5em;
+    width: 500px;
+    height: 165px;
+    border-bottom: 1px solid gray
+
 }
 
 .restaurant-ii-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: center;
+    
 }
 
 .restaurant-info-container {
-    width: 400px;
+    width: 600px;
     height: 214px;
     padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.restaurant-info-top-left {
+    align-self: flex-start;
 }
 
 
 
 .inner-restaurant-index {
-    width: 65vw;
+    width: 70vw;
 
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50vw;
 }
 
 #index-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .all-results {
@@ -1217,10 +1238,10 @@ i {
 
 #map {
     position: fixed;
-    width: 25%;
+    width: 32%;
     height: 40%;
     top: 320px;
-    right: 120px;
+    right: 50px;
 }
 
 .mapboxgl-popup {
