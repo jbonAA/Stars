@@ -2,6 +2,8 @@ import React from 'react';
 import WelcomeContainer from './welcome_container';
 import HomeFilters from './home_filters';
 import Filter from '../nav_bar/filter';
+import SearchDropdown from './searchDropdown';
+import Search from '../search/search';
 
 
 class Greeting extends React.Component {
@@ -29,11 +31,11 @@ class Greeting extends React.Component {
             let length = this.state.name.length
             Object.values(this.props.restaurants).forEach((el) => {
                 console.log(el.name.slice(0, length + 1).toLowerCase());
-                console.log(this.state.name + `${event.target.value}`);
-                if(el.name.slice(0, length + 1).toLowerCase() === this.state.name + `${event.target.value}`){
+                if(el.name.slice(0, length + 1).toLowerCase() === `${event.target.value}`){
                     res.push(el);
                 }
             })
+            console.log(this.state.current)
             this.setState({ 
                 [type]: event.target.value, 
                 current: res
@@ -132,6 +134,7 @@ class Greeting extends React.Component {
                                     onChange={this.handleInput('city')}
                                 />
                                 <button className="greeting-search-submit" onClick={this.handleSearchSubmit}>{icon}</button>
+                            <SearchDropdown restaurants={this.state.current}/>
                             </div>
                         </div>
                     </div>
