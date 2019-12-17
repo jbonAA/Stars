@@ -121,17 +121,8 @@ class Greeting extends React.Component {
                                     className="greeting-search-form"
                                     type="text"
                                     value={this.state.name}
-                                    placeholder="Restaurant Name"
+                                    placeholder="Restaurant by Name"
                                     onChange={this.handleInput('name')}
-                                />
-                                <label className="greeting-search-label">Near</label>
-                                <input
-                                
-                                    className="greeting-search-form"
-                                    type="text"
-                                    value={this.state.city}
-                                    placeholder="Featured City"
-                                    onChange={this.handleInput('city')}
                                 />
                                 <button className="greeting-search-submit" onClick={this.handleSearchSubmit}>{icon}</button>
                             </div>
@@ -159,16 +150,8 @@ class Greeting extends React.Component {
                                 className="greeting-search-form"
                                 type="text"
                                 value={this.state.name}
-                                placeholder="restaurant name"
+                                placeholder=" Restaurant by Name"
                                 onChange={this.handleInput('name')}
-                            />
-                            <label className="greeting-search-label2">Near</label>
-                            <input  
-                                className="greeting-search-form2"
-                                type="text"
-                                value={this.state.city}
-                                placeholder="Featured City"
-                                onChange={this.handleInput('city')}
                             />
                             <button className="greeting-search-submit" onClick={this.handleSubmit}>{icon}</button>
                         </div>
@@ -176,7 +159,7 @@ class Greeting extends React.Component {
                             <WelcomeContainer />
                         </div>
                     </div>
-                    <div id="moveSearch">
+                    <div id="moveSearch2">
                         <SearchDropdown restaurants={this.state.current} />
                     </div>
                 </div>

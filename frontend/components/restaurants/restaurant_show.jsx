@@ -5,11 +5,13 @@ import {withRouter} from 'react-router-dom';
 import ReviewIndexContainer from './review_index_container';
 import ShowHeader from '../show/show_header'
 import ShowHours from '../show/show_hours';
+import ShowMap from '../map/showmap';
 
 class RestaurantShow extends React.Component {
 
     constructor(props){
         super(props)
+        debugger
 
         this.state = {
             show: this.props.show,
@@ -33,8 +35,12 @@ class RestaurantShow extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
-        this.props.fetchRestaurant(localStorage.getItem("restaurantId"))
-            .then(this.setState({ ["test"]: "friend" }))
+        const res = this.props.fetchRestaurant(localStorage.getItem("restaurantId"))
+            .then((res) => {
+                this.setState({
+                    show: res
+                })
+            })
     }
 
 
@@ -42,6 +48,14 @@ class RestaurantShow extends React.Component {
 
 
     render() {
+        let map;
+        if(this.props.show.name) {
+            map = (
+            <ShowMap restaurants={[this.props.show]} locat={`${this.props.show.city}, ${this.props.show.state}`} />
+            )
+        }else{
+            map = null
+        }
         let display;
         if (this.props.show.id) {
             display = (<div>
@@ -82,6 +96,7 @@ class RestaurantShow extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        {map}
                     </div>
 
                     <div id="test">
