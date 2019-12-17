@@ -1,13 +1,28 @@
 import React from 'react';
-
+import {withRouter} from 'react-router-dom';
 
 class ShowHeader extends React.Component {
     constructor(props){
         super(props)
+
+        this.state = {
+            show: this.props.show,
+            test: ""
+        }
         
+        this.handleClick = this.handleClick.bind(this)
+
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        localStorage.setItem("name", this.props.show.name)
+        debugger
+        this.props.history.push(`/restaurants/${this.props.restaurantId}/review/new`)
     }
 
     shouldComponentUpdate(nextState, nextProps) {
+        debugger
         if(this.props.reviews[0] === undefined){
             return true
         }else if(this.props.reviews.length !== nextState.reviews.length){
@@ -47,7 +62,7 @@ class ShowHeader extends React.Component {
                     <p>{this.props.show.price}</p>
                 </div>
                 <div className="head-buttons">
-                    <button className="writeReview" id="show-button">Write a Review</button>
+                    <button className="writeReview" id="show-button"><a onClick={this.handleClick}>Write a Review</a></button>
                     <button id="show-button">Add Photo</button>
                     <button id="show-button">Share</button>
                     <button id="show-button">Save</button>
@@ -60,4 +75,4 @@ class ShowHeader extends React.Component {
 
 }
 
-export default ShowHeader
+export default withRouter(ShowHeader)

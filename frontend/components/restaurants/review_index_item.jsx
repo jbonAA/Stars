@@ -17,7 +17,10 @@ class ReviewIndexItems extends React.Component {
         e.preventDefault();
         
         let id = this.props.review.id;
-        this.props.delete(id).then(this.props.fetchRestaurant(localStorage.getItem("restaurantId")))
+        this.props.delete(id)
+            .then(this.props.fetchRestaurant(localStorage.getItem("restaurantId")))
+            .then(this.forceUpdate())
+
     }
 
     render(){

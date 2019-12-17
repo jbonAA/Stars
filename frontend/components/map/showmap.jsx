@@ -18,7 +18,7 @@ class ShowMap extends React.Component {
         debugger
         this.generateMap = this.generateMap.bind(this)
         this.generateMarkers = this.generateMarkers.bind(this)
-        // this.fly = this.fly.bind(this)
+        this.fly = this.fly.bind(this)
 
     }
 
@@ -31,13 +31,19 @@ class ShowMap extends React.Component {
         let num = this.state.markers.length
         if (prevProps.location !== this.props.location) {
             debugger
+            console.log("hello")
             this.fly(this.state.map)
             // this.state.map.on("load", () => {
             //     this.state.map.center = this.state.markers[0]
             // })
-            this.generateMarkers()
+            this.generateMarkers(this.state.map)
         } else if (prevProps.restaurants.length !== this.props.restaurants.length) {
+            console.log("hello")
             this.generateMarkers()
+        } else if (prevProps.restaurants[0].name !== this.props.restaurants.name){
+            console.log("hello")
+            this.fly(this.state.map)
+            this.generateMarkers(this.state.map)
         }
         // window.location.reload(true)
     }
@@ -59,22 +65,22 @@ class ShowMap extends React.Component {
 
     }
 
-    // fly(map) {
-    //     map.flyTo({
-    //         center: this.props.restaurants[0].latlng,
-    //         zoom: 12,
-    //         bearing: 0,
-    //         speed: 1.0,
-    //         curve: 2,
-    //         easing: function (t) {
-    //             return t;
-    //         },
-    //         essential: true
-    //     })
-    // }
+    fly(map) {
+        map.flyTo({
+            center: this.props.restaurants[0].latlng,
+            zoom: 12,
+            bearing: 0,
+            speed: 1.0,
+            curve: 2,
+            easing: function (t) {
+                return t;
+            },
+            essential: true
+        })
+    }
 
     generateMarkers(map) {
-        debugger
+        console.log(map)
 
 
         for (let j = 0; j < 11; j++) {
@@ -170,7 +176,9 @@ class ShowMap extends React.Component {
             return true;
         } else if (this.props.restaurants.length !== nextState.restaurants.length) {
             return true
-        } else {
+        }else if(this.props.restaurants[0].name !== nextState.restaurants[0].name){
+            return true 
+        }else {
             return false
         }
     }
