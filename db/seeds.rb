@@ -31,6 +31,7 @@ zazie = Restaurant.create(
    delivery: true,
    takeout: true,
    price: "$$",
+   latlng: [-122.450152, 37.765296],
    hours: [
        "Mon: 8:00 am - 2:00 pm",
        "Tue: 8:00 am - 2:00 pm",
@@ -80,6 +81,7 @@ fog = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$$",
+    latlng: [-122.4100714, 37.8094469],
     hours: [
     "Mon: 11:00 am - 10:00 pm",
     "Tue: 11:00 am - 10:00 pm",
@@ -116,6 +118,7 @@ house = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$$$",
+    latlng: [-122.406953, 37.798432],
     hours: [
     "Mon: 11:30 am - 2:30 pm  &  5:30 pm - 10:00 pm",
     "Tue: 11:30 am - 2:30 pm  &  5:30 pm - 10:00 pm",
@@ -150,6 +153,7 @@ farmhouse = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-122.41095, 37.75945],
     hours: [
     "Mon: 11:00 am - 2:00 pm  &  5:00pm - 10:00 pm",
     "Tue: 11:00 am - 2:00 pm  &  5:00pm - 10:00 pm",
@@ -185,6 +189,7 @@ umma = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-122.466084, 37.765502],
     hours: [
     "Mon: 11:00 am - 2:30 pm  &  5:00 pm - 9:00 pm   ",
     "Tue: 11:00 am - 2:30 pm  &  5:00 pm - 9:00 pm   ",
@@ -220,6 +225,7 @@ tuba = Restaurant.create({
     delivery: true,
     takeout: false,
     price: "$$",
+    latlng: [-122.42293, 37.754941],
     hours: [
     "Mon: 5:00 pm - 10:30 pm   ",
     "Tue: 5:00 pm - 10:30 pm   ",
@@ -255,6 +261,7 @@ noosh = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-122.433943, 37.78806],
     hours: [
     "Mon: 11:00 am - 10:30pm",
     "Tue: 11:00 am - 10:30pm",
@@ -290,6 +297,7 @@ hog = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$$",
+    latlng: [-122.463, 37.7648],
     hours: [
     "Mon: 11:00 am - 9:00 pm",
     "Tue: 11:00 am - 9:00 pm",
@@ -325,6 +333,7 @@ tung = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-122.46884, 37.76383],
     hours: [
     "Mon: 11:00 am - 3:00 pm  &  5:00 pm - 9:30 pm  ",
     "Tue: 11:00 am - 3:00 pm  &  5:00 pm - 9:30 pm  ",
@@ -359,6 +368,7 @@ bird = Restaurant.create({
    delivery: true,
    takeout: false,
    price: "$",
+   latlng: [-122.399959, 37.787247],
    hours: [
        "Mon: 7:30 am - 9:00 pm",
        "Tues: 7:30 am - 9:00 pm",
@@ -392,6 +402,7 @@ spoon = Restaurant.create({
    delivery: true,
    takeout: false,
    price: "$$",
+   latlng: [-122.43021, 37.76671],
    hours:[
        "Mon: 8:00 am - 3:00 pm",
        "Tues: 8:00 am - 3:00 pm",
@@ -427,6 +438,7 @@ yardbird = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$$",
+    latlng: [-115.1717, 36.12168],
     hours: [
     "Mon: 11:00 am - 11:00 pm   ",
     "Tue: 11:00 am - 11:00 pm   ",
@@ -462,6 +474,7 @@ mon = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-115.172119, 36.111937],
     hours: [
     "Mon: 7:00 am - 11:00 pm   ",
     "Tue: 7:00 am - 11:00 pm   ",
@@ -497,6 +510,7 @@ earl = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$",
+    latlng: [-115.171091, 36.110127],
     hours: [
     "Mon: Open 24 hours" ,
     "Tue: Open 24 hours" ,
@@ -532,6 +546,7 @@ nacho = Restaurant.create({
     delivery: false,
     takeout: false,
     price: "$$",
+    latlng: [-115.170337, 36.109836],
     hours: [
     "Mon: 8:00 am - 2:00 am   ",
     "Tue: 8:00 am - 2:00 am   ",
@@ -567,6 +582,7 @@ mamas = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$",
+    latlng: [-115.225958, 36.086481],
     hours: [
     "Mon: 6:00 am - 3:00 pm",
     "Tue: 6:00 am - 3:00 pm",
@@ -602,6 +618,7 @@ bacchanal = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$$",
+    latlng: [-115.17336, 36.081132],
     hours: [
     "Mon: 7:30 am - 10:00 pm",
     "Tue: 7:30 am - 10:00 pm",
@@ -637,6 +654,7 @@ neighbors = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-115.296922, 36.081132],
     hours: [
     "Mon: 7:00 am - 3:00 pm",
     "Tue: 7:00 am - 3:00 pm",
@@ -672,6 +690,7 @@ bouchon = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$$$",
+    latlng: [-115.101768, 36.72805],
     hours: [
     "Mon: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
     "Tue: 7:00 am - 1:00 pm  &  5:00 pm - 10:00 pm",
@@ -707,6 +726,7 @@ wicked = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$$",
+    latlng: [-115.176059, 36.109829],
     hours: [
     "Mon: 8:00 am - 9:00 pm",
     "Tue: 8:00 am - 9:00 pm",
@@ -742,6 +762,7 @@ firefly = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-115.154237, 36.120105],
     hours: [
     "Mon: 8:00 am - 9:00 pm",
     "Tue: 8:00 am - 9:00 pm",
@@ -780,6 +801,7 @@ gather = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-110.763421, 43.478801],
     hours: [
     "Mon: 5:00 pm - 10:00 pm",
     "Tue: 5:00 pm - 10:00 pm",
@@ -815,6 +837,7 @@ gun = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$$$",
+    latlng: [-110.78121, 43.473994],
     hours: [
     "Mon: 5:30 pm - 9:30 pm",
     "Tue: 5:30 pm - 9:30 pm",
@@ -849,6 +872,7 @@ still = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-110.761378, 43.473626],
     hours: [
     "Mon: 11:00 am - 10:00 pm",
     "Tue: 11:00 am - 10:00 pm",
@@ -883,6 +907,7 @@ glori = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$$",
+    latlng: [-110.76335, 43.482418],
     hours: [
     "Mon: 5:00 pm - 10:00 pm",
     "Tue: 5:00 pm - 10:00 pm",
@@ -917,6 +942,7 @@ bin22 = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-110.765378, 43.479276],
     hours: [
     "Mon: 10:00 am - 10:00 pm",
     "Tue: 10:00 am - 10:00 pm",
@@ -951,6 +977,7 @@ river = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$$$",
+    latlng: [-110.761027, 43.479263],
     hours: [
     "Mon: 4:00 pm - 10:00 pm",
     "Tue: 4:00 pm - 10:00 pm",
@@ -985,6 +1012,7 @@ thebird = Restaurant.create({
     delivery: false,
     takeout: true,
     price: "$$",
+    latlng: [-110.776924, 43.420187],
     hours: [
     "Mon: 4:00 pm - 11:00 pm",
     "Tue: 4:00 pm - 11:00 pm",
@@ -1019,6 +1047,7 @@ kitchen = Restaurant.create({
     delivery: false,
     takeout: false,
     price: "$$$",
+    latlng: [-110.764099, 43.480887],
     hours: [
     "Mon: 5:30 pm - 9:30 pm",
     "Tue: 5:30 pm - 9:30 pm",
@@ -1053,6 +1082,7 @@ bighole = Restaurant.create({
     delivery: true,
     takeout: true,
     price: "$$",
+    latlng: [-110.76764, 43.47844],
     hours: [
     "Mon: 11:30 am - 10:00 pm ",
     "Tue: 11:30 am - 10:00 pm ",
