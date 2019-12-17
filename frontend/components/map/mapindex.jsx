@@ -17,6 +17,7 @@ class IndexMap extends React.Component {
         debugger
         this.generateMap = this.generateMap.bind(this)
         this.generateMarkers = this.generateMarkers.bind(this)
+        this.fly = this.fly.bind(this)
 
     }
 
@@ -61,9 +62,10 @@ class IndexMap extends React.Component {
         let num = this.state.markers.length
         if (prevProps.location !== this.props.location) {
             debugger
-            this.state.map.on("load", () => {
-                this.state.map.center = this.state.markers[0]
-            })
+            this.fly(this.state.map)
+            // this.state.map.on("load", () => {
+            //     this.state.map.center = this.state.markers[0]
+            // })
             this.generateMarkers(11)
         } else if (prevProps.restaurants.length !== this.props.restaurants.length) {
             this.generateMarkers(11)
@@ -108,6 +110,20 @@ class IndexMap extends React.Component {
                 this.generateMarkers(11)
            })
 
+    }
+
+    fly(map) {
+        map.flyTo({
+            center: this.props.restaurants[0].latlng,
+            zoom: 12,
+            bearing: 0,
+            speed: 1.0,
+            curve: 2,
+            easing: function(t) {
+                return t;
+            },
+            essential: true
+        })
     }
 
     generateMarkers(num) {
@@ -163,8 +179,9 @@ class IndexMap extends React.Component {
                     })
                 })
             })
-                this.getPopups(this.state.map)
-            // })
+        this.getPopups(this.state.map)
+        this.fly(this.state.map)
+
     }
     
     getPopups(map) {
@@ -173,7 +190,7 @@ class IndexMap extends React.Component {
             closeOnClick: true
         })
 
-        for (let i = 0; i < this.state.markers.length; i++) {
+        for (let i = 0; i < this.props.restaurants.length; i++) {
             map.on('mouseenter', `markers${i}`, (e) => {
                 map.getCanvas().style.cursor = 'pointer'
 
