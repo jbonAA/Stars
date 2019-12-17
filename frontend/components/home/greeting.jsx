@@ -16,7 +16,8 @@ class Greeting extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleSearchSubmit = this.handleSearchSubmit.bind(this)
-        // this.handleLogout = this.handleLogout.bind(this)
+        this.handleClick = this.handleClick.bind(this)
+
     }
 
     componentDidMount() {
@@ -48,6 +49,15 @@ class Greeting extends React.Component {
         event.preventDefault();
         this.props.fetchRestaurants(this.state)
             .then(() => this.props.history.push('/'));
+    }
+
+    handleClick(event) {
+        debugger
+
+        this.setState({
+            name: '',
+            current: []
+        })
     }
 
     filter(name) {
@@ -127,7 +137,7 @@ class Greeting extends React.Component {
                                 <button className="greeting-search-submit" onClick={this.handleSearchSubmit}>{icon}</button>
                             </div>
                                 <div id="moveSearch">
-                                    <SearchDropdown restaurants={this.state.current}/>
+                                    <SearchDropdown handle={this.handleClick} restaurants={this.state.current}/>
                                 </div>
                         </div>
                     </div>
@@ -160,7 +170,7 @@ class Greeting extends React.Component {
                         </div>
                     </div>
                     <div id="moveSearch2">
-                        <SearchDropdown restaurants={this.state.current} />
+                        <SearchDropdown handle={this.handleClick} restaurants={this.state.current} />
                     </div>
                 </div>
             )  

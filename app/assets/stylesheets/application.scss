@@ -762,6 +762,9 @@ tentative splash form
     color: rgb(64, 61, 173)
 }
 
+.restaurant-title:hover {
+    cursor: pointer;
+}
 
 //home state filters
 
@@ -1048,6 +1051,14 @@ i {
     margin-right: 22%;
 }
 
+.review-title {
+    font-size: 20px
+}
+
+.review-stars {
+    font-size: 20px
+}
+
 #test {
     display: flex;
     flex-direction: column;
@@ -1132,7 +1143,7 @@ i {
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
-    height: 90px;
+    height: 154px;
     width: 100vw;
 }
 
@@ -1144,12 +1155,12 @@ i {
 
 #rev-a {
     text-align: center;
-    margin-top: 1%;
+    margin-top: 2%;
 
 }
 .description-review {
     width: 57vw;
-    height: 46vh;
+    height: 32vh;
     font-size: 20px;
 }
 
@@ -1295,8 +1306,8 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 #rev {
     border: 1px solid black;
     border-radius: 5px;
-    width: 53.2%;
-    margin-left: 1%;
+    width: 54.2%;
+    margin-left: 2%;
 
 }
 
@@ -1304,6 +1315,7 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 25px;
 }
 
 #rev-button a {

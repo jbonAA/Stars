@@ -21,7 +21,7 @@ class RestaurantIndexItem extends React.Component {
         if(revs.length === 0){
             display = <p>No Reviews</p>
         }else{
-            display = <p>{revs.reduce((a, b) => a + b, 0) / revs.length}</p> 
+            display = <p>{Math.floor(revs.reduce((a, b) => a + b, 0) / revs.length)}</p> 
         }
 
         return (
