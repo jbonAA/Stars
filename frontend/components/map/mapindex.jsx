@@ -101,14 +101,14 @@ class IndexMap extends React.Component {
 
                 return map
             })
+            .then(() => {
+                 this.generateMarkers(11)
+            })
             .then((map) => {
                 this.setState({
                     map: map
                 })
             })
-           .then(() => {
-                this.generateMarkers(11)
-           })
 
     }
 
