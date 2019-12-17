@@ -7,8 +7,10 @@ class ShowHeader extends React.Component {
         
     }
 
-    shouldComponentUpdate() {
+    shouldComponentUpdate(nextState, nextProps) {
         if(this.props.reviews[0] === undefined){
+            return true
+        }else if(this.props.reviews.length !== nextState.reviews.length){
             return true
         }else{
             return false
