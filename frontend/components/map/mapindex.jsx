@@ -46,6 +46,7 @@ class IndexMap extends React.Component {
 
         // })
         this.generateMap()
+        
 
         
         
@@ -66,9 +67,9 @@ class IndexMap extends React.Component {
             // this.state.map.on("load", () => {
             //     this.state.map.center = this.state.markers[0]
             // })
-            this.generateMarkers(11)
+            this.generateMarkers()
         } else if (prevProps.restaurants.length !== this.props.restaurants.length) {
-            this.generateMarkers(11)
+            this.generateMarkers()
         }
         // window.location.reload(true)
     }
@@ -101,13 +102,14 @@ class IndexMap extends React.Component {
 
                 return map
             })
-            .then(() => {
-                 this.generateMarkers(11)
-            })
             .then((map) => {
                 this.setState({
                     map: map
                 })
+            })
+            .then(() => {
+                this.generateMarkers(11)
+                this.getPopups(this.state.map)
             })
 
     }
@@ -126,14 +128,15 @@ class IndexMap extends React.Component {
         })
     }
 
-    generateMarkers(num) {
+    generateMarkers() {
         debugger
         
         
-        for (let j = 0; j < num; j++) {
+        for (let j = 0; j < 11; j++) {
             if (this.state.map.getSource("markers" + `${j}`)) {
                 this.state.map.removeLayer("markers" + `${j}`)
                 this.state.map.removeSource("markers" + `${j}`)
+                
             }
         }
         // this.state.map.on("load", () => {
@@ -141,9 +144,7 @@ class IndexMap extends React.Component {
                 if (error) throw error;
                 
                 this.props.restaurants.forEach((el, i) => {
-                    console.log(el)
                     let mk = el.latlng
-                    console.log(mk)
                     this.state.map.addImage(`custom-marker${i}`, image);
                     this.state.map.addLayer({
                         id: "markers" + `${i}`,
@@ -179,12 +180,13 @@ class IndexMap extends React.Component {
                     })
                 })
             })
-        this.getPopups(this.state.map)
+        // this.getPopups(this.state.map)
         this.fly(this.state.map)
 
     }
     
     getPopups(map) {
+        debugger
         var popup = new mapboxgl.Popup({
             closeButton: false,
             closeOnClick: true

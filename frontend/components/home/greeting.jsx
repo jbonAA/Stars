@@ -147,33 +147,38 @@ class Greeting extends React.Component {
         }else{
 
             display =
-                (<div className="greeting-search2">
-                    <div className="logo-title">
-                        <p className="greeting-title">Stars</p>
+                (
+                <div id="dd-flex">
+                    <div className="greeting-search2">
+                        <div className="logo-title">
+                            <p className="greeting-title">Stars</p>
+                        </div>
+                        <div className="greeting-search-box2">
+                            <label className="greeting-search-label2">Find</label>
+                            <input
+                                className="greeting-search-form"
+                                type="text"
+                                value={this.state.name}
+                                placeholder="restaurant name"
+                                onChange={this.handleInput('name')}
+                            />
+                            <label className="greeting-search-label2">Near</label>
+                            <input  
+                                className="greeting-search-form2"
+                                type="text"
+                                value={this.state.city}
+                                placeholder="Featured City"
+                                onChange={this.handleInput('city')}
+                            />
+                            <button className="greeting-search-submit" onClick={this.handleSubmit}>{icon}</button>
+                        </div>
+                        <div className="greeting-welcome">
+                            <WelcomeContainer />
+                        </div>
                     </div>
-                    <div className="greeting-search-box2">
-                        <label className="greeting-search-label2">Find</label>
-                        <input
-                            className="greeting-search-form"
-                            type="text"
-                            value={this.state.name}
-                            placeholder="restaurant name"
-                            onChange={this.handleInput('name')}
-                        />
-                        <label className="greeting-search-label2">Near</label>
-                        <input  
-                            className="greeting-search-form2"
-                            type="text"
-                            value={this.state.city}
-                            placeholder="Featured City"
-                            onChange={this.handleInput('city')}
-                        />
-                        <button className="greeting-search-submit" onClick={this.handleSubmit}>{icon}</button>
+                    <div id="moveSearch">
+                        <SearchDropdown restaurants={this.state.current} />
                     </div>
-                    <div className="greeting-welcome">
-                        <WelcomeContainer />
-                    </div>
-
                 </div>
             )  
         }
