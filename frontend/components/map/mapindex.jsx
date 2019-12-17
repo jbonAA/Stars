@@ -28,22 +28,22 @@ class IndexMap extends React.Component {
         debugger
         let marks = [];
     
-        this.props.restaurants.forEach((restaurant) => {
-            if (restaurant.city === this.props.location.split(",")[0]) {
-                let address = restaurant.address;
-                let location = `${restaurant.city}, ${restaurant.state}`
-                axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${address}%2C%20${location}.json?access_token=pk.eyJ1IjoicHJvc2UwMDIxIiwiYSI6ImNrMzZoYWdidTAxcm8zaW82MW5jZmV6c2EifQ.PRbSpg500wqcoctnYFTIog&autocomplete=true`)
-                    .then(res => {
-                        marks.push([res.data.features[0].center[0], res.data.features[0].center[1], restaurant.name, restaurant.address])
-                    })
-                    .then(() => {
-                        this.setState({
-                            markers: marks,
-                        })
-                    })
-            }
+        // this.props.restaurants.forEach((restaurant) => {
+        //     if (restaurant.city === this.props.location.split(",")[0]) {
+        //         let address = restaurant.address;
+        //         let location = `${restaurant.city}, ${restaurant.state}`
+        //         axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${address}%2C%20${location}.json?access_token=pk.eyJ1IjoicHJvc2UwMDIxIiwiYSI6ImNrMzZoYWdidTAxcm8zaW82MW5jZmV6c2EifQ.PRbSpg500wqcoctnYFTIog&autocomplete=true`)
+        //             .then(res => {
+        //                 marks.push([res.data.features[0].center[0], res.data.features[0].center[1], restaurant.name, restaurant.address])
+        //             })
+        //             .then(() => {
+        //                 this.setState({
+        //                     markers: marks,
+        //                 })
+        //             })
+        //     }
 
-        })
+        // })
         this.generateMap()
 
         
@@ -56,53 +56,17 @@ class IndexMap extends React.Component {
 
     }
 
-    checkRestaurants(num) {
-        let marks = [];
-        debugger
-        while(marks.length < this.props.restaurants.length){
-            this.props.restaurants.forEach((restaurant) => {
-                if (restaurant.city === this.props.location.split(",")[0]) {
-                    let address = restaurant.address;
-                    let location = `${restaurant.city}, ${restaurant.state}`
-                    axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${address}%2C%20${location}.json?access_token=pk.eyJ1IjoicHJvc2UwMDIxIiwiYSI6ImNrMzZoYWdidTAxcm8zaW82MW5jZmV6c2EifQ.PRbSpg500wqcoctnYFTIog&autocomplete=true`)
-                        .then(res => {
-                            marks.push([res.data.features[0].center[0], res.data.features[0].center[1], restaurant.name, restaurant.address])
-                        })    
-                }
-    
-            })
-        }
-
-        console.log(marks)
-        axios.all(marks).then(() => {
-            this.setState({
-                markers: marks
-            })
-        })
-
-
-        
-        // this.setState({
-        //     // map: this.generateMap(),
-        //     markers: marks
-        // })
-
-
-    }
-
     componentDidUpdate(prevProps, prevState) {
         debugger
         let num = this.state.markers.length
         if (prevProps.location !== this.props.location) {
             debugger
-            this.state.map.on("reload", () => {
+            this.state.map.on("load", () => {
                 this.state.map.center = this.state.markers[0]
             })
-            
-            this.generateMarkers(this.state.markers)
+            this.generateMarkers(11)
         } else if (prevProps.restaurants.length !== this.props.restaurants.length) {
-            this.checkRestaurants()
-            this.generateMarkers(this.state.markers, num)
+            this.generateMarkers(11)
         }
         // window.location.reload(true)
     }
@@ -140,16 +104,13 @@ class IndexMap extends React.Component {
                     map: map
                 })
             })
-            .then(() => {
-                this.checkRestaurants()
-           })
            .then(() => {
-                this.generateMarkers(this.state.markers)
+                this.generateMarkers(11)
            })
 
     }
 
-    generateMarkers(markers, num) {
+    generateMarkers(num) {
         debugger
         
         
@@ -159,14 +120,14 @@ class IndexMap extends React.Component {
                 this.state.map.removeSource("markers" + `${j}`)
             }
         }
-        console.log(this.state.map.style)
-        console.log(markers)
-        this.state.map.on("load", () => {
+        // this.state.map.on("load", () => {
             this.state.map.loadImage("https://i.imgur.com/MK4NUzI.png", (error, image) => {
                 if (error) throw error;
-
-                for (let i = 0; i < markers.length; i++) {
-
+                
+                this.props.restaurants.forEach((el, i) => {
+                    console.log(el)
+                    let mk = el.latlng
+                    console.log(mk)
                     this.state.map.addImage(`custom-marker${i}`, image);
                     this.state.map.addLayer({
                         id: "markers" + `${i}`,
@@ -180,15 +141,15 @@ class IndexMap extends React.Component {
                                         type: 'Feature',
                                         properties: {
                                             description:
-                                                `<strong id="map-popup">
-                                                <p>${markers[i][2]}</p>
-                                                    <p>${markers[i][3]}</p>
+                                            `<strong id="map-popup">
+                                            <p>${el.name}</p>
+                                            <p>${el.address}</p>
                                             </strong>`,
                                             icon: `${image}`
                                         },
                                         geometry: {
                                             type: "Point",
-                                            coordinates: [markers[i][0], markers[i][1]]
+                                            coordinates: mk
                                         }
                                     }
                                 ]
@@ -198,19 +159,14 @@ class IndexMap extends React.Component {
                             "icon-image": `custom-marker${i}`,
                             'icon-allow-overlap': true
                         }
-
+                        
                     })
-
-
-
-                }
-                this.getPopups(this.state.map)
+                })
             })
-        })
-
-
+                this.getPopups(this.state.map)
+            // })
     }
-
+    
     getPopups(map) {
         var popup = new mapboxgl.Popup({
             closeButton: false,
@@ -254,8 +210,6 @@ class IndexMap extends React.Component {
         if (this.props.location !== nextState.location) {
             return true;
         } else if (this.props.restaurants.length !== nextState.restaurants.length) {
-            return true
-        }else if(nextProps.restaurants.length !== this.state.markers.length){
             return true
         } else {
             return false
