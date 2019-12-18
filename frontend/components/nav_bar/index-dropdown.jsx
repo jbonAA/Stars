@@ -5,18 +5,12 @@ class IndexDropdown extends React.Component{
     constructor(props){
         super(props)
 
-        // this.handleClick = this.handleClick.bind(this)
+        
     }
 
 
-    // handleClick(e) {
-    //     e.preventDefault()
-    //     if(e.TextContent === "California"){
+   
 
-    //     }
-    // }
-
-    //fixing
     render(){
 
         return(
@@ -31,9 +25,9 @@ class IndexDropdown extends React.Component{
                             <br/>
                             <p id="dropdown-tt">By Featured State</p>
                             <br/>
-                            <Link to={{ pathname: "/restaurants", query: "CA" }} style={{ textDecoration: 'none' }}>California</Link>
-                            <Link to={{ pathname: "/restaurants", query: "NV" }} style={{ textDecoration: 'none' }}>Nevada</Link>
-                            <Link to={{ pathname: "/restaurants", query: "WY" }} style={{ textDecoration: 'none' }}>Wyoming</Link>
+                            <Link to={{ pathname: "/restaurants", query: "CA" }} onClick={this.props.handle} style={{ textDecoration: 'none' }}>California</Link>
+                            <Link to={{ pathname: "/restaurants", query: "NV" }} onClick={this.props.handle} style={{ textDecoration: 'none' }}>Nevada</Link>
+                            <Link to={{ pathname: "/restaurants", query: "WY" }} onClick={this.props.handle} style={{ textDecoration: 'none' }}>Wyoming</Link>
                         </div>
 
                     </div>
