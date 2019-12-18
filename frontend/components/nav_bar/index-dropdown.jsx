@@ -13,6 +13,20 @@ class IndexDropdown extends React.Component{
 
     render(){
 
+        let display;
+
+        if(window.location.hash === "#/restaurants"){
+            display = (
+                <div className="dd-links">
+                    <div className="dd-review">
+                        <Link to={{ pathname: '/construction' }}>For Businesses!</Link>
+                    </div>
+                </div>
+            )
+        }else{
+            display = <p>Delightful Restaurant, Great to Visit</p>
+        }
+
         return(
             <div className="dropdown-house">
                 <div className="navbar">
@@ -35,15 +49,7 @@ class IndexDropdown extends React.Component{
                 
                 </div>
 
-                <div className="dd-links">
-                    <div className="dd-review">
-                        <a href="">Write A Review</a>
-                    </div>
-                    <div className="dd-review">
-                        <a href="">For Businesses</a>
-                    </div>
-
-                </div>
+                {display}
             </div>
         )
     }

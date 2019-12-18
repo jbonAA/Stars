@@ -9,12 +9,14 @@ import HomeContainer from './home/home_container';
 import SearchContainer from './search/search_container';
 import RestaurantShowContainer from './restaurants/restaurant_show_container'
 import ReviewFormContainer from './restaurants/review_form_container'
+import ConstructionComponent from '../components/construction/construction'
 
 const App = () => (
     <div>
   
         <Switch>
             {/* <AuthRoute exact path="/" component={GreetingContainer} /> */}
+            <Route exact path="/construction" component={ConstructionComponent} />
             <Route exact path="/restaurants/:restaurantId/review/new" component={ReviewFormContainer} />
             <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
             <Route exact path="/restaurants" component={SearchContainer} />
