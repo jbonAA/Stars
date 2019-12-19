@@ -26,14 +26,14 @@ class SearchDropdown extends React.Component {
     }
 
     handleDropdown() {
-        console.log(this.props.restaurants)
+        // console.log(this.props.restaurants)
         let display = [];
         this.props.restaurants.forEach((el, i) => {
             display.push(<Link to={{ pathname: `/restaurants/${el.id}` }} onClick={this.props.handle} key={i} style={{ textDecoration: 'none' }}>
             <p key={i} >{el.name}: {el.city}, {el.state}</p>
             </Link>)
         })
-        console.log(display)
+        // console.log(display)
         let change = document.getElementById("search-items");
         debugger
         if(display !== []) {

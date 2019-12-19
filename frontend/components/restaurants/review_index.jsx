@@ -21,6 +21,7 @@ class ReviewIndex extends React.Component{
                             <ReviewIndexItem
                             fetchRestaurant={this.props.fetchRestaurant}
                             review={review}
+                            key={Object.values(reviews).indexOf(review)}
                             delete={this.props.delete}
                             currentUser={this.props.currentUser} />
                             )

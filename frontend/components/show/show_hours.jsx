@@ -13,8 +13,8 @@ class ShowHours extends React.Component {
                 <div>
                     <h3>Restaurant Hours</h3>
                     <ul className="hours">
-                        {this.props.show.hours.map(el => (
-                            <li id="list-hour">{el}</li>
+                        {this.props.show.hours.map(el=> (
+                            <li id="list-hour" key={this.props.show.hours.indexOf(el)}>{el}</li>
                         ))}
                     </ul>
                 </div>
