@@ -5,19 +5,27 @@ class IndexDropdown extends React.Component{
     constructor(props){
         super(props)
 
-        // this.handleClick = this.handleClick.bind(this)
+        
     }
 
 
-    // handleClick(e) {
-    //     e.preventDefault()
-    //     if(e.TextContent === "California"){
+   
 
-    //     }
-    // }
-
-    //fixing
     render(){
+
+        let display;
+
+        if(window.location.hash === "#/restaurants"){
+            display = (
+                <div className="dd-links">
+                    <div className="dd-review">
+                        <Link to={{ pathname: '/construction' }}>For Businesses!</Link>
+                    </div>
+                </div>
+            )
+        }else{
+            display = <p>Delightful Restaurant, Great to Visit</p>
+        }
 
         return(
             <div className="dropdown-house">
@@ -31,9 +39,9 @@ class IndexDropdown extends React.Component{
                             <br/>
                             <p id="dropdown-tt">By Featured State</p>
                             <br/>
-                            <Link to={{ pathname: "/restaurants", query: "CA" }} style={{ textDecoration: 'none' }}>California</Link>
-                            <Link to={{ pathname: "/restaurants", query: "NV" }} style={{ textDecoration: 'none' }}>Nevada</Link>
-                            <Link to={{ pathname: "/restaurants", query: "WY" }} style={{ textDecoration: 'none' }}>Wyoming</Link>
+                            <Link to={{ pathname: "/restaurants", query: "CA" }} onClick={this.props.handle} style={{ textDecoration: 'none' }}>California</Link>
+                            <Link to={{ pathname: "/restaurants", query: "NV" }} onClick={this.props.handle} style={{ textDecoration: 'none' }}>Nevada</Link>
+                            <Link to={{ pathname: "/restaurants", query: "WY" }} onClick={this.props.handle} style={{ textDecoration: 'none' }}>Wyoming</Link>
                         </div>
 
                     </div>
@@ -41,15 +49,7 @@ class IndexDropdown extends React.Component{
                 
                 </div>
 
-                <div className="dd-links">
-                    <div className="dd-review">
-                        <a href="">Write A Review</a>
-                    </div>
-                    <div className="dd-review">
-                        <a href="">For Businesses</a>
-                    </div>
-
-                </div>
+                {display}
             </div>
         )
     }

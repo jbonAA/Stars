@@ -12,9 +12,30 @@ class Search extends React.Component {
     constructor(props){
         super(props)
         debugger
+
+        this.location = ""
+
+        this.handleClick = this.handleClick.bind(this)
     }
 
     //handle with function scope needs to set state with new query on click in index dropdown
+
+
+    handleClick(e) {
+        debugger
+        let newlocat = e.target.textContent
+        let state;
+        if(newlocat === "California"){
+            state = "CA"
+        }else if(newlocat === "Nevada"){
+            state = "NV"
+        }else{
+            state = "WY"
+        }
+        window.localStorage.setItem(location, state)
+        this.forceUpdate()
+    }
+
 
     render() {
         let display;
@@ -36,7 +57,7 @@ class Search extends React.Component {
         return (
             <div>
                 <HomeContainer />
-                <IndexDropdown />
+                <IndexDropdown handle={this.handleClick}/>
                 {/* <br/>
                 <br/> */}
                 {display}
