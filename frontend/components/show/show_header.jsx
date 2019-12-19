@@ -47,7 +47,7 @@ class ShowHeader extends React.Component {
                 }
             })
             stars = total.reduce((a, b) => a + b, 0)/total.length
-            display = (<p>{Math.floor(stars)} stars</p>)
+            display = `${Math.floor(stars)} stars`
 
         }
 

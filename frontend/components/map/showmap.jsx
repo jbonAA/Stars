@@ -31,17 +31,17 @@ class ShowMap extends React.Component {
         let num = this.state.markers.length
         if (prevProps.location !== this.props.location) {
             debugger
-            console.log("hello")
+            // console.log("hello")
             this.fly(this.state.map)
             // this.state.map.on("load", () => {
             //     this.state.map.center = this.state.markers[0]
             // })
             this.generateMarkers(this.state.map)
         } else if (prevProps.restaurants.length !== this.props.restaurants.length) {
-            console.log("hello")
+            // console.log("hello")
             this.generateMarkers()
         } else if (prevProps.restaurants[0].name !== this.props.restaurants.name){
-            console.log("hello")
+            // console.log("hello")
             this.fly(this.state.map)
             this.generateMarkers(this.state.map)
         }
@@ -80,7 +80,7 @@ class ShowMap extends React.Component {
     }
 
     generateMarkers(map) {
-        console.log(map)
+        // console.log(map)
 
 
         for (let j = 0; j < 11; j++) {

@@ -114,7 +114,7 @@ const RestaurantIndex = ({ restaurants, filters, fetchRestaurant }) => {
                 if ((JSON.parse(localStorage.getItem(filters)))[key] === "") {
                     included = true
                 } else {
-                    console.log(rest[key])
+                    // console.log(rest[key])
                     if (rest[key].includes((JSON.parse(localStorage.getItem(filters))[key]))) {
                         included = true
                     } else {

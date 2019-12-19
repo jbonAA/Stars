@@ -31,12 +31,12 @@ class Greeting extends React.Component {
         return (event) => {
             let length = this.state.name.length
             Object.values(this.props.restaurants).forEach((el) => {
-                console.log(el.name.slice(0, length + 1).toLowerCase());
+                // console.log(el.name.slice(0, length + 1).toLowerCase());
                 if(el.name.slice(0, length + 1).toLowerCase() === `${event.target.value}`){
                     res.push(el);
                 }
             })
-            console.log(this.state.current)
+            // console.log(this.state.current)
             this.setState({ 
                 [type]: event.target.value, 
                 current: res
