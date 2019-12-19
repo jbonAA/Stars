@@ -80,7 +80,7 @@ fog = Restaurant.create({
     stars:0,
     delivery: false,
     takeout: true,
-    price: "$$",
+    price: "$$$",
     latlng: [-122.4100714, 37.8094469],
     hours: [
     "Mon: 11:00 am - 10:00 pm",
@@ -117,7 +117,7 @@ house = Restaurant.create({
     stars:0,
     delivery: false,
     takeout: true,
-    price: "$$$",
+    price: "$$$$",
     latlng: [-122.406953, 37.798432],
     hours: [
     "Mon: 11:30 am - 2:30 pm  &  5:30 pm - 10:00 pm",
@@ -152,7 +152,7 @@ farmhouse = Restaurant.create({
     stars:0,
     delivery: true,
     takeout: true,
-    price: "$$",
+    price: "$$$",
     latlng: [-122.41095, 37.75945],
     hours: [
     "Mon: 11:00 am - 2:00 pm  &  5:00pm - 10:00 pm",
@@ -188,7 +188,7 @@ umma = Restaurant.create({
     stars:0,
     delivery: true,
     takeout: true,
-    price: "$$",
+    price: "$$$$",
     latlng: [-122.466084, 37.765502],
     hours: [
     "Mon: 11:00 am - 2:30 pm  &  5:00 pm - 9:00 pm   ",
@@ -224,7 +224,7 @@ tuba = Restaurant.create({
     stars:0,
     delivery: true,
     takeout: false,
-    price: "$$",
+    price: "$",
     latlng: [-122.42293, 37.754941],
     hours: [
     "Mon: 5:00 pm - 10:30 pm   ",
@@ -260,7 +260,7 @@ noosh = Restaurant.create({
     stars:0,
     delivery: true,
     takeout: true,
-    price: "$$",
+    price: "$$$",
     latlng: [-122.433943, 37.78806],
     hours: [
     "Mon: 11:00 am - 10:30pm",
@@ -296,7 +296,7 @@ hog = Restaurant.create({
     stars:0,
     delivery: false,
     takeout: true,
-    price: "$$",
+    price: "$$$$",
     latlng: [-122.463, 37.7648],
     hours: [
     "Mon: 11:00 am - 9:00 pm",
@@ -401,7 +401,7 @@ spoon = Restaurant.create({
    phone:"(415) 946-3005",
    delivery: true,
    takeout: false,
-   price: "$$",
+   price: "$",
    latlng: [-122.43021, 37.76671],
    hours:[
        "Mon: 8:00 am - 3:00 pm",

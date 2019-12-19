@@ -163,7 +163,7 @@ class Greeting extends React.Component {
                                 placeholder=" Restaurant by Name"
                                 onChange={this.handleInput('name')}
                             />
-                            <button className="greeting-search-submit" onClick={this.handleSubmit}>{icon}</button>
+                            <button className="greeting-search-submit" onClick={this.handleSearchSubmit}>{icon}</button>
                         </div>
                         <div className="greeting-welcome">
                             <WelcomeContainer />
