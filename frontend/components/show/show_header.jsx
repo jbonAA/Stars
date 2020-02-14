@@ -38,6 +38,7 @@ class ShowHeader extends React.Component {
         let stars;
         let display;
         let total=[]
+        debugger
         if(this.props.reviews.length === 0){
             display = (<p>Yet to be Reviewed</p>)
         }else{

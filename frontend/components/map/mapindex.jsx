@@ -59,10 +59,8 @@ class IndexMap extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        debugger
         let num = this.state.markers.length
         if (prevProps.location !== this.props.location) {
-            debugger
             this.fly(this.state.map)
             // this.state.map.on("load", () => {
             //     this.state.map.center = this.state.markers[0]
@@ -129,7 +127,6 @@ class IndexMap extends React.Component {
     }
 
     generateMarkers() {
-        debugger
         
         
         for (let j = 0; j < 11; j++) {

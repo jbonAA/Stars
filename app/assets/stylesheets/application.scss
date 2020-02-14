@@ -700,8 +700,10 @@ tentative splash form
     justify-content: space-between;
     line-height: 1.5em;
     width: 500px;
-    height: 219px;
-    border-bottom: 1px solid gray
+    height: 19vh;
+    border-bottom: 1px solid gray;
+    background: rgb(247, 231, 231);
+    padding: 10px;
 
 }
 
@@ -1359,3 +1361,8 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     
 
 }
+
+#hoverLinks {
+    cursor: pointer;
+}
+

@@ -61,7 +61,6 @@ class Login extends React.Component{
                         </ul>
                         <form>
                             <input
-                                id={this.props.errors.length === 0 ? "" : ("error")} 
                                 className="login-value"
                                 type="text"
                                 value={this.state.email}
@@ -70,7 +69,6 @@ class Login extends React.Component{
                             />
                             <br/>
                             <input
-                                id={this.props.errors.length === 0 ? "" : ("error")}
                                 className="login-value"
                                 type="password"
                                 value={this.state.password}

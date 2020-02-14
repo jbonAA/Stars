@@ -22,29 +22,29 @@ class HomeFilters extends React.Component {
                     <p className="filter-title">Find Restaurants By State</p>
                     <ul className="state-list-elements">
                         
-                        <li className="state-li" id="sf-li">
                         <Link to={{ pathname: "/restaurants", query: "CA" }} style={{ textDecoration: 'none' }}>
+                            <li className="state-li" id="sf-li">
                                 <div id="ca-li">
                                     <h2 id="state">California</h2>
                                 </div>
-                            </Link>
-                        </li>
-                        <li className="state-li" id="nv-li">
+                            </li>
+                        </Link>
+                        
                         <Link to={{ pathname: "/restaurants", query: "NV" }} style={{ textDecoration: 'none' }}>
+                            <li className="state-li" id="nv-li">
                                 <div id="ca-li">
                                     <h2 id="state">Nevada</h2>
                                 </div>
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
 
-                        <li className="state-li" id="wy-li">
-                            <Link to={{pathname: "/restaurants", query: "WY"}} style={{textDecoration: 'none'}}>
+                        <Link to={{pathname: "/restaurants", query: "WY"}} style={{textDecoration: 'none'}}>
+                            <li className="state-li" id="wy-li">
                                 <div id="ca-li">
                                    <h2 id="state">Wyoming</h2>
                                 </div>
-                            </Link>
-                        </li>
-                        
+                            </li>
+                        </Link>
                     </ul>
             </div>
         )

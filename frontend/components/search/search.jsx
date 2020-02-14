@@ -20,6 +20,9 @@ class Search extends React.Component {
 
     //handle with function scope needs to set state with new query on click in index dropdown
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
 
     handleClick(e) {
         debugger

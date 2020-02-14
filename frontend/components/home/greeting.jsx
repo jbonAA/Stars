@@ -17,12 +17,17 @@ class Greeting extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleSearchSubmit = this.handleSearchSubmit.bind(this)
         this.handleClick = this.handleClick.bind(this)
+        this.handleRedirectToHome = this.handleRedirectToHome.bind(this)
 
     }
 
     componentDidMount() {
 
         window.localStorage.setItem(["[object Object]"], JSON.stringify({}))
+    }
+
+    handleRedirectToHome() {
+        this.props.history.push("/")
     }
 
     handleInput(type) {
@@ -98,7 +103,7 @@ class Greeting extends React.Component {
                 display = (
                     <div className="greeting-new">
                         <div className="logo-title">
-                            <p className="greeting-title">Stars</p>
+                            <p className="greeting-title" id="hoverLinks" onClick={this.handleRedirectToHome}>Stars</p>
                         </div>
                         <div className="greeting-welcome">
                             <WelcomeContainer />
@@ -122,7 +127,7 @@ class Greeting extends React.Component {
                             </div>
                         </div>
                         <div className="home-search">
-                            <p className="main-title">Stars</p>
+                            <p className="main-title" id="hoverLinks" onClick={this.handleRedirectToHome}>Stars</p>
                             
                             <div className="greeting-search-box">
                                 <label className="greeting-search-label">Find</label>
@@ -152,7 +157,7 @@ class Greeting extends React.Component {
                 <div id="dd-flex">
                     <div className="greeting-search2">
                         <div className="logo-title">
-                            <p className="greeting-title">Stars</p>
+                            <p className="greeting-title" id="hoverLinks" onClick={this.handleRedirectToHome}>Stars</p>
                         </div>
                         <div className="greeting-search-box2">
                             <label className="greeting-search-label2">Find</label>
