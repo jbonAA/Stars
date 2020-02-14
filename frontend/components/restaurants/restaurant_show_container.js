@@ -8,7 +8,7 @@ const mapStateToProps = (state, { match }) => {
     debugger
     const restaurantId = parseInt(match.params.restaurantId);
     const show = selectRestaurant(state.entities, restaurantId);
-    const reviews = selectReviewsForRestaurant(state.entities, show)
+    const reviews = selectReviewsForRestaurant(show)
     // const show = state.entities.restaurants[restaurantId];
     // const reviews = show.reviewIds;
 
