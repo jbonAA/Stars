@@ -11,7 +11,7 @@ import IndexMap from '../map/index_map'
 class Search extends React.Component {
     constructor(props){
         super(props)
-        debugger
+        
 
         this.location = ""
 
@@ -25,7 +25,7 @@ class Search extends React.Component {
     }
 
     handleClick(e) {
-        debugger
+        
         let newlocat = e.target.textContent
         let state;
         if(newlocat === "California"){

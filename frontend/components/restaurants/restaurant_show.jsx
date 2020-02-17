@@ -11,7 +11,7 @@ class RestaurantShow extends React.Component {
 
     constructor(props){
         super(props)
-        debugger
+        
 
         this.state = {
             show: this.props.show,
@@ -26,7 +26,7 @@ class RestaurantShow extends React.Component {
     handleClick(e) {
         e.preventDefault();
         localStorage.setItem("name", this.props.show.name)
-        debugger
+        
         this.props.history.push(`/restaurants/${this.props.restaurantId}/review/new`)
     }
 

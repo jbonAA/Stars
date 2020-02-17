@@ -15,7 +15,7 @@ class ShowMap extends React.Component {
             restaurants: this.props.restaurants
         }
 
-        debugger
+        
         this.generateMap = this.generateMap.bind(this)
         this.generateMarkers = this.generateMarkers.bind(this)
         this.fly = this.fly.bind(this)
@@ -27,10 +27,10 @@ class ShowMap extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        debugger
+        
         let num = this.state.markers.length
         if (prevProps.location !== this.props.location) {
-            debugger
+            
             // console.log("hello")
             this.fly(this.state.map)
             // this.state.map.on("load", () => {
@@ -171,7 +171,7 @@ class ShowMap extends React.Component {
 
     // }
     shouldComponentUpdate(nextState, nextProps) {
-        debugger
+        
         if (this.props.location !== nextState.location) {
             return true;
         } else if (this.props.restaurants.length !== nextState.restaurants.length) {

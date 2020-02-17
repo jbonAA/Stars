@@ -14,7 +14,7 @@ class IndexMap extends React.Component {
             restaurants: this.props.restaurants
         }
 
-        debugger
+        // debugger
         this.generateMap = this.generateMap.bind(this)
         this.generateMarkers = this.generateMarkers.bind(this)
         this.fly = this.fly.bind(this)
@@ -26,7 +26,7 @@ class IndexMap extends React.Component {
 
 
     componentDidMount() {
-        debugger
+        // debugger
         let marks = [];
     
         // this.props.restaurants.forEach((restaurant) => {
@@ -183,7 +183,6 @@ class IndexMap extends React.Component {
     }
     
     getPopups(map) {
-        debugger
         var popup = new mapboxgl.Popup({
             closeButton: false,
             closeOnClick: true
@@ -222,7 +221,7 @@ class IndexMap extends React.Component {
 
 
     shouldComponentUpdate(nextState, nextProps) {
-        debugger
+        
         if (this.props.location !== nextState.location) {
             return true;
         } else if (this.props.restaurants.length !== nextState.restaurants.length) {

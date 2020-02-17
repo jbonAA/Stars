@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class SearchDropdown extends React.Component {
     constructor(props) {
         super(props)
-        debugger
 
 
         this.handleDropdown = this.handleDropdown.bind(this)
@@ -13,7 +12,6 @@ class SearchDropdown extends React.Component {
 
 
     shouldComponentUpdate(nextProps, nextState) {
-        debugger
         if(nextProps.restaurants){
             if(this.props.restaurants.length !== nextProps.restaurants.length){
                 return true
@@ -35,7 +33,6 @@ class SearchDropdown extends React.Component {
         })
         // console.log(display)
         let change = document.getElementById("search-items");
-        debugger
         if(display !== []) {
             change.setAttribute("class", "none")
         }else{
@@ -48,7 +45,6 @@ class SearchDropdown extends React.Component {
 
     render() {
         let list;
-        debugger
         if(this.props.restaurants.length > 0){
             list = this.handleDropdown()
         }else{

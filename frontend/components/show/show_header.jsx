@@ -17,12 +17,10 @@ class ShowHeader extends React.Component {
     handleClick(e) {
         e.preventDefault();
         localStorage.setItem("name", this.props.show.name)
-        debugger
         this.props.history.push(`/restaurants/${this.props.restaurantId}/review/new`)
     }
 
     shouldComponentUpdate(nextState, nextProps) {
-        debugger
         if(this.props.reviews[0] === undefined){
             return true
         // }else if(this.props.reviews.length !== nextProps.reviews.length){
@@ -39,7 +37,6 @@ class ShowHeader extends React.Component {
         console.log(this.props.reviews)
         let display;
         let total=[]
-        debugger
         if(this.props.reviews.length === 0){
             display = (<p>Yet to be Reviewed</p>)
         }else if(this.props.reviews[0] === undefined) {

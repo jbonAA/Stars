@@ -91,7 +91,7 @@ class Filter extends React.Component {
         //iterate through the most recent element in state array
         //render restaurant items that have that element.true/make frontend calls
         //no need to map and make ajax calls to backend
-        debugger
+        
 
 
 

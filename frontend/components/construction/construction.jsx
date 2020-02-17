@@ -10,7 +10,6 @@ class ConstructionComponent extends React.Component {
 
     handleReturn(e) {
         e.preventDefault();
-        debugger
         window.history.back()
     }
 

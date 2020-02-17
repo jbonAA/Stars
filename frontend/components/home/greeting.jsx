@@ -31,7 +31,6 @@ class Greeting extends React.Component {
     }
 
     handleInput(type) {
-        debugger
         let res = [];
         return (event) => {
             let length = this.state.name.length
@@ -75,7 +74,6 @@ class Greeting extends React.Component {
     }
 
     handleSearchSubmit(name) {
-        debugger
 
 
         let searched = this.filter(name)

@@ -5,7 +5,7 @@ import { selectRestaurant, selectReviewsForRestaurant } from '../../reducers/sel
 
 const mapStateToProps = (state, { match }) => {
     
-    debugger
+    
     const restaurantId = parseInt(match.params.restaurantId);
     const show = selectRestaurant(state.entities, restaurantId);
     const reviews = selectReviewsForRestaurant(state.entities, show)
