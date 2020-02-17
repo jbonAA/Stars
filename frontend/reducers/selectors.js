@@ -1,6 +1,7 @@
 
-export const selectReviewsForRestaurant = (restaurant) => {
-    return restaurant.reviewIds
+export const selectReviewsForRestaurant = ({reviews}, restaurant) => {
+    
+    return restaurant.reviewIds.map(reviewId => reviews[`${reviewId}`])
 }
 export const selectRestaurant = ({restaurants}, restaurantId) => {
     return restaurants[restaurantId] || {reviewIds: [] };

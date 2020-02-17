@@ -25,7 +25,7 @@ class ShowHeader extends React.Component {
         debugger
         if(this.props.reviews[0] === undefined){
             return true
-        }else if(this.props.reviews.length !== nextState.reviews.length){
+        }else if(this.props.reviews.length !== nextProps.reviews.length){
             return true
         }else{
             return false
@@ -36,11 +36,14 @@ class ShowHeader extends React.Component {
 
     render() {
         let stars;
+        console.log(this.props.reviews)
         let display;
         let total=[]
         debugger
         if(this.props.reviews.length === 0){
             display = (<p>Yet to be Reviewed</p>)
+        }else if(this.props.reviews[0] === undefined) {
+            display = null
         }else{
             Object.values(this.props.reviews).forEach((review) => {
                 if (review.stars){

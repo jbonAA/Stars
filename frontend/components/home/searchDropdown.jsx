@@ -30,7 +30,7 @@ class SearchDropdown extends React.Component {
         let display = [];
         this.props.restaurants.forEach((el, i) => {
             display.push(<Link to={{ pathname: `/restaurants/${el.id}` }} onClick={this.props.handle} key={i} style={{ textDecoration: 'none' }}>
-            <p key={i} >{el.name}: {el.city}, {el.state}</p>
+            <p key={i}>{el.name}: {el.city}, {el.state}</p>
             </Link>)
         })
         // console.log(display)

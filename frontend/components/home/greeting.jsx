@@ -57,33 +57,31 @@ class Greeting extends React.Component {
     }
 
     handleClick(event) {
-        debugger
-
         this.setState({
-            name: '',
+            name: "",
             current: []
         })
+        this.handleSearchSubmit(event.target.childNodes[1].wholeText)
     }
 
     filter(name) {
         let result = []
-        Object.values(this.props.restaurants).forEach((el) => {
-            if (el.name.toLowerCase() === name) {
+        this.state.current.forEach((el) => {
+            if (el.name === name) {
                 result.push(el)
             }
         })
         return result
     }
 
-    handleSearchSubmit(event) {
-        event.preventDefault();
+    handleSearchSubmit(name) {
         debugger
 
 
-        let searched = this.filter(this.state.name)
+        let searched = this.filter(name)
         let id = searched[0].id
         this.props.fetchRestaurant(id)
-            .then(() => this.props.history.push(`/restaurants/${id}`))
+            
         
         
     }
@@ -132,7 +130,6 @@ class Greeting extends React.Component {
                             <div className="greeting-search-box">
                                 <label className="greeting-search-label">Find</label>
                                 <input
-                                
                                     className="greeting-search-form"
                                     type="text"
                                     value={this.state.name}
@@ -162,6 +159,7 @@ class Greeting extends React.Component {
                         <div className="greeting-search-box2">
                             <label className="greeting-search-label2">Find</label>
                             <input
+                                onClick={this.handleSearchSubmit}
                                 className="greeting-search-form"
                                 type="text"
                                 value={this.state.name}
