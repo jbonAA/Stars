@@ -1066,11 +1066,11 @@ i {
 }
 
 .review-title {
-    font-size: 20px
+    font-size: 24px
 }
 
 .review-stars {
-    font-size: 20px
+    font-size: 24px
 }
 
 #test {
@@ -1151,7 +1151,19 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+#title-rev h2 {
+    font-size: 40px;
+}
+
+#revform {
+    margin-bottom: 12%;
+    padding: 3%;
+    border-radius: 2%;
+    border: solid 1px black;
+    background: rgb(226, 209, 209);
 }
 
 #title-rev {
@@ -1165,6 +1177,7 @@ i {
 
 #rev-form-input {
     margin-left: 1%;
+    font-size: 14px;
 }
 
 
@@ -1177,7 +1190,7 @@ i {
 .description-review {
     width: 57vw;
     height: 32vh;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 
@@ -1234,8 +1247,8 @@ i {
 
 #info {
     height: 13vh;
-    margin: 3%;
-    line-height: 1.4em;
+    margin: 1.3%;
+    line-height: 2.4em;
 }
 
 .hours {

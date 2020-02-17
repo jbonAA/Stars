@@ -54,9 +54,8 @@ class ReviewForm extends React.Component {
                 <div id="new-review">
                     <div id="title-rev">
                         <h2>{localStorage.getItem("name")}</h2>
-                        <a id="rev-a" href="">Read our Review Guidelines</a>
                     </div>
-                    <div>
+                    <div id="revform">
 
                         <div className="review-stars">
                             <label> Stars: 
