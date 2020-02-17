@@ -142,7 +142,7 @@ class Filter extends React.Component {
                         <div className="filter-header">
                             <h2>
                                 <span className="restaurants">
-                                    Restaurants in 
+                                    Browse Featured Locations In 
                                     <span> {display}</span>
                                 </span>
                             </h2>
@@ -150,9 +150,9 @@ class Filter extends React.Component {
                         </div>
                         <div className="filter-selector">
                             <div className="split-selector">   
-                                <a href="">{display} </a>
+                                <p>{display} </p>
                                 <p className="no-margin">></p>
-                                <a href="">Restaurants</a>
+                                <p>Restaurants</p>
                             </div>
                         </div>
                     </div>

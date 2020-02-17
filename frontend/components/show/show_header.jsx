@@ -25,8 +25,8 @@ class ShowHeader extends React.Component {
         debugger
         if(this.props.reviews[0] === undefined){
             return true
-        }else if(this.props.reviews.length !== nextProps.reviews.length){
-            return true
+        // }else if(this.props.reviews.length !== nextProps.reviews.length){
+        //     return true
         }else{
             return false
         }

@@ -17,8 +17,6 @@ class RestaurantShow extends React.Component {
             show: this.props.show,
             test: ""
         }
-
-        debugger
         
         
         
@@ -79,20 +77,6 @@ class RestaurantShow extends React.Component {
                                 <div>
                                     <ShowHours
                                     show={this.props.show} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="show-info-right">
-                            <div id="right-info">
-                                <h3>Restaurant Info</h3>
-
-                                <div>
-                                    {this.props.show.phone}
-                                    <p>{this.props.show.address}</p>
-                                    <p>{this.props.show.city}, {this.props.show.state} {this.props.show.zip}</p>
-                                </div>
-                                <div>
-                                    <a id="" href="">View Menu</a>
                                 </div>
                             </div>
                         </div>
