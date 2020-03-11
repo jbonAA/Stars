@@ -113,11 +113,11 @@ class Greeting extends React.Component {
                 <div>
                     <div className="splash-body" >
                         <div className="top-nav">
-                            <div className="splash-nav-ele">
-                                <p className="nav-ele">Write a review</p>
+                            {<div className="splash-nav-ele">
+                                {/* <p className="nav-ele">Write a review</p>
                                 <p className="nav-ele">Events</p>
-                                <p className="nav-ele">Talk</p>
-                            </div>
+                                <p className="nav-ele">Talk</p> */}
+                            </div> }
                             <div>
                                 {<WelcomeContainer />}
                             </div>
