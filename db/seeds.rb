@@ -58,8 +58,8 @@ zazie.photos.attach(io: file4, filename: 'zazie4.jpg')
 
 
 Review.create(
-    title: "bingoboi",
-    description: "testing show page",
+    title: "First Experience at Zazie",
+    description: "As you step your foot into the restaurant, you are welcomed by the magnificent urban setting, a beautiful combination of vintage sports cars and an immense luxury of modernity. Every table gives you a clear view of the chef working in the kitchen. Those, with no prior reservation, are welcomed to wait in the lounge with comfortable armchairs. The lounge has pictures of sports player displayed on the wall.",
     restaurant_id: 1,
     user_id: 1,
     stars: "5"
