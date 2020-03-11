@@ -545,7 +545,7 @@ nacho = Restaurant.create({
     stars:0,
     delivery: false,
     takeout: false,
-    price: "$$",
+    price: "$$$$",
     latlng: [-115.170337, 36.109836],
     hours: [
     "Mon: 8:00 am - 2:00 am   ",
@@ -653,7 +653,7 @@ neighbors = Restaurant.create({
     stars:0,
     delivery: true,
     takeout: true,
-    price: "$$",
+    price: "$$$$",
     latlng: [-115.296922, 36.081132],
     hours: [
     "Mon: 7:00 am - 3:00 pm",
