@@ -106,7 +106,10 @@ class Signup extends React.Component {
                             </p>
                             <button className="signup-submit" onClick={this.handleSubmit}>Sign Up</button>
                         </form>
-                        <p className="login-links3">Already on Stars? <Link className="back-to-login" onClick={this.props.clearErrors} to="/login">Log In</Link> </p>
+                        <div className="back-to-main">
+                            <p className="login-links3">Already on Stars? <Link className="back-to-login" onClick={this.props.clearErrors} to="/login">Log In</Link> </p>
+                            <Link className="back-to-login" onClick={this.props.clearErrors} to="/">Continue Browsing</Link>
+                        </div>
                     </div>
                 </div>
             </div>

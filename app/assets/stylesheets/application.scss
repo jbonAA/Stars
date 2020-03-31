@@ -38,6 +38,15 @@ tentative login/signup forms
     
 }
 
+.back-to-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
 .everything{
     display: flex;
     flex-direction: column;
@@ -202,8 +211,6 @@ tentative login/signup forms
 
 .login-links3 {
     font-size: 16px;
-    margin-top: 5px;
-    margin-left: 200px;
 }
 
 .signup-links {
@@ -734,7 +741,7 @@ tentative splash form
     flex-direction: row;
     justify-content: space-around;
     width: 38vw;
-    height: 27vh;
+    height: 26vh;
 }
 
 #center-head h3 {
@@ -1309,8 +1316,8 @@ i {
     position: fixed;
     width: 32%;
     height: 40%;
-    top: 320px;
-    right: 50px;
+    top: 36vh;
+    right: 4vw;
 }
 #map2 {
     position: absolute;
