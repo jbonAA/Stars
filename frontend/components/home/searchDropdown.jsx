@@ -14,6 +14,10 @@ class SearchDropdown extends React.Component {
     shouldComponentUpdate(nextProps, nextState) {
         if(nextProps.restaurants){
             if(this.props.restaurants.length !== nextProps.restaurants.length){
+                let change = document.getElementById("search-items")
+                if(nextProps.restaurants.length === 0){
+                    change.setAttribute("class", "transp")
+                }
                 return true
             }else{
                 return false
@@ -24,21 +28,17 @@ class SearchDropdown extends React.Component {
     }
 
     handleDropdown() {
-        // console.log(this.props.restaurants)
+    
         let display = [];
         this.props.restaurants.forEach((el, i) => {
             display.push(<Link to={{ pathname: `/restaurants/${el.id}` }} onClick={this.props.handle} key={i} style={{ textDecoration: 'none' }}>
             <p key={i}>{el.name}: {el.city}, {el.state}</p>
             </Link>)
         })
-        // console.log(display)
-        let change = document.getElementById("search-items");
-        if(display !== []) {
-            change.setAttribute("class", "none")
-        }else{
-            change.setAttribute("class", "transp")
 
-        }
+        let change = document.getElementById("search-items");
+        change.setAttribute("class", "none")
+    
         return display
     }
 
