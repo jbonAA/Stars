@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
 
 class ShowHeader extends React.Component {
     constructor(props){
@@ -50,7 +51,15 @@ class ShowHeader extends React.Component {
                 }
             })
             stars = total.reduce((a, b) => a + b, 0)/total.length
-            display = `${Math.floor(stars)} stars`
+            // display = `${Math.floor(stars)} stars`
+            
+            display = <StarRatingComponent 
+                name="rate2"
+                editing={false}
+                starCount={5}
+                value={stars}
+                starColor={"#e80f0f"}
+            />
 
         }
 

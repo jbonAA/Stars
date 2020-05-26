@@ -27,14 +27,6 @@ User.create({
     zip: "94019"
 })
 
-Review.create(
-    title: "Loved the Place",
-    description: "Ate a bunch of great calamari and the service was excellent",
-    restaurant_id: 1,
-    user_id: 2,
-    stars: "5"
-)
-
 User.create({
     email: "funGamer@aa.io",
     password: "pasword",
@@ -120,6 +112,22 @@ Review.create(
     restaurant_id: 1,
     user_id: 1,
     stars: "5"
+)
+
+Review.create(
+    title: "Loved the Place",
+    description: "Ate a bunch of great calamari and the service was excellent",
+    restaurant_id: 1,
+    user_id: 2,
+    stars: "5"
+)
+
+Review.create(
+    title: "These pancakes were unbelievable!",
+    description: "One of my favorite breakfast spots in the neighborhood. Reasonably priced and very nice owners",
+    restaurant_id: 1,
+    user_id: 3,
+    stars: "4"
 )
 
 # in map state to props need to return an empty array if no reviews yet

@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
 
 class RestaurantIndexItem extends React.Component {
     constructor(props){
@@ -21,7 +22,14 @@ class RestaurantIndexItem extends React.Component {
         if(revs.length === 0){
             display = <p>No Reviews</p>
         }else{
-            display = <p>{Math.floor(revs.reduce((a, b) => a + b, 0) / revs.length)}</p> 
+            let aggregateStare = Math.floor(revs.reduce((a, b) => a + b, 0) / revs.length)
+            display = <StarRatingComponent
+                name="rate2"
+                editing={false}
+                starCount={5}
+                value={aggregateStare}
+                starColor={"#e80f0f"}
+            />
         }
 
         return (

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import StarRatingComponent from 'react-star-rating-component';
 
 class ReviewIndexItems extends React.Component {
     constructor(props){
@@ -39,7 +40,13 @@ class ReviewIndexItems extends React.Component {
                                 </div>
                                 <div id="info-rev">
                                     <div>
-                                        <p>{review.stars} stars</p>
+                                        <StarRatingComponent
+                                            name="rate2"
+                                            editing={false}
+                                            starCount={5}
+                                            value={review.stars}
+                                            starColor={"#e80f0f"}
+                                        />
                                         <br />
                                         <h2>{review.title}</h2>
                                     </div>
@@ -65,7 +72,13 @@ class ReviewIndexItems extends React.Component {
                                 </div>
                                 <div id="info-rev">
                                     <div>
-                                        <p>{review.stars} stars</p>
+                                        <StarRatingComponent
+                                            name="rate2"
+                                            editing={false}
+                                            starCount={5}
+                                            value={review.stars}
+                                            starColor={"#e80f0f"}
+                                        />
                                         <br />
                                         <h2>{review.title}</h2>
                                     </div>
