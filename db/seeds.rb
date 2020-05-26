@@ -27,6 +27,14 @@ User.create({
     zip: "94019"
 })
 
+Review.create(
+    title: "Loved the Place",
+    description: "Ate a bunch of great calamari and the service was excellent",
+    restaurant_id: 1,
+    user_id: 2,
+    stars: "5"
+)
+
 User.create({
     email: "funGamer@aa.io",
     password: "pasword",
@@ -67,9 +75,6 @@ User.create({
     zip: "94019"
 })
 
-User.create({
-    
-})
 
 zazie = Restaurant.create(
    name: "Zazie",

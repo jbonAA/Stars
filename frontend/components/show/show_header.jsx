@@ -15,9 +15,11 @@ class ShowHeader extends React.Component {
     }
 
     handleClick(e) {
+        debugger
+        console.log(this.state.show.id)
         e.preventDefault();
         localStorage.setItem("name", this.props.show.name)
-        this.props.history.push(`/restaurants/${this.props.restaurantId}/review/new`)
+        this.props.history.push(`/restaurants/${this.state.show.id}/review/new`)
     }
 
     shouldComponentUpdate(nextState, nextProps) {

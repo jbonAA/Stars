@@ -32,6 +32,7 @@ class RestaurantShow extends React.Component {
 
 
     componentDidMount() {
+        debugger
         window.scrollTo(0, 0)
         const res = this.props.fetchRestaurant(localStorage.getItem("restaurantId"))
             .then((res) => {
@@ -40,7 +41,6 @@ class RestaurantShow extends React.Component {
                 })
             })
     }
-
 
 
 
