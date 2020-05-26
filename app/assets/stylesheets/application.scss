@@ -719,6 +719,7 @@ tentative splash form
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
+    height: 21vh;
     
 }
 
@@ -985,7 +986,7 @@ i {
 
 #moveSearch {
     display: flex;
-    width: 60%;
+    width: 41%;
     justify-content: flex-start;
 }
 #moveSearch2 {
@@ -1289,7 +1290,7 @@ i {
 }
 
 .restaurant-ii-photo img {
-    width: 16vw;
+    width: 18vw;
     height: 22vh;
     margin-left: 0;
 }
@@ -1319,12 +1320,15 @@ i {
     height: 39.5%;
     top: 40.5vh;
     right: 4vw;
+    border: 1px solid black;
+    border-radius: 5px;
 }
+
 #map2 {
     position: absolute;
     width: 40%;
     height: 54.5%;
-    top: 62%;
+    top: 69.5%;
     right: 9%;
     border: 1px solid black;
     border-radius: 5px;
