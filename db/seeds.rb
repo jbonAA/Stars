@@ -27,6 +27,50 @@ User.create({
     zip: "94019"
 })
 
+User.create({
+    email: "funGamer@aa.io",
+    password: "pasword",
+    first_name: "Chuck",
+    last_name: "Laferty",
+    zip: "94019"
+})
+
+User.create({
+    email: "testing@aaaa.io",
+    password: "pasword",
+    first_name: "Bill",
+    last_name: "Bargus",
+    zip: "94019"
+})
+
+User.create({
+    email: "test@aa.io",
+    password: "password",
+    first_name: "Rod",
+    last_name: "Farva",
+    zip: "94019"
+})
+
+User.create({
+    email: "tester@aa.io",
+    password: "password",
+    first_name: "Mike",
+    last_name: "Yones",
+    zip: "94019"
+})
+
+User.create({
+    email: "testme@aa.io",
+    password: "password",
+    first_name: "Hank",
+    last_name: "Hill",
+    zip: "94019"
+})
+
+User.create({
+    
+})
+
 zazie = Restaurant.create(
    name: "Zazie",
    description: "Breakfast & Brunch, French",
