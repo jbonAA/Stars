@@ -110,7 +110,7 @@ class Signup extends React.Component {
                             <p className="login-links3">Already on Stars? <Link className="back-to-login" onClick={this.props.clearErrors} to="/login">Log In</Link> </p>
                             <Link className="back-to-login" onClick={this.props.clearErrors} to="/">Continue Browsing</Link>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
         )
