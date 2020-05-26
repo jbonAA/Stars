@@ -19,6 +19,14 @@ User.create({
     zip: "94019"
 })
 
+User.create({
+    email: "testing@aa.io",
+    password: "pasword",
+    first_name: "Paul",
+    last_name: "Stewart",
+    zip: "94019"
+})
+
 zazie = Restaurant.create(
    name: "Zazie",
    description: "Breakfast & Brunch, French",
