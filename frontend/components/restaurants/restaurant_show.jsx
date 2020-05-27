@@ -7,6 +7,7 @@ import ShowHeader from '../show/show_header'
 import ShowHours from '../show/show_hours';
 import ShowMap from '../map/showmap';
 
+
 class RestaurantShow extends React.Component {
 
     constructor(props){
