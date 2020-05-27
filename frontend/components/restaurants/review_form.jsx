@@ -1,6 +1,7 @@
 import React from 'react';
 import GreetingContainer from '../home/greeting_container';
 import {withRouter} from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
 
 class ReviewForm extends React.Component {
     constructor(props){
@@ -11,10 +12,10 @@ class ReviewForm extends React.Component {
             title: '',
             description: '',
             restaurant_id: parseInt(this.props.match.params.restaurantId),
-            user_id: this.props.userId
+            user_id: this.props.userId,
+            stars: 0
         }
         
-        this.stars = 0
 
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -45,7 +46,13 @@ class ReviewForm extends React.Component {
         return errors
     }
 
+    onStarClick(nextValue, prevValue, name) {
+        this.setState({ stars: nextValue })
+    }
+
     render () {
+
+        let {stars} = this.state
 
 
         return(
@@ -58,14 +65,16 @@ class ReviewForm extends React.Component {
                     <div id="revform">
 
                         <div className="review-stars">
-                            <label> Stars: 
-                            <input 
-                            id="rev-form-input"
-                            type="text"
-                            value={this.state.stars}
-                            placeholder="Enter a number 1-5"
-                            onChange={this.handleInput('stars')}/>
-                            </label>
+
+                            <StarRatingComponent 
+                                name="rating"
+                                starCount={5}
+                                value={stars}
+                                starColor={"red"}
+                                onStarClick={this.onStarClick.bind(this)}
+                            />
+
+
 
                         </div>
                         <br/>
