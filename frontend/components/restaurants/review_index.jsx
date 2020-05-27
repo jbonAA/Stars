@@ -12,6 +12,8 @@ class ReviewIndex extends React.Component{
 
     
 
+    
+
     render(){
         const { reviews } = this.props
         return (
@@ -30,7 +32,7 @@ class ReviewIndex extends React.Component{
                     }
                 </ul>
 
-                
+
             </div>
         )
     }

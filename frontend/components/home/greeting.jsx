@@ -75,7 +75,7 @@ class Greeting extends React.Component {
 
     handleSearchSubmit(name) {
 
-
+        debugger
         let searched = this.filter(name)
         let id = searched[0].id
         this.props.fetchRestaurant(id)

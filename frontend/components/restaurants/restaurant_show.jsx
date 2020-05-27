@@ -45,7 +45,6 @@ class RestaurantShow extends React.Component {
 
 
 
-
     render() {
         let map;
         if(this.props.show.name) {

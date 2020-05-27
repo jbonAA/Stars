@@ -13,8 +13,9 @@ class ReviewForm extends React.Component {
             description: '',
             restaurant_id: parseInt(this.props.match.params.restaurantId),
             user_id: this.props.userId,
-            stars: 0
         }
+
+        this.stars = 0
         
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -46,13 +47,13 @@ class ReviewForm extends React.Component {
         return errors
     }
 
-    onStarClick(nextValue, prevValue, name) {
-        this.setState({ stars: nextValue })
-    }
+    // onStarClick(nextValue, prevValue, name) {
+    //     this.setState({ stars: nextValue })
+    // }
 
     render () {
 
-        let {stars} = this.state
+        // let {stars} = this.state
 
 
         return(
@@ -65,16 +66,25 @@ class ReviewForm extends React.Component {
                     <div id="revform">
 
                         <div className="review-stars">
+                            <label> Stars: 
+                            <input 
+                            id="rev-form-input"
+                            type="text"
+                            value={this.state.stars}
+                            placeholder="Enter a number 1-5"
+                            onChange={this.handleInput('stars')}
+                            />
 
-                            <StarRatingComponent 
+                            {/* <StarRatingComponent 
                                 name="rating"
                                 starCount={5}
                                 value={stars}
                                 starColor={"red"}
                                 onStarClick={this.onStarClick.bind(this)}
-                            />
+                            /> */}
 
 
+                            </label>
 
                         </div>
                         <br/>
