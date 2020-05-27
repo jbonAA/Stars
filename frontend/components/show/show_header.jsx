@@ -69,7 +69,7 @@ class ShowHeader extends React.Component {
                 <h4>{this.props.show.description}</h4>
                     
                 <div className="head-price">
-                    <p>{display}</p>
+                    {display}
                     <p> {Object.values(this.props.reviews).length} reviews</p>
                     <p>{this.props.show.price}</p>
                 </div>

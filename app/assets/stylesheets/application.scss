@@ -714,6 +714,10 @@ tentative splash form
 
 }
 
+.dv-star-rating i {
+    border: none;
+}
+
 .restaurant-ii-container {
     display: flex;
     flex-direction: row;
@@ -1225,7 +1229,7 @@ i {
 }
 
 .head-price > p{
-    width: 50%;
+    width: 21%;
     text-align: center;
     margin-top: 0px;
 }
