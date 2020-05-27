@@ -33,7 +33,7 @@ class RestaurantIndexItem extends React.Component {
         }
 
         return (
-            <div className="restaurant-ii-container">
+            <div className="restaurant-ii-container" onClick={this.handleClick}>
                 <div className="restaurant-ii-photo" onClick={this.handleClick} >
                     <img src={this.props.photos[0]} alt=""/>
                 </div>
