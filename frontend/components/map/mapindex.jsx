@@ -128,25 +128,31 @@ class IndexMap extends React.Component {
 
     generateMarkers() {
         
+        let map = this.state.map
         
-        for (let j = 0; j < 11; j++) {
-            if (this.state.map.getSource(`markers${j}`)) {
-                this.state.map.removeLayer(`markers${j}`)
-                this.state.map.removeSource(`markers${j}`)   
-            }
-        }
+        // for (let j = 0; j < 11; j++) {
+        //     if (this.state.map.getSource(`markers${j}`)) {
+        //         this.state.map.removeLayer(`markers${j}`)
+        //         this.state.map.removeSource(`markers${j}`)   
+        //     }
+        // }
         // this.state.map.on("load", () => {
-            this.state.map.loadImage("https://i.imgur.com/MK4NUzI.png", (error, image) => {
+            map.loadImage("https://i.imgur.com/MK4NUzI.png", (error, image) => {
                 if (error) throw error;
                 this.props.restaurants.forEach((el, i) => {
                     let mk = el.latlng
                     
-                    if(this.state.map.hasImage(`custom-marker${i}`)){
-                        this.state.map.removeImage(`custom-marker${i}`)
+                    if(map.getSource(`markers${i}`)){
+                        map.removeLayer(`markers${i}`)
+                        map.removeSource(`markers${i}`)
                     }
 
-                    this.state.map.addImage(`custom-marker${i}`, image);
-                    this.state.map.addLayer({
+                    if(map.hasImage(`custom-marker${i}`)){
+                        map.removeImage(`custom-marker${i}`)
+                    }
+
+                    map.addImage(`custom-marker${i}`, image);
+                    map.addLayer({
                         id: "markers" + `${i}`,
                         type: "symbol",
                         source: {
@@ -180,8 +186,10 @@ class IndexMap extends React.Component {
                     })
                 })
             })
-        // this.getPopups(this.state.map)
-        this.fly(this.state.map)
+                
+        // })
+        // this.getPopups(map)
+        this.fly(map)
 
     }
     
