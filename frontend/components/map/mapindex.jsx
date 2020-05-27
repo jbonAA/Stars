@@ -132,8 +132,7 @@ class IndexMap extends React.Component {
         for (let j = 0; j < 11; j++) {
             if (this.state.map.getSource("markers" + `${j}`)) {
                 this.state.map.removeLayer("markers" + `${j}`)
-                this.state.map.removeSource("markers" + `${j}`)
-                
+                this.state.map.removeSource("markers" + `${j}`)   
             }
         }
         // this.state.map.on("load", () => {
@@ -142,6 +141,10 @@ class IndexMap extends React.Component {
                 
                 this.props.restaurants.forEach((el, i) => {
                     let mk = el.latlng
+                    
+                    
+
+
                     this.state.map.addImage(`custom-marker${i}`, image);
                     this.state.map.addLayer({
                         id: "markers" + `${i}`,

@@ -163,10 +163,9 @@ const RestaurantIndex = ({ restaurants, filters, fetchRestaurant }) => {
             <div className="inner-restaurant-index">
                 {/* <Filter total={filtered_restaurants.length}/> */}
                 {further_filt_restaurants.map(restaurant => (
-                    <div> <RestaurantIndexItem
+                    <div key={restaurant.id}> <RestaurantIndexItem
                         restaurant={restaurant}
                         photos={restaurant.photoUrls}
-                        key={restaurant.id}
                         fetchRestaurant={fetchRestaurant}
                     />
                         <br />
