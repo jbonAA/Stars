@@ -129,6 +129,7 @@ class Filter extends React.Component {
             display="Wyoming"
         }
 
+        debugger
         
         let number = window.localStorage.getItem(number)
         let total = window.localStorage.getItem(total)
