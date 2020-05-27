@@ -90,44 +90,45 @@ class ShowMap extends React.Component {
 
             }
         }
-        // map.on("load", () => {
-        map.loadImage("https://i.imgur.com/MK4NUzI.png", (error, image) => {
-            if (error) throw error;
+        map.on("load", () => {
+            map.loadImage("https://i.imgur.com/MK4NUzI.png", (error, image) => {
+                if (error) throw error;
 
-            this.props.restaurants.forEach((el, i) => {
-                let mk = el.latlng
-                map.addImage(`custom-marker${i}`, image);
-                map.addLayer({
-                    id: "markers" + `${i}`,
-                    type: "symbol",
-                    source: {
-                        type: "geojson",
-                        data: {
-                            type: 'FeatureCollection',
-                            features: [
-                                {
-                                    type: 'Feature',
-                                    properties: {
-                                        description:
-                                            `<strong id="map-popup">
-                                            <p>${el.name}</p>
-                                            <p>${el.address}</p>
-                                            </strong>`,
-                                        icon: `${image}`
-                                    },
-                                    geometry: {
-                                        type: "Point",
-                                        coordinates: mk
+                this.props.restaurants.forEach((el, i) => {
+                    let mk = el.latlng
+                    map.addImage(`custom-marker${i}`, image);
+                    map.addLayer({
+                        id: "markers" + `${i}`,
+                        type: "symbol",
+                        source: {
+                            type: "geojson",
+                            data: {
+                                type: 'FeatureCollection',
+                                features: [
+                                    {
+                                        type: 'Feature',
+                                        properties: {
+                                            description:
+                                                `<strong id="map-popup">
+                                                <p>${el.name}</p>
+                                                <p>${el.address}</p>
+                                                </strong>`,
+                                            icon: `${image}`
+                                        },
+                                        geometry: {
+                                            type: "Point",
+                                            coordinates: mk
+                                        }
                                     }
-                                }
-                            ]
+                                ]
+                            }
+                        },
+                        layout: {
+                            "icon-image": `custom-marker${i}`,
+                            'icon-allow-overlap': true
                         }
-                    },
-                    layout: {
-                        "icon-image": `custom-marker${i}`,
-                        'icon-allow-overlap': true
-                    }
 
+                    })
                 })
             })
         })
