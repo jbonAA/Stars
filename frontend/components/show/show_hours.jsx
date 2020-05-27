@@ -9,6 +9,7 @@ class ShowHours extends React.Component {
     render() {
         let display;
         if (this.props.show.hours){
+            
             display = (
                 <div id="center-head">
                     <h3>Restaurant Hours and Info</h3>
@@ -18,6 +19,8 @@ class ShowHours extends React.Component {
                                 <li id="list-hour" key={this.props.show.hours.indexOf(el)}>{el}</li>
                             ))}
                         </ul>
+
+                        
                         <div id="info">
                             <p>Phone: {this.props.show.phone}</p>
                             <p>Address: {this.props.show.address}</p>

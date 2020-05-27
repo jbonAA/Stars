@@ -37,6 +37,7 @@ class ReviewForm extends React.Component {
         const review = Object.assign({}, this.state)
         this.props.createReview(review)
             .then(() => this.props.history.push(`/restaurants/${this.props.match.params.restaurantId}`))
+            .then(() => this.forceUpdate())
 
     }
 
