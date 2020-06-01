@@ -1,4 +1,5 @@
 import React from 'react';
+import HoursTable from '../tables/hoursTable'
 
 class ShowHours extends React.Component {
     constructor(props){
@@ -9,17 +10,17 @@ class ShowHours extends React.Component {
     render() {
         let display;
         if (this.props.show.hours){
+
+            const rowData = [];
+            this.props.show.hours.forEach((el) => {
+                rowData.push(el.split(": "))
+            })
             
             display = (
                 <div id="center-head">
                     <h3>Restaurant Hours and Info</h3>
                     <div className="hoursandInfo">
-                        <ul className="hours">
-                            {this.props.show.hours.map(el=> (
-                                <li id="list-hour" key={this.props.show.hours.indexOf(el)}>{el}</li>
-                            ))}
-                        </ul>
-
+                        <HoursTable rows={rowData} />
                         
                         <div id="info">
                             <p>Phone: {this.props.show.phone}</p>
