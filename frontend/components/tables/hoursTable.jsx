@@ -12,11 +12,13 @@ class HoursTable extends React.Component {
 
         return (
             <table>
-                {rows.map((cell, cellIndex) => {
-                    return (
-                        <Cell key={cellIndex} info={cell}/>
-                    )
-                })}
+                <tbody>
+                    {rows.map((cell, cellIndex) => {
+                        return (
+                            <Cell key={cellIndex} info={cell}/>
+                        )
+                    })}
+                </tbody>
             </table>
         )
     }
