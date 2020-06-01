@@ -11,7 +11,7 @@ class Cell extends React.Component {
         const {info} = this.props
 
         return (
-            <tr><th>{info[0]}</th><td>{info[1]}</td></tr>
+            <tr><th>{info[0]}:</th><td>{info[1]}</td></tr>
         )
     }
 }
