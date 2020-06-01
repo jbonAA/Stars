@@ -25,7 +25,8 @@ class ShowHours extends React.Component {
                         <div id="info">
                             <p>Phone: {this.props.show.phone}</p>
                             <p>Address: {this.props.show.address}</p>
-                            <p>City, State: {this.props.show.city}, {this.props.show.state} {this.props.show.zip}</p>
+                            <p>City: {this.props.show.city}</p>
+                            <p>State: {this.props.show.state}</p>
                         </div>
                     </div>
                 </div>
