@@ -26,7 +26,8 @@ class ReviewIndex extends React.Component{
                             review={review}
                             key={Object.values(reviews).indexOf(review)}
                             delete={this.props.delete}
-                            currentUser={this.props.currentUser} />
+                            currentUser={this.props.currentUser} 
+                            update={this.props.update}/>
                             )
                         )
                     }

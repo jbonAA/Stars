@@ -2,6 +2,7 @@ import React from 'react';
 import GreetingContainer from '../home/greeting_container';
 import {withRouter} from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
+import update from '../restaurants/restaurant_show'
 
 class ReviewForm extends React.Component {
     constructor(props){
@@ -37,7 +38,7 @@ class ReviewForm extends React.Component {
         const review = Object.assign({}, this.state)
         this.props.createReview(review)
             .then(() => this.props.history.push(`/restaurants/${this.props.match.params.restaurantId}`))
-            .then(() => this.forceUpdate())
+            .then(() => update)
 
     }
 

@@ -22,6 +22,7 @@ class RestaurantShow extends React.Component {
         
         
         this.handleClick = this.handleClick.bind(this)
+        this.update = this.update.bind(this)
     }
 
     handleClick(e) {
@@ -33,7 +34,6 @@ class RestaurantShow extends React.Component {
 
 
     componentDidMount() {
-        debugger
         window.scrollTo(0, 0)
         const res = this.props.fetchRestaurant(localStorage.getItem("restaurantId"))
             .then((res) => {
@@ -42,6 +42,11 @@ class RestaurantShow extends React.Component {
                 })
             })
     }
+
+    update() {
+        this.forceUpdate();
+    }
+
 
 
 
@@ -90,7 +95,8 @@ class RestaurantShow extends React.Component {
                         </div>
                         <div id="review-index">
                             <ReviewIndexContainer
-                            reviews={this.props.reviews} />
+                            reviews={this.props.reviews}
+                            update={this.update()} />
                         </div>
                     </div>
                 </div>

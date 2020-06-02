@@ -21,7 +21,7 @@ class ReviewIndexItems extends React.Component {
         let id = this.props.review.id;
         this.props.delete(id)
             .then(this.props.fetchRestaurant(localStorage.getItem("restaurantId")))
-            .then(this.forceUpdate())
+            .then(this.props.update)
 
     }
 

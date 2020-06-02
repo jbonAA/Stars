@@ -23,11 +23,11 @@ class ShowHeader extends React.Component {
         this.props.history.push(`/restaurants/${this.state.show.id}/review/new`)
     }
 
-    shouldComponentUpdate(nextState, nextProps) {
+    shouldComponentUpdate(nextProps, nextState) {
         if(this.props.reviews[0] === undefined){
             return true
-        // }else if(this.props.reviews.length !== nextProps.reviews.length){
-        //     return true
+        }else if(this.props.reviews.length !== nextProps.reviews.length){
+            return true
         }else{
             return false
         }
