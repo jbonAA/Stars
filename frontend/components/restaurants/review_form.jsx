@@ -2,7 +2,7 @@ import React from 'react';
 import GreetingContainer from '../home/greeting_container';
 import {withRouter} from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
-import update from '../restaurants/restaurant_show'
+import incrementCount from '../show/show_header';
 
 class ReviewForm extends React.Component {
     constructor(props){
@@ -35,10 +35,11 @@ class ReviewForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        console.log(incrementCount)
         const review = Object.assign({}, this.state)
         this.props.createReview(review)
             .then(() => this.props.history.push(`/restaurants/${this.props.match.params.restaurantId}`))
-            .then(() => update)
+            .then(() => incrementCount)
 
     }
 

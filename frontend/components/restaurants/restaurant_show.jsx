@@ -22,7 +22,6 @@ class RestaurantShow extends React.Component {
         
         
         this.handleClick = this.handleClick.bind(this)
-        this.update = this.update.bind(this)
     }
 
     handleClick(e) {
@@ -41,10 +40,6 @@ class RestaurantShow extends React.Component {
                     show: res
                 })
             })
-    }
-
-    update() {
-        this.forceUpdate();
     }
 
 
@@ -77,6 +72,7 @@ class RestaurantShow extends React.Component {
                                 <div>
                                     <ShowHeader 
                                     show={this.props.show}
+                                    reviewCount={this.props.reviews.length}
                                     reviews={this.props.reviews}/>
                                 </div>
                                 <div>
@@ -96,7 +92,7 @@ class RestaurantShow extends React.Component {
                         <div id="review-index">
                             <ReviewIndexContainer
                             reviews={this.props.reviews}
-                            update={this.update()} />
+                            />
                         </div>
                     </div>
                 </div>

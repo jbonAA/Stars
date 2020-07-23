@@ -8,10 +8,30 @@ class ShowHeader extends React.Component {
 
         this.state = {
             show: this.props.show,
-            test: ""
+            test: "",
+            reviewCount: this.props.reviewCount
         }
         
         this.handleClick = this.handleClick.bind(this)
+        this.incrementCount = this.incrementCount(this)
+        this.decrementCount = this.decrementCount(this)
+
+    }
+
+    incrementCount() {
+        const {reviewCount} = this.state
+
+        this.setState({
+            reviewCount: reviewCount + 1
+        })
+    }
+
+    decrementCount() {
+        const {reviewCount} = this.state
+
+        this.setState({
+            reviewCount: reviewCount - 1
+        })
 
     }
 
@@ -69,7 +89,8 @@ class ShowHeader extends React.Component {
                     
                 <div className="head-price">
                     {display}
-                    <p> {Object.values(this.props.reviews).length} reviews</p>
+                    {/* <p> {Object.values(this.props.reviews).length} reviews</p> */}
+                    <p>{this.state.reviewCount} Reviews</p>
                     <p>{this.props.show.price}</p>
                 </div>
                 <div className="head-buttons">
